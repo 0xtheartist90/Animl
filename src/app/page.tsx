@@ -1,12 +1,23 @@
-import HomePage from '@/app/(delete-this-and-modify-page.tsx)/HomePage';
+import About from '@/components/home/about';
+import CocktailDen from '@/components/home/cocktail-den';
+import Events from '@/components/home/events';
+import Hero from '@/components/home/hero';
+import MenuPreview from '@/components/home/menu-preview';
+import ReserveCta from '@/components/home/reserve-cta';
+import Statement from '@/components/home/statement';
 
-/**
- * The main page component that renders the HomePage component.
- *
- * @returns {JSX.Element} The rendered HomePage component.
- */
 const Page = () => {
-    return <HomePage />;
+    return (
+        <>
+            <Hero />
+            <About />
+            <Statement />
+            <MenuPreview />
+            <CocktailDen />
+            <Events />
+            <ReserveCta />
+        </>
+    );
 };
 
 export default Page;
