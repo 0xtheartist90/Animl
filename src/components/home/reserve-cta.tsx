@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { Reveal } from '@/components/site/reveal';
@@ -18,21 +19,28 @@ const ReserveCta = () => {
                 {/* Giant CTA */}
                 <Link
                     href='/reservations'
-                    className='group relative flex flex-col justify-center overflow-hidden px-5 py-20 md:col-span-8 md:px-14 md:py-32'>
-                    <span className='bg-flame absolute inset-0 origin-bottom scale-y-0 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-y-100' />
+                    className='group bg-flame relative flex flex-col justify-center overflow-hidden px-5 py-20 md:col-span-8 md:px-14 md:py-32'>
+                    <Image
+                        src='/images/leopardbg.png'
+                        alt=''
+                        fill
+                        sizes='(max-width: 768px) 100vw, 66vw'
+                        className='object-cover opacity-[0.10] mix-blend-multiply'
+                    />
+                    <span className='bg-coal absolute inset-0 origin-bottom scale-y-0 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-y-100' />
                     <Reveal>
-                        <span className='label-mono text-smoke group-hover:text-bone/80 relative mb-6 block transition-colors duration-500'>
+                        <span className='label-mono text-coal/70 group-hover:text-bone/70 relative mb-6 block transition-colors duration-500'>
                             Your table is waiting
                         </span>
-                        <span className='text-bone relative block font-sans text-[clamp(52px,8vw,128px)] leading-[1.02] font-semibold tracking-tight uppercase'>
+                        <span className='text-coal group-hover:text-bone relative block font-sans text-[clamp(52px,8vw,128px)] leading-[1.02] font-semibold tracking-tight uppercase transition-colors duration-500'>
                             Reserve
                             <br />
                             Now
-                            <span className='text-flame group-hover:text-bone transition-colors duration-500'>
+                            <span className='text-bone group-hover:text-flame transition-colors duration-500'>
                                 .
                             </span>
                         </span>
-                        <span className='label-mono text-bone/70 group-hover:text-bone relative mt-8 inline-flex items-center gap-3 transition-colors duration-500'>
+                        <span className='label-mono text-coal/80 group-hover:text-bone relative mt-8 inline-flex items-center gap-3 transition-colors duration-500'>
                             Book your evening
                             <span className='transition-transform duration-500 group-hover:translate-x-2'>→</span>
                         </span>
