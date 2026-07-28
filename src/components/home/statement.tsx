@@ -13,7 +13,7 @@ const Statement = () => {
                 alt=''
                 fill
                 sizes='100vw'
-                className='object-cover opacity-[0.05] mix-blend-multiply'
+                className='object-cover opacity-[0.10] mix-blend-multiply'
             />
             <Marquee slow className='relative'>
                 {ITEMS.map((item, i) => (

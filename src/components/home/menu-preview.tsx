@@ -223,7 +223,7 @@ const MenuPreview = () => {
             </div>
 
             {/* Dish marquee */}
-            <RevealImage className='mt-6 md:mt-10'>
+            <RevealImage>
                 <Link href='/menus' className='group block'>
                     <Marquee slow className='py-0'>
                         {DISHES.map((dish) => (

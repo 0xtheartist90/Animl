@@ -15,13 +15,13 @@ const ICONS = [
 /** Terracotta interlude — breaks the dark rhythm of the page. */
 const Experience = () => {
     return (
-        <section className='bg-flame text-coal relative mt-6 overflow-hidden md:mt-10'>
+        <section className='bg-flame text-coal relative overflow-hidden'>
             <Image
                 src='/images/leopardbg.png'
                 alt=''
                 fill
                 sizes='100vw'
-                className='object-cover opacity-[0.05] mix-blend-multiply'
+                className='object-cover opacity-[0.10] mix-blend-multiply'
             />
             <div className='relative px-5 py-20 text-center md:py-28'>
                 <Reveal>

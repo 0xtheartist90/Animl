@@ -75,7 +75,7 @@ const About = () => {
                             alt=''
                             fill
                             sizes='(max-width: 768px) 100vw, 25vw'
-                            className='object-cover opacity-[0.05] mix-blend-multiply'
+                            className='object-cover opacity-[0.10] mix-blend-multiply'
                         />
                         <div className='relative flex h-full flex-col items-center justify-center gap-3 py-14'>
                             <p className='headline text-coal text-center text-6xl'>420A</p>

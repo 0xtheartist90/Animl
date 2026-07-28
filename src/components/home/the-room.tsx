@@ -75,16 +75,18 @@ const TheRoom = () => {
             {/* Marquee interlude */}
             <Statement />
 
-            {/* Full-bleed bar */}
+            {/* Full-bleed interior video */}
             <Link href='/reservations' className='group relative block'>
-                <Parallax className='h-[55svh] md:h-[70svh]' amount={10}>
+                <Parallax className='h-[55svh] md:h-[75svh]' amount={10}>
                     <div className='relative h-full w-full scale-[1.14]'>
-                        <Image
-                            src='/images/home/bar-wide.jpg'
-                            alt='The mirrored bar with brass stools and rosso marble floors'
-                            fill
-                            sizes='100vw'
-                            className='img-premium object-cover'
+                        <video
+                            className='absolute inset-0 h-full w-full object-cover'
+                            src='/video/interior.mp4'
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            preload='metadata'
                         />
                     </div>
                 </Parallax>
