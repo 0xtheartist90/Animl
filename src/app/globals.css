@@ -144,6 +144,13 @@
         font-size: 0.6875rem;
         letter-spacing: 0.22em;
     }
+    /* Scrollable panels without visible scrollbars */
+    .scroll-invisible {
+        scrollbar-width: none;
+    }
+    .scroll-invisible::-webkit-scrollbar {
+        display: none;
+    }
     /* Image treatment: slightly desaturated until hover */
     .img-premium {
         filter: saturate(0.88) contrast(1.04);
