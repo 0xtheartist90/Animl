@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react';
 
 import type { Metadata, Viewport } from 'next';
-import { Cormorant_Garamond } from 'next/font/google';
 import localFont from 'next/font/local';
 
 import '@/app/globals.css';
@@ -23,12 +22,6 @@ const display = localFont({
     src: './fonts/TheQuicky.otf',
     variable: '--font-display',
     display: 'swap'
-});
-const serifAccent = Cormorant_Garamond({
-    subsets: ['latin'],
-    weight: ['400', '500'],
-    style: ['normal', 'italic'],
-    variable: '--font-serif-accent'
 });
 
 export const metadata: Metadata = {
@@ -54,7 +47,7 @@ const Layout = ({ children }: Readonly<{ children: ReactNode }>) => {
     return (
         <html suppressHydrationWarning lang='en' className='dark'>
             <body
-                className={`${geistSans.variable} ${geistMono.variable} ${display.variable} ${serifAccent.variable} bg-background text-foreground overscroll-none antialiased`}>
+                className={`${geistSans.variable} ${geistMono.variable} ${display.variable} bg-background text-foreground overscroll-none antialiased`}>
                 <SmoothScroll>
                     <SiteHeader />
                     <main>{children}</main>

@@ -39,7 +39,6 @@
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
     --font-display: var(--font-display);
-    --font-serif: var(--font-serif-accent);
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --color-card: var(--card);
@@ -128,10 +127,6 @@
 
 @utility font-display {
     font-family: var(--font-display);
-}
-
-@utility font-serif-accent {
-    font-family: var(--font-serif-accent);
 }
 
 @layer utilities {

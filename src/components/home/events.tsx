@@ -24,8 +24,8 @@ const Events = () => {
                 <Parallax className='h-[70svh] md:h-[85svh]' amount={12}>
                     <div className='relative h-full w-full scale-[1.15]'>
                         <Image
-                            src='/images/home/disco-bull.jpg'
-                            alt='The mirrored bull suspended above the Animl dining room'
+                            src='/images/home/dining-room.jpg'
+                            alt='The Animl dining room beneath the mirrored bull and glowing coffered ceiling'
                             fill
                             sizes='100vw'
                             className='img-premium object-cover'

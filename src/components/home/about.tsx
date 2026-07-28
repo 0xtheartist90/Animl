@@ -75,11 +75,13 @@ const About = () => {
                             alt=''
                             fill
                             sizes='(max-width: 768px) 100vw, 25vw'
-                            className='object-cover'
+                            className='object-cover opacity-[0.06]'
                         />
                         <div className='relative flex h-full flex-col items-center justify-center gap-3 py-14'>
-                            <p className='headline text-coal text-center text-6xl'>420A</p>
-                            <p className='label-mono text-coal/80 text-center'>Wellington St West</p>
+                            <p className='headline text-bone text-center text-6xl'>
+                                420<span className='text-flame'>A</span>
+                            </p>
+                            <p className='label-mono text-smoke text-center'>Wellington St West</p>
                         </div>
                     </RevealImage>
                 </div>

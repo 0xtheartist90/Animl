@@ -31,7 +31,7 @@ const SiteFooter = () => {
                     <Logo className='w-56 md:w-72' />
                     <div>
                         <p className='label-mono text-smoke mb-3'>Steakhouse &amp; Cocktail Den</p>
-                        <p className='font-serif-accent text-bone/80 text-2xl italic'>Elegantly Untamed</p>
+                        <p className='headline text-bone/80 text-2xl'>Elegantly Untamed</p>
                     </div>
                 </div>
 

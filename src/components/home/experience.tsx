@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { IconBull, IconCake, IconCoupe, IconShell, IconWine } from '@/components/site/icons';
@@ -14,8 +15,15 @@ const ICONS = [
 /** Terracotta interlude — breaks the dark rhythm of the page. */
 const Experience = () => {
     return (
-        <section className='bg-flame text-coal mt-6 md:mt-10'>
-            <div className='px-5 py-20 text-center md:py-28'>
+        <section className='bg-flame text-coal relative mt-6 overflow-hidden md:mt-10'>
+            <Image
+                src='/images/leopardbg.png'
+                alt=''
+                fill
+                sizes='100vw'
+                className='object-cover opacity-[0.05] mix-blend-multiply'
+            />
+            <div className='relative px-5 py-20 text-center md:py-28'>
                 <Reveal>
                     <p className='label-mono text-coal/70 mb-8'>The Animl Experience</p>
                 </Reveal>

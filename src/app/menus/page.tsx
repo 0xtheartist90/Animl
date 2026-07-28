@@ -45,7 +45,7 @@ const Page = () => {
             </section>
             <section className='px-5 py-16 text-center md:py-24'>
                 <Reveal>
-                    <p className='font-serif-accent text-bone/80 mx-auto max-w-xl text-2xl italic'>
+                    <p className='headline text-bone/80 mx-auto max-w-xl text-3xl'>
                         Ordering a special bottle? Call ahead and we&apos;ll have it decanted before you arrive.
                     </p>
                     <Link
