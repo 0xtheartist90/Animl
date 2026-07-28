@@ -1,6 +1,8 @@
 import Link from 'next/link';
 
+import Logo from '@/components/site/logo';
 import Marquee from '@/components/site/marquee';
+import Spark from '@/components/site/spark';
 
 const HOURS = [
     { days: 'Mon — Wed', hours: '5:00 PM — 12:00 AM' },
@@ -17,7 +19,7 @@ const SiteFooter = () => {
                     {Array.from({ length: 6 }).map((_, i) => (
                         <span key={i} className='headline text-bone mx-8 inline-flex items-center gap-8 text-3xl'>
                             Reserve your table
-                            <span className='bg-flame group-hover:bg-bone inline-block h-2 w-2 rotate-45' />
+                            <Spark className='text-flame group-hover:text-bone transition-colors' size={20} />
                         </span>
                     ))}
                 </Marquee>
@@ -26,9 +28,7 @@ const SiteFooter = () => {
             <div className='grid grid-cols-1 md:grid-cols-12'>
                 {/* Brand */}
                 <div className='border-border flex flex-col justify-between gap-10 border-b p-8 md:col-span-5 md:border-r md:border-b-0 md:p-10'>
-                    <span className='headline text-bone text-7xl md:text-8xl'>
-                        Animl<span className='text-flame'>.</span>
-                    </span>
+                    <Logo className='w-56 md:w-72' />
                     <div>
                         <p className='label-mono text-smoke mb-3'>Steakhouse &amp; Cocktail Den</p>
                         <p className='font-serif-accent text-bone/80 text-2xl italic'>Elegantly Untamed</p>

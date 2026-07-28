@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { Parallax, Reveal, RevealImage, RevealLines } from '@/components/site/reveal';
+import Spark from '@/components/site/spark';
 
 const CUTS = [
     { name: '10 oz Filet Mignon', origin: 'Alberta AAA Angus — wet-aged 30 days', price: '108' },
@@ -107,7 +108,7 @@ const MenuPreview = () => {
                         </RevealImage>
                         <div className='from-coal/80 absolute inset-x-0 bottom-0 bg-gradient-to-t to-transparent p-6 pt-16'>
                             <p className='label-mono text-bone flex items-center gap-3'>
-                                <span className='bg-flame inline-block h-1.5 w-1.5 rotate-45' />
+                                <Spark className='text-flame' size={14} />
                                 {item.label}
                             </p>
                         </div>

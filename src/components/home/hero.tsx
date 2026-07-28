@@ -4,7 +4,9 @@ import { useRef } from 'react';
 
 import Link from 'next/link';
 
+import Logo from '@/components/site/logo';
 import { EASE } from '@/components/site/reveal';
+import Spark from '@/components/site/spark';
 
 import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react';
 
@@ -34,47 +36,38 @@ const Hero = () => {
             <div className='from-coal via-coal/30 absolute inset-0 bg-gradient-to-t to-transparent' />
             <div className='from-coal/70 absolute inset-0 bg-gradient-to-b via-transparent to-transparent' />
 
+            {/* Centered wordmark */}
+            <motion.div
+                style={reduced ? undefined : { opacity: contentOpacity }}
+                className='absolute inset-0 flex items-center justify-center px-8'>
+                <motion.div
+                    initial={{ opacity: 0, y: 28, scale: 0.97 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ duration: 1.6, delay: 0.7, ease: EASE }}>
+                    <Logo className='w-[78vw] max-w-[520px] md:w-[38vw]' />
+                </motion.div>
+            </motion.div>
+
             <motion.div
                 style={reduced ? undefined : { opacity: contentOpacity, y: contentY }}
-                className='relative flex h-full flex-col justify-end px-5 pb-12 md:px-8 md:pb-16'>
+                className='relative flex h-full flex-col justify-end px-5 pb-12 md:px-8 md:pb-14'>
                 <motion.p
                     initial={{ opacity: 0, y: 24 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 0.7, ease: EASE }}
-                    className='label-mono text-bone/80 mb-6 flex items-center gap-4'>
-                    <span className='bg-flame inline-block h-2 w-2 rotate-45' />
+                    transition={{ duration: 1, delay: 1.1, ease: EASE }}
+                    className='label-mono text-bone/80 mb-8 flex items-center gap-4'>
+                    <Spark className='text-flame' />
                     Steakhouse &amp; Cocktail Den — Toronto
                 </motion.p>
-
-                <h1 className='headline text-bone text-[clamp(72px,17vw,260px)]'>
-                    <span className='block overflow-hidden pb-[0.06em]'>
-                        <motion.span
-                            className='block will-change-transform'
-                            initial={{ y: '110%' }}
-                            animate={{ y: 0 }}
-                            transition={{ duration: 1.2, delay: 0.85, ease: EASE }}>
-                            Elegantly
-                        </motion.span>
-                    </span>
-                    <span className='block overflow-hidden pb-[0.06em]'>
-                        <motion.span
-                            className='block will-change-transform'
-                            initial={{ y: '110%' }}
-                            animate={{ y: 0 }}
-                            transition={{ duration: 1.2, delay: 0.97, ease: EASE }}>
-                            Untamed<span className='text-flame'>.</span>
-                        </motion.span>
-                    </span>
-                </h1>
 
                 <motion.div
                     initial={{ opacity: 0, y: 24 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 1.25, ease: EASE }}
-                    className='mt-8 flex flex-col gap-6 md:mt-10 md:flex-row md:items-end md:justify-between'>
+                    className='flex flex-col gap-6 md:flex-row md:items-end md:justify-between'>
                     <p className='label-mono text-bone/70 max-w-md leading-loose'>
-                        Dry-aged steak, crafted cocktails and 1970s glamour in the heart of the Entertainment
-                        District.
+                        Elegantly untamed — dry-aged steak, crafted cocktails and 1970s glamour in the heart of the
+                        Entertainment District.
                     </p>
                     <div className='flex items-center gap-4'>
                         <Link

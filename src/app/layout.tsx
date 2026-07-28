@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 
 import type { Metadata, Viewport } from 'next';
-import { Bebas_Neue, Cormorant_Garamond } from 'next/font/google';
+import { Cormorant_Garamond } from 'next/font/google';
 import localFont from 'next/font/local';
 
 import '@/app/globals.css';
@@ -19,10 +19,10 @@ const geistMono = localFont({
     variable: '--font-geist-mono',
     weight: '100 900'
 });
-const display = Bebas_Neue({
-    subsets: ['latin'],
-    weight: '400',
-    variable: '--font-display'
+const display = localFont({
+    src: './fonts/TheQuicky.otf',
+    variable: '--font-display',
+    display: 'swap'
 });
 const serifAccent = Cormorant_Garamond({
     subsets: ['latin'],

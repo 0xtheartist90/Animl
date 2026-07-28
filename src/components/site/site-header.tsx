@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+import Logo from '@/components/site/logo';
 import { EASE } from '@/components/site/reveal';
 
 import { AnimatePresence, motion } from 'motion/react';
@@ -49,9 +50,7 @@ const SiteHeader = () => {
                 }`}>
                 <div className='flex h-16 items-stretch justify-between px-5 md:h-[72px] md:px-8'>
                     <Link href='/' className='flex items-center' aria-label='Animl Steakhouse — home'>
-                        <span className='headline text-bone text-[28px] md:text-[32px]'>
-                            Animl<span className='text-flame'>.</span>
-                        </span>
+                        <Logo className='w-[88px] md:w-[104px]' />
                     </Link>
 
                     <nav className='hidden items-stretch md:flex'>

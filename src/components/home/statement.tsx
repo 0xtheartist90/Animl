@@ -1,4 +1,5 @@
 import Marquee from '@/components/site/marquee';
+import Spark from '@/components/site/spark';
 
 const ITEMS = ['Dry-Aged Steak', 'Crafted Cocktails', 'Art Deco', 'Studio 54 Energy', '1970s Glamour', 'Raw Bar'];
 
@@ -9,7 +10,7 @@ const Statement = () => {
                 {ITEMS.map((item, i) => (
                     <span key={i} className='mx-6 inline-flex items-center gap-12 md:mx-10'>
                         <span className='headline text-outline text-6xl md:text-8xl'>{item}</span>
-                        <span className='bg-flame inline-block h-3 w-3 rotate-45' />
+                        <Spark className='text-flame' size={26} />
                     </span>
                 ))}
             </Marquee>

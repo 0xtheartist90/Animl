@@ -135,11 +135,10 @@
 }
 
 @layer utilities {
-    /* Big condensed display headlines */
+    /* Big script display headlines — The Quicky, matching the wordmark */
     .headline {
         font-family: var(--font-display);
-        text-transform: uppercase;
-        line-height: 0.92;
+        line-height: 1.04;
         letter-spacing: 0.01em;
         font-weight: 400;
     }

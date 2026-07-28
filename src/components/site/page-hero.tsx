@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import { Reveal, RevealLines } from '@/components/site/reveal';
+import Spark from '@/components/site/spark';
 
 /** Shared interior-page hero: label, giant title, optional backdrop image. */
 const PageHero = ({
@@ -27,7 +28,7 @@ const PageHero = ({
             <div className='relative px-5 pt-40 pb-16 md:px-8 md:pt-56 md:pb-24'>
                 <Reveal>
                     <p className='label-mono text-bone/70 mb-6 flex items-center gap-4'>
-                        <span className='bg-flame inline-block h-2 w-2 rotate-45' />
+                        <Spark className='text-flame' />
                         {label}
                     </p>
                 </Reveal>
