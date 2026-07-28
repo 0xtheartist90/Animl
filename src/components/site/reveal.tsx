@@ -24,7 +24,7 @@ export const Reveal = ({ children, className, delay = 0, duration = 1, y = 42, o
             className={className}
             initial={reduced ? false : { opacity: 0, y }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once, margin: '-12% 0px' }}
+            viewport={{ once, margin: '0px' }}
             transition={{ duration, delay, ease: EASE }}>
             {children}
         </motion.div>
@@ -55,7 +55,7 @@ export const RevealLines = ({
                         className={`block will-change-transform ${lineClassName ?? ''}`}
                         initial={reduced ? false : { y: '110%' }}
                         whileInView={{ y: 0 }}
-                        viewport={{ once: true, margin: '-10% 0px' }}
+                        viewport={{ once: true, margin: '0px' }}
                         transition={{ duration: 1.1, delay: delay + i * stagger, ease: EASE }}>
                         {line}
                     </motion.span>
@@ -82,7 +82,7 @@ export const RevealImage = ({
             className={className}
             initial={reduced ? false : { clipPath: 'inset(100% 0% 0% 0%)' }}
             whileInView={{ clipPath: 'inset(0% 0% 0% 0%)' }}
-            viewport={{ once: true, margin: '-10% 0px' }}
+            viewport={{ once: true, margin: '0px' }}
             transition={{ duration: 1.2, delay, ease: EASE }}>
             {children}
         </motion.div>

@@ -120,99 +120,105 @@ const MenuPreview = () => {
                 </Link>
             </div>
 
-            {/* Tab bar */}
-            <div className='grid grid-cols-2 gap-2 px-5 pb-10 md:grid-cols-4 md:gap-0 md:px-8'>
-                {TABS.map((tab) => {
-                    const Icon = tab.icon;
-                    const isActive = active.key === tab.key;
+            {/* Selector + content — fits one viewport on desktop */}
+            <div className='md:flex md:h-[calc(100svh-72px)] md:flex-col'>
+                {/* Tab bar */}
+                <div className='grid shrink-0 grid-cols-2 gap-2 px-5 pb-6 md:grid-cols-4 md:gap-0 md:px-8'>
+                    {TABS.map((tab) => {
+                        const Icon = tab.icon;
+                        const isActive = active.key === tab.key;
 
-                    return (
-                        <button
-                            key={tab.key}
-                            onClick={() => setActive(tab)}
-                            aria-pressed={isActive}
-                            className={`group relative flex items-center justify-center gap-4 py-6 transition-colors duration-500 md:py-8 ${
-                                isActive ? 'text-flame' : 'text-bone/60 hover:text-bone'
-                            }`}>
-                            <Icon size={30} className='transition-transform duration-500 group-hover:-translate-y-0.5' />
-                            <span className='label-mono'>{tab.label}</span>
-                            {isActive && (
-                                <motion.span
-                                    layoutId='menu-tab-underline'
-                                    transition={{ duration: 0.5, ease: EASE }}
-                                    className='bg-flame absolute inset-x-8 bottom-2 h-px md:inset-x-14'
+                        return (
+                            <button
+                                key={tab.key}
+                                onClick={() => setActive(tab)}
+                                aria-pressed={isActive}
+                                className={`group relative flex items-center justify-center gap-4 py-4 transition-colors duration-500 ${
+                                    isActive ? 'text-flame' : 'text-bone/60 hover:text-bone'
+                                }`}>
+                                <Icon
+                                    size={26}
+                                    className='transition-transform duration-500 group-hover:-translate-y-0.5'
                                 />
-                            )}
-                        </button>
-                    );
-                })}
-            </div>
-
-            <div className='grid grid-cols-1 md:grid-cols-12'>
-                {/* Image — swaps with the active tab */}
-                <div className='relative aspect-square overflow-hidden md:col-span-5 md:aspect-auto md:min-h-[640px]'>
-                    <AnimatePresence mode='popLayout' initial={false}>
-                        <motion.div
-                            key={active.key}
-                            initial={{ opacity: 0, scale: 1.06 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.9, ease: EASE }}
-                            className='absolute inset-0'>
-                            <Image
-                                src={active.image}
-                                alt={active.imageAlt}
-                                fill
-                                sizes='(max-width: 768px) 100vw, 42vw'
-                                className='img-premium object-cover'
-                            />
-                        </motion.div>
-                    </AnimatePresence>
+                                <span className='label-mono'>{tab.label}</span>
+                                {isActive && (
+                                    <motion.span
+                                        layoutId='menu-tab-underline'
+                                        transition={{ duration: 0.5, ease: EASE }}
+                                        className='bg-flame absolute inset-x-8 bottom-1 h-px md:inset-x-14'
+                                    />
+                                )}
+                            </button>
+                        );
+                    })}
                 </div>
 
-                {/* List — swaps with the active tab */}
-                <div className='flex flex-col justify-center px-5 py-16 md:col-span-7 md:px-14 md:py-20'>
-                    <AnimatePresence mode='wait' initial={false}>
-                        <motion.div
-                            key={active.key}
-                            initial={{ opacity: 0, y: 28 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -16 }}
-                            transition={{ duration: 0.55, ease: EASE }}>
-                            <h2 className='headline text-bone text-5xl md:text-6xl'>
-                                {active.title.slice(0, -1)}
-                                <span className='text-flame'>.</span>
-                            </h2>
-                            <p className='label-mono text-smoke mt-6 max-w-md leading-loose'>{active.footnote}</p>
+                <div className='grid grid-cols-1 md:min-h-0 md:flex-1 md:grid-cols-12'>
+                    {/* Image — swaps with the active tab */}
+                    <div className='relative aspect-square overflow-hidden md:col-span-5 md:aspect-auto md:h-full'>
+                        <AnimatePresence mode='popLayout' initial={false}>
+                            <motion.div
+                                key={active.key}
+                                initial={{ opacity: 0, scale: 1.06 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.9, ease: EASE }}
+                                className='absolute inset-0'>
+                                <Image
+                                    src={active.image}
+                                    alt={active.imageAlt}
+                                    fill
+                                    sizes='(max-width: 768px) 100vw, 42vw'
+                                    className='img-premium object-cover'
+                                />
+                            </motion.div>
+                        </AnimatePresence>
+                    </div>
 
-                            <ul className='mt-10'>
-                                {active.items.map((item, i) => (
-                                    <motion.li
-                                        key={item.name}
-                                        initial={{ opacity: 0, y: 20 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 0.6, delay: 0.08 + i * 0.06, ease: EASE }}
-                                        className='group border-border hover:border-flame/60 flex items-baseline justify-between gap-6 border-b py-5 transition-colors duration-500'>
-                                        <div>
-                                            <p className='headline group-hover:text-flame text-2xl transition-colors duration-300 md:text-3xl'>
-                                                {item.name}
-                                            </p>
-                                            <p className='label-mono text-smoke mt-2 text-[10px]'>{item.note}</p>
-                                        </div>
-                                        {item.price && (
-                                            <p className='font-mono text-bone/80 shrink-0 text-sm'>{item.price}</p>
-                                        )}
-                                    </motion.li>
-                                ))}
-                            </ul>
+                    {/* List — swaps with the active tab */}
+                    <div className='flex flex-col justify-center px-5 py-12 md:col-span-7 md:min-h-0 md:px-14 md:py-4'>
+                        <AnimatePresence mode='wait' initial={false}>
+                            <motion.div
+                                key={active.key}
+                                initial={{ opacity: 0, y: 28 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -16 }}
+                                transition={{ duration: 0.55, ease: EASE }}>
+                                <h2 className='headline text-bone text-4xl md:text-5xl'>
+                                    {active.title.slice(0, -1)}
+                                    <span className='text-flame'>.</span>
+                                </h2>
+                                <p className='label-mono text-smoke mt-2 max-w-md leading-relaxed'>{active.footnote}</p>
 
-                            <Link
-                                href='/menus'
-                                className='label-mono border-bone/25 text-bone hover:border-flame hover:bg-flame mt-10 inline-block border px-8 py-4 transition-all duration-300'>
-                                The full {active.label.toLowerCase()} menu
-                            </Link>
-                        </motion.div>
-                    </AnimatePresence>
+                                <ul className='mt-3'>
+                                    {active.items.map((item, i) => (
+                                        <motion.li
+                                            key={item.name}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{ duration: 0.6, delay: 0.08 + i * 0.06, ease: EASE }}
+                                            className='group border-border hover:border-flame/60 flex items-baseline justify-between gap-6 border-b py-3 transition-colors duration-500 md:py-2'>
+                                            <div>
+                                                <p className='headline group-hover:text-flame text-xl transition-colors duration-300 md:text-2xl'>
+                                                    {item.name}
+                                                </p>
+                                                <p className='label-mono text-smoke mt-0.5 text-[10px]'>{item.note}</p>
+                                            </div>
+                                            {item.price && (
+                                                <p className='font-mono text-bone/80 shrink-0 text-sm'>{item.price}</p>
+                                            )}
+                                        </motion.li>
+                                    ))}
+                                </ul>
+
+                                <Link
+                                    href='/menus'
+                                    className='label-mono border-bone/25 text-bone hover:border-flame hover:bg-flame mt-4 inline-block border px-6 py-3 transition-all duration-300'>
+                                    The full {active.label.toLowerCase()} menu
+                                </Link>
+                            </motion.div>
+                        </AnimatePresence>
+                    </div>
                 </div>
             </div>
 

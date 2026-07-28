@@ -17,7 +17,7 @@ const TheRoom = () => {
             </div>
 
             {/* Intro line */}
-            <div className='px-5 py-12 text-center md:py-20'>
+            <div className='px-5 pt-4 pb-10 text-center md:pt-6 md:pb-16'>
                 <RevealLines
                     className='headline text-bone text-5xl md:text-7xl'
                     lines={[
