@@ -6,9 +6,7 @@ const ReserveCta = () => {
     return (
         <section>
             <div className='border-border flex items-center justify-between border-b px-5 py-4 md:px-8'>
-                <p className='label-mono text-bone/70'>
-                    <span className='text-flame mr-3'>05</span>Reservations
-                </p>
+                <p className='label-mono text-bone/70'>Reservations</p>
                 <p className='label-mono text-smoke hidden md:block'>Elegant attire requested</p>
             </div>
 
@@ -22,7 +20,7 @@ const ReserveCta = () => {
                         <span className='label-mono text-smoke group-hover:text-bone/80 relative mb-6 block transition-colors duration-500'>
                             Your table is waiting
                         </span>
-                        <span className='headline text-bone relative block text-[clamp(64px,10vw,160px)] leading-none'>
+                        <span className='text-bone relative block font-sans text-[clamp(52px,8vw,128px)] leading-[1.02] font-semibold tracking-tight uppercase'>
                             Reserve
                             <br />
                             Now

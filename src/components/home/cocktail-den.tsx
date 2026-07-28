@@ -15,9 +15,7 @@ const CocktailDen = () => {
     return (
         <section className='border-border border-b'>
             <div className='border-border flex items-center justify-between border-b px-5 py-4 md:px-8'>
-                <p className='label-mono text-bone/70'>
-                    <span className='text-flame mr-3'>03</span>The Cocktail Den
-                </p>
+                <p className='label-mono text-bone/70'>The Cocktail Den</p>
                 <p className='label-mono text-smoke hidden md:block'>A programme by Saralyn Stevens</p>
             </div>
 

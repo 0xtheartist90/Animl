@@ -36,21 +36,16 @@ const Hero = () => {
             <div className='from-coal via-coal/30 absolute inset-0 bg-gradient-to-t to-transparent' />
             <div className='from-coal/70 absolute inset-0 bg-gradient-to-b via-transparent to-transparent' />
 
-            {/* Centered wordmark */}
-            <motion.div
-                style={reduced ? undefined : { opacity: contentOpacity }}
-                className='absolute inset-0 flex items-center justify-center px-8'>
-                <motion.div
-                    initial={{ opacity: 0, y: 28, scale: 0.97 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    transition={{ duration: 1.6, delay: 0.7, ease: EASE }}>
-                    <Logo className='w-[78vw] max-w-[520px] md:w-[38vw]' />
-                </motion.div>
-            </motion.div>
-
             <motion.div
                 style={reduced ? undefined : { opacity: contentOpacity, y: contentY }}
                 className='relative flex h-full flex-col justify-end px-5 pb-12 md:px-8 md:pb-14'>
+                <motion.div
+                    initial={{ opacity: 0, y: 28 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1.4, delay: 0.7, ease: EASE }}
+                    className='mb-6'>
+                    <Logo className='w-44 md:w-60' />
+                </motion.div>
                 <motion.p
                     initial={{ opacity: 0, y: 24 }}
                     animate={{ opacity: 1, y: 0 }}

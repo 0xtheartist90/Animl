@@ -12,24 +12,24 @@
     --card-foreground: #edeae4;
     --popover: #111110;
     --popover-foreground: #edeae4;
-    --primary: #e01a2b;
+    --primary: #b26a66;
     --primary-foreground: #edeae4;
     --secondary: #1a1a19;
     --secondary-foreground: #edeae4;
     --muted: #1a1a19;
     --muted-foreground: #8a877f;
-    --accent: #e01a2b;
+    --accent: #b26a66;
     --accent-foreground: #edeae4;
-    --destructive: #e01a2b;
+    --destructive: #b26a66;
     --destructive-foreground: #edeae4;
     --border: rgba(237, 234, 228, 0.14);
     --input: rgba(237, 234, 228, 0.14);
-    --ring: rgba(224, 26, 43, 0.6);
+    --ring: rgba(178, 106, 102, 0.6);
     --radius: 0rem;
 
     /* brand tokens */
-    --flame: #e01a2b;
-    --blood: #7d0f1c;
+    --flame: #b26a66;
+    --blood: #6f3d3a;
     --bone: #edeae4;
     --smoke: #8a877f;
     --coal: #0a0a0a;
@@ -148,15 +148,6 @@
         text-transform: uppercase;
         font-size: 0.6875rem;
         letter-spacing: 0.22em;
-    }
-    /* Hollow / outlined type for marquees */
-    .text-outline {
-        color: transparent;
-        -webkit-text-stroke: 1px rgba(237, 234, 228, 0.35);
-    }
-    .text-outline-red {
-        color: transparent;
-        -webkit-text-stroke: 1px var(--flame);
     }
     /* Image treatment: slightly desaturated until hover */
     .img-premium {

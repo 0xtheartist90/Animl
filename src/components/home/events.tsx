@@ -9,9 +9,7 @@ const Events = () => {
     return (
         <section className='border-border border-b'>
             <div className='border-border flex items-center justify-between border-b px-5 py-4 md:px-8'>
-                <p className='label-mono text-bone/70'>
-                    <span className='text-flame mr-3'>04</span>Private Dining &amp; Events
-                </p>
+                <p className='label-mono text-bone/70'>Private Dining &amp; Events</p>
                 <Link href='/events' className='link-sweep label-mono text-bone/70 hover:text-bone transition-colors'>
                     Plan an event
                 </Link>

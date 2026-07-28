@@ -9,7 +9,7 @@ const Statement = () => {
             <Marquee slow>
                 {ITEMS.map((item, i) => (
                     <span key={i} className='mx-6 inline-flex items-center gap-12 md:mx-10'>
-                        <span className='headline text-outline text-6xl md:text-8xl'>{item}</span>
+                        <span className='headline text-bone/90 text-6xl md:text-8xl'>{item}</span>
                         <Spark className='text-flame' size={26} />
                     </span>
                 ))}

@@ -9,9 +9,7 @@ const About = () => {
         <section className='border-border border-b'>
             {/* Section label */}
             <div className='border-border flex items-center justify-between border-b px-5 py-4 md:px-8'>
-                <p className='label-mono text-bone/70'>
-                    <span className='text-flame mr-3'>01</span>About Animl
-                </p>
+                <p className='label-mono text-bone/70'>About Animl</p>
                 <p className='label-mono text-smoke hidden md:block'>Toronto — Entertainment District</p>
             </div>
 
