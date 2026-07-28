@@ -19,7 +19,7 @@ const Page = () => {
                 imageAlt='Steak dinner at Animl Steakhouse Toronto'
             />
             <section className='grid grid-cols-1 md:grid-cols-12'>
-                <div className='border-border border-b p-8 md:col-span-7 md:border-r md:border-b-0 md:p-14'>
+                <div className='p-8 md:col-span-7 md:p-14'>
                     <Reveal>
                         <p className='label-mono text-flame mb-6'>Booking</p>
                         <p className='text-bone/70 max-w-lg font-mono text-[13px] leading-loose'>
@@ -50,7 +50,7 @@ const Page = () => {
                     </Reveal>
                 </div>
                 <div className='md:col-span-5'>
-                    <div className='border-border border-b p-8 md:p-14'>
+                    <div className='p-8 md:p-14'>
                         <Reveal delay={0.1}>
                             <p className='label-mono text-flame mb-6'>Dinner Service</p>
                             <ul className='label-mono text-bone/70 space-y-4'>

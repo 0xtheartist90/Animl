@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import { IconCake, IconCoffee, IconCoupe, IconHerb, IconMartini } from '@/components/site/icons';
 import { Reveal, RevealImage, RevealLines } from '@/components/site/reveal';
+import Spark from '@/components/site/spark';
 
 const COURSES = [
     { course: 'Amuse Bouche', theme: 'Familiar, refreshing, subtle', Icon: IconCoupe },
@@ -14,9 +15,12 @@ const COURSES = [
 
 const CocktailDen = () => {
     return (
-        <section className='border-border border-b'>
-            <div className='border-border flex items-center justify-between border-b px-5 py-4 md:px-8'>
-                <p className='label-mono text-bone/70'>The Cocktail Den</p>
+        <section className='pt-6 md:pt-10'>
+            <div className='flex items-center justify-between px-5 py-6 md:px-8'>
+                <p className='label-mono text-bone/70 flex items-center gap-4'>
+                    <Spark className='text-flame' size={13} />
+                    The Cocktail Den
+                </p>
                 <p className='label-mono text-smoke hidden md:block'>A programme by Saralyn Stevens</p>
             </div>
 
@@ -68,7 +72,7 @@ const CocktailDen = () => {
                 </div>
 
                 {/* Images */}
-                <div className='border-border order-1 grid grid-cols-2 md:order-2 md:col-span-6 md:border-l'>
+                <div className='order-1 grid grid-cols-2 md:order-2 md:col-span-6'>
                     <RevealImage className='relative col-span-2 aspect-[4/3] md:aspect-auto md:min-h-[420px]'>
                         <Image
                             src='/images/home/cocktail-red.jpg'
@@ -78,7 +82,7 @@ const CocktailDen = () => {
                             className='img-premium object-cover'
                         />
                     </RevealImage>
-                    <RevealImage className='border-border relative aspect-square border-t' delay={0.1}>
+                    <RevealImage className='relative aspect-square' delay={0.1}>
                         <Image
                             src='/images/home/espresso-martini.jpg'
                             alt='Espresso martini with gilded chocolate garnish'
@@ -87,7 +91,7 @@ const CocktailDen = () => {
                             className='img-premium object-cover'
                         />
                     </RevealImage>
-                    <RevealImage className='border-border relative aspect-square border-t border-l' delay={0.18}>
+                    <RevealImage className='relative aspect-square' delay={0.18}>
                         <Image
                             src='/images/home/bar.jpg'
                             alt='The mirrored bar at Animl'

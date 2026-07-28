@@ -18,7 +18,7 @@ const PageHero = ({
     imageAlt?: string;
 }) => {
     return (
-        <section className='border-border relative overflow-hidden border-b'>
+        <section className='relative overflow-hidden'>
             {image && (
                 <>
                     <Image src={image} alt={imageAlt ?? ''} fill sizes='100vw' priority className='object-cover opacity-40' />

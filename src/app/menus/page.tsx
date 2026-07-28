@@ -27,11 +27,10 @@ const Page = () => {
                 image='/images/home/steak-branded.jpg'
                 imageAlt='Animl-branded dry-aged steak'
             />
-            <section className='border-border grid grid-cols-1 border-b md:grid-cols-2'>
+            <section className='grid grid-cols-1 md:grid-cols-2'>
                 {MENUS.map((menu, i) => (
                     <Reveal key={menu.name} delay={0.06 * i}>
-                        <div
-                            className={`group border-border flex h-full flex-col justify-between gap-16 border-b p-8 md:p-12 ${i % 2 === 0 ? 'md:border-r' : ''}`}>
+                        <div className='group flex h-full flex-col justify-between gap-16 p-8 md:p-12'>
                             <p className='label-mono text-flame'>{`0${i + 1}`}</p>
                             <div>
                                 <h2 className='headline group-hover:text-flame text-5xl transition-colors duration-300 md:text-6xl'>

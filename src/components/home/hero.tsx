@@ -32,9 +32,10 @@ const Hero = () => {
                     preload='auto'
                 />
             </motion.div>
-            {/* Grade */}
-            <div className='from-coal via-coal/30 absolute inset-0 bg-gradient-to-t to-transparent' />
-            <div className='from-coal/70 absolute inset-0 bg-gradient-to-b via-transparent to-transparent' />
+            {/* Grade — edges and corners only, centre stays clean */}
+            <div className='absolute inset-0 bg-[radial-gradient(ellipse_75%_65%_at_center,transparent_55%,rgba(10,10,10,0.5)_100%)]' />
+            <div className='from-coal absolute inset-x-0 bottom-0 h-[34%] bg-gradient-to-t to-transparent' />
+            <div className='from-coal/55 absolute inset-x-0 top-0 h-28 bg-gradient-to-b to-transparent' />
 
             <motion.div
                 style={reduced ? undefined : { opacity: contentOpacity, y: contentY }}

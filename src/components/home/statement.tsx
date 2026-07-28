@@ -5,7 +5,7 @@ const ITEMS = ['Dry-Aged Steak', 'Crafted Cocktails', 'Art Deco', 'Studio 54 Ene
 
 const Statement = () => {
     return (
-        <section className='border-border border-b py-8 md:py-10'>
+        <section className='py-10 md:py-14'>
             <Marquee slow>
                 {ITEMS.map((item, i) => (
                     <span key={i} className='mx-6 inline-flex items-center gap-12 md:mx-10'>

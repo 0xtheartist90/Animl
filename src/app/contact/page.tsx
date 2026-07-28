@@ -19,7 +19,7 @@ const Page = () => {
                 imageAlt='Sculptural lighting inside Animl Steakhouse'
             />
             <section className='grid grid-cols-1 md:grid-cols-3'>
-                <div className='border-border border-b p-8 md:border-r md:border-b-0 md:p-14'>
+                <div className='p-8 md:p-14'>
                     <Reveal>
                         <p className='label-mono text-flame mb-6'>Address</p>
                         <address className='label-mono text-bone/70 leading-loose not-italic'>
@@ -38,7 +38,7 @@ const Page = () => {
                         </a>
                     </Reveal>
                 </div>
-                <div className='border-border border-b p-8 md:border-r md:border-b-0 md:p-14'>
+                <div className='p-8 md:p-14'>
                     <Reveal delay={0.1}>
                         <p className='label-mono text-flame mb-6'>Reach Us</p>
                         <ul className='label-mono text-bone/70 space-y-4'>

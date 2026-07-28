@@ -14,7 +14,7 @@ const ICONS = [
 /** Terracotta interlude — breaks the dark rhythm of the page. */
 const Experience = () => {
     return (
-        <section className='bg-flame text-coal border-flame border-b'>
+        <section className='bg-flame text-coal mt-6 md:mt-10'>
             <div className='px-5 py-20 text-center md:py-28'>
                 <Reveal>
                     <p className='label-mono text-coal/70 mb-8'>The Animl Experience</p>

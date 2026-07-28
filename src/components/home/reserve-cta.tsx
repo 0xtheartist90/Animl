@@ -1,12 +1,16 @@
 import Link from 'next/link';
 
 import { Reveal } from '@/components/site/reveal';
+import Spark from '@/components/site/spark';
 
 const ReserveCta = () => {
     return (
-        <section>
-            <div className='border-border flex items-center justify-between border-b px-5 py-4 md:px-8'>
-                <p className='label-mono text-bone/70'>Reservations</p>
+        <section className='pt-6 md:pt-10'>
+            <div className='flex items-center justify-between px-5 py-6 md:px-8'>
+                <p className='label-mono text-bone/70 flex items-center gap-4'>
+                    <Spark className='text-flame' size={13} />
+                    Reservations
+                </p>
                 <p className='label-mono text-smoke hidden md:block'>Elegant attire requested</p>
             </div>
 
@@ -14,7 +18,7 @@ const ReserveCta = () => {
                 {/* Giant CTA */}
                 <Link
                     href='/reservations'
-                    className='group border-border relative flex flex-col justify-center overflow-hidden border-b px-5 py-20 md:col-span-8 md:border-r md:border-b-0 md:px-14 md:py-32'>
+                    className='group relative flex flex-col justify-center overflow-hidden px-5 py-20 md:col-span-8 md:px-14 md:py-32'>
                     <span className='bg-flame absolute inset-0 origin-bottom scale-y-0 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-y-100' />
                     <Reveal>
                         <span className='label-mono text-smoke group-hover:text-bone/80 relative mb-6 block transition-colors duration-500'>
@@ -37,7 +41,7 @@ const ReserveCta = () => {
 
                 {/* Hours + dress code */}
                 <div className='md:col-span-4'>
-                    <div className='border-border border-b p-8 md:p-10'>
+                    <div className='p-8 md:p-10'>
                         <Reveal>
                             <p className='label-mono text-flame mb-6'>Dinner Service</p>
                             <ul className='label-mono text-bone/70 space-y-4'>

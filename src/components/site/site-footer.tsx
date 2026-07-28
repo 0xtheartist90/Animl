@@ -15,7 +15,7 @@ const SiteFooter = () => {
         <footer className='border-border border-t'>
             {/* Ticker */}
             <Link href='/reservations' className='group block'>
-                <Marquee className='border-border group-hover:bg-flame border-b py-5 transition-colors duration-500' slow>
+                <Marquee className='group-hover:bg-flame py-5 transition-colors duration-500' slow>
                     {Array.from({ length: 6 }).map((_, i) => (
                         <span key={i} className='headline text-bone mx-8 inline-flex items-center gap-8 text-3xl'>
                             Reserve your table
@@ -27,7 +27,7 @@ const SiteFooter = () => {
 
             <div className='grid grid-cols-1 md:grid-cols-12'>
                 {/* Brand */}
-                <div className='border-border flex flex-col justify-between gap-10 border-b p-8 md:col-span-5 md:border-r md:border-b-0 md:p-10'>
+                <div className='flex flex-col justify-between gap-10 p-8 md:col-span-5 md:p-10'>
                     <Logo className='w-56 md:w-72' />
                     <div>
                         <p className='label-mono text-smoke mb-3'>Steakhouse &amp; Cocktail Den</p>
@@ -36,7 +36,7 @@ const SiteFooter = () => {
                 </div>
 
                 {/* Navigate */}
-                <div className='border-border border-b p-8 md:col-span-2 md:border-r md:border-b-0 md:p-10'>
+                <div className='p-8 md:col-span-2 md:p-10'>
                     <p className='label-mono text-flame mb-6'>Navigate</p>
                     <ul className='space-y-3'>
                         {[
@@ -58,7 +58,7 @@ const SiteFooter = () => {
                 </div>
 
                 {/* Contact */}
-                <div className='border-border border-b p-8 md:col-span-3 md:border-r md:border-b-0 md:p-10'>
+                <div className='p-8 md:col-span-3 md:p-10'>
                     <p className='label-mono text-flame mb-6'>Find Us</p>
                     <address className='label-mono text-bone/70 space-y-3 leading-relaxed not-italic'>
                         <p>
@@ -104,7 +104,7 @@ const SiteFooter = () => {
                 </div>
             </div>
 
-            <div className='border-border label-mono text-smoke flex flex-col gap-3 border-t px-8 py-6 md:flex-row md:items-center md:justify-between md:px-10'>
+            <div className='label-mono text-smoke flex flex-col gap-3 px-8 py-6 md:flex-row md:items-center md:justify-between md:px-10'>
                 <p>© 2026 Animl Steakhouse — powered by INK Entertainment</p>
                 <a
                     href='https://inkentertainment.com/privacy-policy/'

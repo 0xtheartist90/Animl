@@ -22,7 +22,7 @@ const Page = () => {
                 imageAlt='Guests lounging in the Animl dining room'
             />
             <section className='grid grid-cols-1 md:grid-cols-12'>
-                <div className='border-border border-b p-8 md:col-span-7 md:border-r md:border-b-0 md:p-14'>
+                <div className='p-8 md:col-span-7 md:p-14'>
                     <Reveal>
                         <p className='label-mono text-flame mb-6'>The Venue</p>
                         <p className='text-bone/70 max-w-lg font-mono text-[13px] leading-loose'>

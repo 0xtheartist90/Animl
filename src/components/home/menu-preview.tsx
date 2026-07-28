@@ -109,17 +109,20 @@ const MenuPreview = () => {
     const [active, setActive] = useState(TABS[0]);
 
     return (
-        <section className='border-border border-b'>
-            <div className='border-border flex items-center justify-between border-b px-5 py-4 md:px-8'>
-                <p className='label-mono text-bone/70'>The Menus</p>
+        <section className='pt-6 md:pt-10'>
+            <div className='flex items-center justify-between px-5 py-6 md:px-8'>
+                <p className='label-mono text-bone/70 flex items-center gap-4'>
+                    <Spark className='text-flame' size={13} />
+                    The Menus
+                </p>
                 <Link href='/menus' className='link-sweep label-mono text-bone/70 hover:text-bone transition-colors'>
                     Explore all menus
                 </Link>
             </div>
 
             {/* Tab bar */}
-            <div className='border-border grid grid-cols-2 border-b md:grid-cols-4'>
-                {TABS.map((tab, i) => {
+            <div className='grid grid-cols-2 gap-2 px-5 pb-10 md:grid-cols-4 md:gap-0 md:px-8'>
+                {TABS.map((tab) => {
                     const Icon = tab.icon;
                     const isActive = active.key === tab.key;
 
@@ -128,9 +131,7 @@ const MenuPreview = () => {
                             key={tab.key}
                             onClick={() => setActive(tab)}
                             aria-pressed={isActive}
-                            className={`group border-border relative flex items-center justify-center gap-4 py-6 transition-colors duration-500 md:py-8 ${
-                                i < TABS.length - 1 ? 'md:border-r' : ''
-                            } ${i % 2 === 0 ? 'border-r md:border-r' : ''} ${i < 2 ? 'border-b md:border-b-0' : ''} ${
+                            className={`group relative flex items-center justify-center gap-4 py-6 transition-colors duration-500 md:py-8 ${
                                 isActive ? 'text-flame' : 'text-bone/60 hover:text-bone'
                             }`}>
                             <Icon size={30} className='transition-transform duration-500 group-hover:-translate-y-0.5' />
@@ -139,7 +140,7 @@ const MenuPreview = () => {
                                 <motion.span
                                     layoutId='menu-tab-underline'
                                     transition={{ duration: 0.5, ease: EASE }}
-                                    className='bg-flame absolute inset-x-0 bottom-0 h-px'
+                                    className='bg-flame absolute inset-x-8 bottom-2 h-px md:inset-x-14'
                                 />
                             )}
                         </button>
@@ -149,7 +150,7 @@ const MenuPreview = () => {
 
             <div className='grid grid-cols-1 md:grid-cols-12'>
                 {/* Image — swaps with the active tab */}
-                <div className='border-border relative aspect-square overflow-hidden md:col-span-5 md:aspect-auto md:min-h-[640px] md:border-r'>
+                <div className='relative aspect-square overflow-hidden md:col-span-5 md:aspect-auto md:min-h-[640px]'>
                     <AnimatePresence mode='popLayout' initial={false}>
                         <motion.div
                             key={active.key}
@@ -216,11 +217,11 @@ const MenuPreview = () => {
             </div>
 
             {/* Dish marquee */}
-            <RevealImage className='border-border border-t'>
+            <RevealImage className='mt-6 md:mt-10'>
                 <Link href='/menus' className='group block'>
                     <Marquee slow className='py-0'>
                         {DISHES.map((dish) => (
-                            <span key={dish.src} className='border-border relative block w-64 border-r md:w-80'>
+                            <span key={dish.src} className='relative block w-64 md:w-80'>
                                 <span className='relative block aspect-[4/5] overflow-hidden'>
                                     <Image
                                         src={dish.src}

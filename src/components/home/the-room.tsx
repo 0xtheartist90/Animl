@@ -2,17 +2,21 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { Parallax, Reveal, RevealImage, RevealLines } from '@/components/site/reveal';
+import Spark from '@/components/site/spark';
 
 const TheRoom = () => {
     return (
-        <section className='border-border border-b'>
-            <div className='border-border flex items-center justify-between border-b px-5 py-4 md:px-8'>
-                <p className='label-mono text-bone/70'>The Room</p>
+        <section className='pt-6 md:pt-10'>
+            <div className='flex items-center justify-between px-5 py-6 md:px-8'>
+                <p className='label-mono text-bone/70 flex items-center gap-4'>
+                    <Spark className='text-flame' size={13} />
+                    The Room
+                </p>
                 <p className='label-mono text-smoke hidden md:block'>Design by Nivek Remas</p>
             </div>
 
             {/* Intro line */}
-            <div className='border-border border-b px-5 py-16 text-center md:py-24'>
+            <div className='px-5 py-12 text-center md:py-20'>
                 <RevealLines
                     className='headline text-bone text-5xl md:text-7xl'
                     lines={[
@@ -32,7 +36,7 @@ const TheRoom = () => {
 
             {/* Interior grid */}
             <div className='grid grid-cols-1 md:grid-cols-12'>
-                <RevealImage className='border-border relative aspect-[4/5] md:col-span-7 md:aspect-auto md:min-h-[620px] md:border-r'>
+                <RevealImage className='relative aspect-[4/5] md:col-span-7 md:aspect-auto md:min-h-[620px]'>
                     <Parallax className='h-full' amount={8}>
                         <div className='relative h-full min-h-full w-full scale-[1.16]'>
                             <Image
@@ -46,7 +50,7 @@ const TheRoom = () => {
                     </Parallax>
                 </RevealImage>
                 <div className='grid md:col-span-5'>
-                    <RevealImage className='border-border relative aspect-[4/3] border-t md:aspect-auto md:border-t-0 md:border-b' delay={0.1}>
+                    <RevealImage className='relative aspect-[4/3] md:aspect-auto' delay={0.1}>
                         <Image
                             src='/images/home/booth.jpg'
                             alt='Fringed lamp on a leopard velvet booth'
@@ -55,7 +59,7 @@ const TheRoom = () => {
                             className='img-premium object-cover'
                         />
                     </RevealImage>
-                    <RevealImage className='border-border relative aspect-[4/3] border-t md:aspect-auto md:border-t-0' delay={0.18}>
+                    <RevealImage className='relative aspect-[4/3] md:aspect-auto' delay={0.18}>
                         <Image
                             src='/images/home/ceiling.jpg'
                             alt='Backlit coffered ceiling with mirrored panels'
@@ -68,7 +72,7 @@ const TheRoom = () => {
             </div>
 
             {/* Full-bleed bar */}
-            <Link href='/reservations' className='group border-border relative block border-t'>
+            <Link href='/reservations' className='group relative block'>
                 <Parallax className='h-[55svh] md:h-[70svh]' amount={10}>
                     <div className='relative h-full w-full scale-[1.14]'>
                         <Image

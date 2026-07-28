@@ -2,14 +2,18 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { Parallax, Reveal, RevealLines } from '@/components/site/reveal';
+import Spark from '@/components/site/spark';
 
 const OCCASIONS = ['Corporate Events', 'Celebrations', 'Wrap Parties', 'Private Dining', 'Full Buyouts'];
 
 const Events = () => {
     return (
-        <section className='border-border border-b'>
-            <div className='border-border flex items-center justify-between border-b px-5 py-4 md:px-8'>
-                <p className='label-mono text-bone/70'>Private Dining &amp; Events</p>
+        <section className='pt-6 md:pt-10'>
+            <div className='flex items-center justify-between px-5 py-6 md:px-8'>
+                <p className='label-mono text-bone/70 flex items-center gap-4'>
+                    <Spark className='text-flame' size={13} />
+                    Private Dining &amp; Events
+                </p>
                 <Link href='/events' className='link-sweep label-mono text-bone/70 hover:text-bone transition-colors'>
                     Plan an event
                 </Link>

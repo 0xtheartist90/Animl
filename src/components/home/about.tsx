@@ -2,20 +2,24 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { Parallax, Reveal, RevealImage, RevealLines } from '@/components/site/reveal';
+import Spark from '@/components/site/spark';
 import Stamp from '@/components/site/stamp';
 
 const About = () => {
     return (
-        <section className='border-border border-b'>
+        <section className='pt-6 md:pt-10'>
             {/* Section label */}
-            <div className='border-border flex items-center justify-between border-b px-5 py-4 md:px-8'>
-                <p className='label-mono text-bone/70'>About Animl</p>
+            <div className='flex items-center justify-between px-5 py-6 md:px-8'>
+                <p className='label-mono text-bone/70 flex items-center gap-4'>
+                    <Spark className='text-flame' size={13} />
+                    About Animl
+                </p>
                 <p className='label-mono text-smoke hidden md:block'>Toronto — Entertainment District</p>
             </div>
 
             <div className='grid grid-cols-1 md:grid-cols-12'>
                 {/* Image */}
-                <RevealImage className='border-border relative aspect-[4/5] md:col-span-4 md:aspect-auto md:border-r'>
+                <RevealImage className='relative aspect-[4/5] md:col-span-4 md:aspect-auto'>
                     <Parallax className='h-full' amount={8}>
                         <div className='relative h-full min-h-full w-full scale-[1.18]'>
                             <Image
@@ -30,7 +34,7 @@ const About = () => {
                 </RevealImage>
 
                 {/* Copy */}
-                <div className='border-border flex flex-col justify-center border-b px-5 py-16 text-center md:col-span-5 md:border-r md:border-b-0 md:px-14 md:py-28'>
+                <div className='flex flex-col justify-center px-5 py-16 text-center md:col-span-5 md:px-14 md:py-28'>
                     <Reveal>
                         <p className='label-mono text-flame mb-8'>Where luxury turns instinctive</p>
                     </Reveal>
@@ -58,21 +62,26 @@ const About = () => {
                     </Reveal>
                 </div>
 
-                {/* Stamp cell */}
+                {/* Stamp + leopard address card */}
                 <div className='grid grid-rows-2 md:col-span-3'>
-                    <div className='border-border flex flex-col items-center justify-center gap-4 border-b py-14'>
+                    <div className='flex flex-col items-center justify-center gap-4 py-14'>
                         <Reveal>
                             <Stamp text='Elegantly Untamed • Toronto • Steakhouse • Cocktail Den • ' />
                         </Reveal>
                     </div>
-                    <div className='flex flex-col items-center justify-center gap-3 py-14'>
-                        <Reveal delay={0.1}>
-                            <p className='headline text-bone text-center text-6xl'>
-                                420<span className='text-flame'>A</span>
-                            </p>
-                            <p className='label-mono text-smoke mt-3 text-center'>Wellington St West</p>
-                        </Reveal>
-                    </div>
+                    <RevealImage className='relative overflow-hidden' delay={0.1}>
+                        <Image
+                            src='/images/leopardbg.png'
+                            alt=''
+                            fill
+                            sizes='(max-width: 768px) 100vw, 25vw'
+                            className='object-cover'
+                        />
+                        <div className='relative flex h-full flex-col items-center justify-center gap-3 py-14'>
+                            <p className='headline text-coal text-center text-6xl'>420A</p>
+                            <p className='label-mono text-coal/80 text-center'>Wellington St West</p>
+                        </div>
+                    </RevealImage>
                 </div>
             </div>
         </section>
