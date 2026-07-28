@@ -5,7 +5,6 @@ import Experience from '@/components/home/experience';
 import Hero from '@/components/home/hero';
 import MenuPreview from '@/components/home/menu-preview';
 import ReserveCta from '@/components/home/reserve-cta';
-import Statement from '@/components/home/statement';
 import TheRoom from '@/components/home/the-room';
 
 const Page = () => {
@@ -14,7 +13,6 @@ const Page = () => {
             <Hero />
             <About />
             <TheRoom />
-            <Statement />
             <MenuPreview />
             <Experience />
             <CocktailDen />

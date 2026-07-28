@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import Statement from '@/components/home/statement';
 import { Parallax, Reveal, RevealImage, RevealLines } from '@/components/site/reveal';
 import Spark from '@/components/site/spark';
 
@@ -70,6 +71,9 @@ const TheRoom = () => {
                     </RevealImage>
                 </div>
             </div>
+
+            {/* Marquee interlude */}
+            <Statement />
 
             {/* Full-bleed bar */}
             <Link href='/reservations' className='group relative block'>
