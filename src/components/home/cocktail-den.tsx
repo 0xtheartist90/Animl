@@ -1,14 +1,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { IconCake, IconCoffee, IconCoupe, IconHerb, IconMartini } from '@/components/site/icons';
 import { Reveal, RevealImage, RevealLines } from '@/components/site/reveal';
 
 const COURSES = [
-    { course: 'Amuse Bouche', theme: 'Familiar, refreshing, subtle' },
-    { course: 'Appetizers', theme: 'Bright, savoury, crisp' },
-    { course: 'Entrées', theme: 'Bold, complex, rich' },
-    { course: 'Desserts', theme: 'Decadent, velvety, playful' },
-    { course: 'Tea & Coffee', theme: 'Aromatic, bittersweet, robust' }
+    { course: 'Amuse Bouche', theme: 'Familiar, refreshing, subtle', Icon: IconCoupe },
+    { course: 'Appetizers', theme: 'Bright, savoury, crisp', Icon: IconHerb },
+    { course: 'Entrées', theme: 'Bold, complex, rich', Icon: IconMartini },
+    { course: 'Desserts', theme: 'Decadent, velvety, playful', Icon: IconCake },
+    { course: 'Tea & Coffee', theme: 'Aromatic, bittersweet, robust', Icon: IconCoffee }
 ];
 
 const CocktailDen = () => {
@@ -41,10 +42,16 @@ const CocktailDen = () => {
                     <ul className='mt-12 max-w-md'>
                         {COURSES.map((c, i) => (
                             <Reveal key={c.course} delay={0.05 * i} y={24}>
-                                <li className='group border-border flex items-baseline justify-between gap-6 border-b py-4'>
-                                    <p className='headline group-hover:text-flame text-2xl transition-colors duration-300'>
-                                        {c.course}
-                                    </p>
+                                <li className='group border-border flex items-center justify-between gap-6 border-b py-4'>
+                                    <span className='flex items-center gap-5'>
+                                        <c.Icon
+                                            size={28}
+                                            className='text-bone/50 group-hover:text-flame transition-colors duration-300'
+                                        />
+                                        <p className='headline group-hover:text-flame text-2xl transition-colors duration-300'>
+                                            {c.course}
+                                        </p>
+                                    </span>
                                     <p className='label-mono text-smoke text-right text-[10px]'>{c.theme}</p>
                                 </li>
                             </Reveal>
