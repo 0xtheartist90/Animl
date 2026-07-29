@@ -19,7 +19,7 @@ const TheRoom = () => {
             {/* Intro line */}
             <div className='px-5 pt-4 pb-10 text-center md:pt-6 md:pb-16'>
                 <RevealLines
-                    className='headline text-bone text-6xl md:text-8xl'
+                    className='text-bone font-sans font-semibold tracking-tight uppercase leading-[1.05] text-5xl md:text-7xl'
                     lines={[
                         'Art Deco lines,',
                         <span key='l2'>
@@ -100,7 +100,7 @@ const TheRoom = () => {
                 <div className='from-coal/80 absolute inset-0 bg-gradient-to-t via-transparent to-transparent' />
                 <div className='absolute inset-x-0 bottom-0 px-5 pb-8 md:px-8 md:pb-10'>
                     <Reveal y={28} className='flex items-end justify-between'>
-                        <p className='headline text-bone text-4xl md:text-5xl'>Pull up a stool.</p>
+                        <p className='text-bone font-sans font-semibold tracking-tight uppercase leading-[1.05] text-3xl md:text-4xl'>Pull up a stool.</p>
                         <ReserveButton className='label-mono bg-flame text-bone hover:bg-bone hover:text-coal hidden items-center gap-3 px-5 py-2.5 transition-colors duration-300 md:inline-flex'>
                             Reserve your evening <span aria-hidden>→</span>
                         </ReserveButton>

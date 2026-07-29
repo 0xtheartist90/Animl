@@ -42,7 +42,7 @@ const About = () => {
                         <p className='label-mono text-flame mb-8'>Where luxury turns instinctive</p>
                     </Reveal>
                     <RevealLines
-                        className='headline text-bone text-5xl md:text-6xl'
+                        className='text-bone font-sans font-semibold tracking-tight uppercase leading-[1.05] text-4xl md:text-5xl'
                         lines={['Polished luxury,', 'primal appetite.']}
                         delay={0.1}
                     />

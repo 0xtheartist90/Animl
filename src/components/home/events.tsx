@@ -37,7 +37,7 @@ const Events = () => {
 
                 <div className='absolute inset-x-0 bottom-0 px-5 pb-12 md:px-8 md:pb-16'>
                     <RevealLines
-                        className='headline text-bone text-7xl md:text-[7.5vw]'
+                        className='text-bone font-sans font-semibold tracking-tight uppercase leading-[1.05] text-5xl md:text-[6vw]'
                         lines={[
                             'A venue built',
                             <span key='l2'>
