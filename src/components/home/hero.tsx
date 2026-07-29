@@ -65,7 +65,7 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.9, delay: 0.75, ease: EASE }}
-                    className='label-mono text-bone/80 mb-8 flex items-center gap-4'>
+                    className='text-bone/90 mb-8 flex items-center gap-4 font-sans text-xl font-semibold tracking-tight uppercase md:text-2xl'>
                     <Spark className='text-flame' />
                     Steakhouse &amp; Cocktail Den — Toronto
                 </motion.p>

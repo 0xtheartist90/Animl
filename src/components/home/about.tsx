@@ -11,8 +11,8 @@ const About = () => {
         <section className='pt-6 md:pt-10'>
             {/* Section label */}
             <Reveal y={14} duration={0.7} className='flex items-center justify-between px-5 py-6 md:px-8'>
-                <p className='label-mono text-bone/70 flex items-center gap-4'>
-                    <Spark className='text-flame' size={13} />
+                <p className='text-bone flex items-center gap-4 font-sans text-2xl font-semibold tracking-tight uppercase md:text-3xl'>
+                    <Spark className='text-flame' size={18} />
                     About Animl
                 </p>
                 <CtaLink href='/about' className='hidden md:inline-flex'>
@@ -42,7 +42,7 @@ const About = () => {
                         <p className='label-mono text-flame mb-8'>Where luxury turns instinctive</p>
                     </Reveal>
                     <RevealLines
-                        className='text-bone font-sans font-semibold tracking-tight uppercase leading-[1.05] text-4xl md:text-5xl'
+                        className='headline text-bone text-5xl md:text-6xl'
                         lines={['Polished luxury,', 'primal appetite.']}
                         delay={0.1}
                     />

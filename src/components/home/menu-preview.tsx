@@ -120,8 +120,8 @@ const MenuPreview = () => {
     return (
         <section className='pt-6 md:pt-10'>
             <Reveal y={14} duration={0.7} className='flex items-center justify-between px-5 py-6 md:px-8'>
-                <p className='label-mono text-bone/70 flex items-center gap-4'>
-                    <Spark className='text-flame' size={13} />
+                <p className='text-bone flex items-center gap-4 font-sans text-2xl font-semibold tracking-tight uppercase md:text-3xl'>
+                    <Spark className='text-flame' size={18} />
                     The Menus
                 </p>
             </Reveal>
@@ -191,7 +191,7 @@ const MenuPreview = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -16 }}
                                 transition={{ duration: 0.55, ease: EASE }}>
-                                <h2 className='text-bone font-sans font-semibold tracking-tight uppercase leading-[1.05] text-3xl md:text-4xl'>
+                                <h2 className='headline text-bone text-4xl md:text-5xl'>
                                     {active.title.slice(0, -1)}
                                     <span className='text-flame'>.</span>
                                 </h2>

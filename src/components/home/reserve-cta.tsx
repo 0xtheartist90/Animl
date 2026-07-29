@@ -8,8 +8,8 @@ const ReserveCta = () => {
     return (
         <section className='pt-6 md:pt-10'>
             <Reveal y={14} duration={0.7} className='flex items-center justify-between px-5 py-6 md:px-8'>
-                <p className='label-mono text-bone/70 flex items-center gap-4'>
-                    <Spark className='text-flame' size={13} />
+                <p className='text-bone flex items-center gap-4 font-sans text-2xl font-semibold tracking-tight uppercase md:text-3xl'>
+                    <Spark className='text-flame' size={18} />
                     Reservations
                 </p>
                 <p className='label-mono text-smoke hidden md:block'>Elegant attire requested</p>
