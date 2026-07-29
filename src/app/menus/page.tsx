@@ -1,3 +1,5 @@
+import { Suspense } from 'react';
+
 import type { Metadata } from 'next';
 
 import MenusClient from '@/components/menus/menus-client';
@@ -9,7 +11,11 @@ export const metadata: Metadata = {
 };
 
 const Page = () => {
-    return <MenusClient />;
+    return (
+        <Suspense>
+            <MenusClient />
+        </Suspense>
+    );
 };
 
 export default Page;

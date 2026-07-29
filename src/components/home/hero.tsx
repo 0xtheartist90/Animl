@@ -20,9 +20,12 @@ const Hero = () => {
 
     return (
         <section ref={ref} className='relative h-[100svh] overflow-hidden'>
-            {/* Video */}
+            {/* Video — fades in while settling from a slow zoom */}
             <motion.div style={reduced ? undefined : { y: videoY }} className='absolute inset-0 scale-[1.06]'>
-                <video
+                <motion.video
+                    initial={reduced ? false : { opacity: 0, scale: 1.08 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ opacity: { duration: 1.2, ease: 'easeOut' }, scale: { duration: 2.4, ease: EASE } }}
                     className='h-full w-full object-cover'
                     src='/video/hero.mp4'
                     autoPlay
@@ -43,23 +46,23 @@ const Hero = () => {
                 <motion.div
                     initial={{ opacity: 0, y: 28 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1.4, delay: 0.7, ease: EASE }}
+                    transition={{ duration: 1.2, delay: 0.5, ease: EASE }}
                     className='mb-6'>
                     <Logo className='w-44 md:w-60' />
                 </motion.div>
                 <motion.p
-                    initial={{ opacity: 0, y: 24 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 1.1, ease: EASE }}
+                    transition={{ duration: 0.9, delay: 0.75, ease: EASE }}
                     className='label-mono text-bone/80 mb-8 flex items-center gap-4'>
                     <Spark className='text-flame' />
                     Steakhouse &amp; Cocktail Den — Toronto
                 </motion.p>
 
                 <motion.div
-                    initial={{ opacity: 0, y: 24 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 1.25, ease: EASE }}
+                    transition={{ duration: 0.9, delay: 0.9, ease: EASE }}
                     className='flex flex-col gap-6 md:flex-row md:items-end md:justify-between'>
                     <p className='label-mono text-bone/70 max-w-md leading-loose'>
                         Elegantly untamed — dry-aged steak, crafted cocktails and 1970s glamour in the heart of the
@@ -84,7 +87,7 @@ const Hero = () => {
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 2, duration: 1 }}
+                transition={{ delay: 1.6, duration: 1 }}
                 className='absolute bottom-0 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 pb-4 md:flex'>
                 <span className='label-mono text-bone/50 text-[10px]'>Scroll</span>
                 <motion.span

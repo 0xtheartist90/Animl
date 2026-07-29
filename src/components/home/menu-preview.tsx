@@ -116,7 +116,6 @@ const MenuPreview = () => {
                     <Spark className='text-flame' size={13} />
                     The Menus
                 </p>
-                <CtaLink href='/menus'>Explore all menus</CtaLink>
             </div>
 
             {/* Selector + content — fits one viewport on desktop */}
@@ -211,8 +210,8 @@ const MenuPreview = () => {
                                 </ul>
 
                                 <Link
-                                    href='/menus'
-                                    className='label-mono border-bone/25 text-bone hover:border-flame hover:bg-flame mt-4 inline-block border px-6 py-3 transition-all duration-300'>
+                                    href={`/menus?tab=${active.key}`}
+                                    className='label-mono bg-flame text-bone hover:bg-bone hover:text-coal mt-4 inline-block px-6 py-3 transition-colors duration-300'>
                                     The full {active.label.toLowerCase()} menu
                                 </Link>
                             </motion.div>
@@ -222,7 +221,7 @@ const MenuPreview = () => {
             </div>
 
             {/* Dish marquee */}
-            <RevealImage>
+            <RevealImage zoom={false}>
                 <Link href='/menus' className='group block'>
                     <Marquee slow className='py-0'>
                         {DISHES.map((dish) => (

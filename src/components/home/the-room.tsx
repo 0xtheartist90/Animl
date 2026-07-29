@@ -101,7 +101,7 @@ const TheRoom = () => {
                 <div className='from-coal/80 absolute inset-0 bg-gradient-to-t via-transparent to-transparent' />
                 <div className='absolute inset-x-0 bottom-0 flex items-end justify-between px-5 pb-8 md:px-8 md:pb-10'>
                     <p className='headline text-bone text-4xl md:text-5xl'>Pull up a stool.</p>
-                    <CtaLink href='/reservations' className='bg-coal/40 hidden backdrop-blur-sm md:inline-flex'>
+                    <CtaLink href='/reservations' className='hidden md:inline-flex'>
                         Reserve your evening
                     </CtaLink>
                 </div>

@@ -16,7 +16,7 @@ type RevealProps = {
 };
 
 /** Fade + rise reveal when the element scrolls into view. */
-export const Reveal = ({ children, className, delay = 0, duration = 1, y = 42, once = true }: RevealProps) => {
+export const Reveal = ({ children, className, delay = 0, duration = 0.9, y = 32, once = true }: RevealProps) => {
     const reduced = useReducedMotion();
 
     return (
@@ -37,7 +37,7 @@ export const RevealLines = ({
     className,
     lineClassName,
     delay = 0,
-    stagger = 0.09
+    stagger = 0.11
 }: {
     lines: ReactNode[];
     className?: string;
@@ -56,7 +56,7 @@ export const RevealLines = ({
                         initial={reduced ? false : { y: '110%' }}
                         whileInView={{ y: 0 }}
                         viewport={{ once: true, margin: '0px' }}
-                        transition={{ duration: 1.1, delay: delay + i * stagger, ease: EASE }}>
+                        transition={{ duration: 1, delay: delay + i * stagger, ease: EASE }}>
                         {line}
                     </motion.span>
                 </span>
@@ -65,26 +65,38 @@ export const RevealLines = ({
     );
 };
 
-/** Image unmasked with a clip-path wipe from the bottom. */
+/**
+ * Image unmasked with a clip-path wipe from the bottom, while its content
+ * settles from a gentle zoom — set `zoom={false}` for wide/marquee content.
+ */
 export const RevealImage = ({
     children,
     className,
-    delay = 0
+    delay = 0,
+    zoom = true
 }: {
     children: ReactNode;
     className?: string;
     delay?: number;
+    zoom?: boolean;
 }) => {
     const reduced = useReducedMotion();
 
     return (
         <motion.div
-            className={className}
+            className={`overflow-hidden ${className ?? ''}`}
             initial={reduced ? false : { clipPath: 'inset(100% 0% 0% 0%)' }}
             whileInView={{ clipPath: 'inset(0% 0% 0% 0%)' }}
             viewport={{ once: true, margin: '0px' }}
-            transition={{ duration: 1.2, delay, ease: EASE }}>
-            {children}
+            transition={{ duration: 1.1, delay, ease: EASE }}>
+            <motion.div
+                className='relative h-full w-full will-change-transform'
+                initial={reduced || !zoom ? false : { scale: 1.12 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true, margin: '0px' }}
+                transition={{ duration: 1.5, delay, ease: EASE }}>
+                {children}
+            </motion.div>
         </motion.div>
     );
 };

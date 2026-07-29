@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 
 import CtaLink from '@/components/site/cta-link';
 import { IconBull, IconCake, IconShaker, IconWine } from '@/components/site/icons';
@@ -243,8 +244,10 @@ const TABS: { key: string; label: string; icon: typeof IconBull; title: string; 
 ];
 
 const MenusClient = () => {
-    const [activeTab, setActiveTab] = useState(TABS[0]);
-    const [activeCourse, setActiveCourse] = useState(TABS[0].courses[0]);
+    const searchParams = useSearchParams();
+    const initialTab = TABS.find((t) => t.key === searchParams.get('tab')) ?? TABS[0];
+    const [activeTab, setActiveTab] = useState(initialTab);
+    const [activeCourse, setActiveCourse] = useState(initialTab.courses[0]);
 
     const selectTab = (tab: (typeof TABS)[number]) => {
         setActiveTab(tab);
