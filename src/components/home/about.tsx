@@ -47,11 +47,11 @@ const About = () => {
                         delay={0.1}
                     />
                     <Reveal delay={0.25}>
-                        <p className='text-bone/60 mx-auto mt-8 max-w-md font-mono text-[14px] leading-loose'>
+                        <p className='text-bone/60 mx-auto mt-8 max-w-md font-mono text-[15px] leading-loose'>
                             Animl is a sensory dining experience built on strong flavours, premium ingredients and
                             culinary artistry — served with sophisticated presentation in a lively, theatrical room.
                         </p>
-                        <p className='text-bone/60 mx-auto mt-6 max-w-md font-mono text-[14px] leading-loose'>
+                        <p className='text-bone/60 mx-auto mt-6 max-w-md font-mono text-[15px] leading-loose'>
                             Art Deco lines, Studio 54 energy and 1970s glamour — a space designed by Nivek Remas for
                             evenings you don&apos;t forget.
                         </p>

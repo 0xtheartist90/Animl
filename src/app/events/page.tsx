@@ -69,7 +69,7 @@ const Page = () => {
                     ]}
                 />
                 <Reveal delay={0.15}>
-                    <p className='text-bone/60 mx-auto mt-8 max-w-lg font-mono text-[14px] leading-loose'>
+                    <p className='text-bone/60 mx-auto mt-8 max-w-lg font-mono text-[15px] leading-loose'>
                         Premium menus, high-quality steak and culinary craftsmanship in an intimate, boldly designed
                         room. From a velvet corner of the den to the entire venue — if you can dream the night, we can
                         set the table for it.
@@ -89,7 +89,7 @@ const Page = () => {
                                         <p className='headline group-hover:text-flame text-2xl transition-colors duration-300 md:text-3xl'>
                                             {o.name}
                                         </p>
-                                        <p className='label-mono text-smoke mt-2 text-[11px] leading-relaxed'>
+                                        <p className='label-mono text-smoke mt-2 text-[12px] leading-relaxed'>
                                             {o.note}
                                         </p>
                                     </div>
@@ -124,7 +124,7 @@ const Page = () => {
                             <div className='flex flex-col items-center gap-5 text-center'>
                                 <Icon size={44} className='text-flame' />
                                 <p className='headline text-bone text-3xl'>{name}</p>
-                                <p className='label-mono text-smoke max-w-xs text-[11px] leading-relaxed'>{note}</p>
+                                <p className='label-mono text-smoke max-w-xs text-[12px] leading-relaxed'>{note}</p>
                             </div>
                         </Reveal>
                     ))}
@@ -153,7 +153,7 @@ const Page = () => {
                                     <span className='headline text-flame text-3xl'>{s.n}</span>
                                     <div>
                                         <p className='headline text-bone text-2xl'>{s.name}</p>
-                                        <p className='label-mono text-smoke mt-1 text-[11px] leading-relaxed'>
+                                        <p className='label-mono text-smoke mt-1 text-[12px] leading-relaxed'>
                                             {s.note}
                                         </p>
                                     </div>
@@ -162,7 +162,7 @@ const Page = () => {
                         ))}
                     </ul>
                     <Reveal delay={0.2}>
-                        <p className='label-mono text-smoke mt-8 max-w-md text-[11px] leading-relaxed'>
+                        <p className='label-mono text-smoke mt-8 max-w-md text-[12px] leading-relaxed'>
                             Parties of eight or fewer can book directly with our reservations team — for everything
                             bigger, the events team takes it from here.
                         </p>

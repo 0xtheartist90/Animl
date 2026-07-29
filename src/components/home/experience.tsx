@@ -43,7 +43,7 @@ const Experience = () => {
                                     size={42}
                                     className='text-coal transition-transform duration-500 group-hover/exp:[animation:spin_7s_linear_infinite]'
                                 />
-                                <span className='label-mono text-coal/70 text-[11px]'>{label}</span>
+                                <span className='label-mono text-coal/70 text-[12px]'>{label}</span>
                             </div>
                         ))}
                     </div>

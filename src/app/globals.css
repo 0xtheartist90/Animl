@@ -152,7 +152,7 @@
     .label-mono {
         font-family: var(--font-geist-mono);
         text-transform: uppercase;
-        font-size: 0.75rem;
+        font-size: 0.8125rem;
         letter-spacing: 0.22em;
     }
     /* Scrollable panels without visible scrollbars */

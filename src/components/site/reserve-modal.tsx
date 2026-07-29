@@ -167,7 +167,7 @@ export const ReserveProvider = ({ children }: { children: ReactNode }) => {
 
                             {sent ? (
                                 <div className='mt-8'>
-                                    <p className='text-bone/80 font-mono text-[14px] leading-loose'>
+                                    <p className='text-bone/80 font-mono text-[15px] leading-loose'>
                                         Your mail app should have opened with the request — send it and we&apos;ll
                                         confirm shortly. Prefer to talk?
                                     </p>
@@ -201,7 +201,7 @@ export const ReserveProvider = ({ children }: { children: ReactNode }) => {
                                         className='label-mono bg-flame text-bone hover:bg-bone hover:text-coal col-span-2 mt-2 px-8 py-4 transition-colors duration-300'>
                                         Request reservation
                                     </button>
-                                    <p className='label-mono text-smoke col-span-2 mt-1 text-center text-[11px]'>
+                                    <p className='label-mono text-smoke col-span-2 mt-1 text-center text-[12px]'>
                                         More than 8 guests? Switch to{' '}
                                         <button
                                             type='button'
@@ -250,7 +250,7 @@ export const ReserveProvider = ({ children }: { children: ReactNode }) => {
                                         className='label-mono bg-flame text-bone hover:bg-bone hover:text-coal col-span-2 mt-2 px-8 py-4 transition-colors duration-300'>
                                         Submit enquiry
                                     </button>
-                                    <p className='label-mono text-smoke col-span-2 mt-1 text-center text-[11px]'>
+                                    <p className='label-mono text-smoke col-span-2 mt-1 text-center text-[12px]'>
                                         Our events team will tour you through the space and tailor the night
                                     </p>
                                 </form>

@@ -37,7 +37,7 @@ const CocktailDen = () => {
                         ]}
                     />
                     <Reveal delay={0.15}>
-                        <p className='text-bone/60 mt-8 max-w-md font-mono text-[14px] leading-loose'>
+                        <p className='text-bone/60 mt-8 max-w-md font-mono text-[15px] leading-loose'>
                             The cocktail menu is arranged like a meal — from amuse bouche to dessert — with miniature
                             martinis and a house digestif alongside. Crafted by Saralyn Stevens and the Animl bar team.
                         </p>
@@ -56,7 +56,7 @@ const CocktailDen = () => {
                                             {c.course}
                                         </p>
                                     </span>
-                                    <p className='label-mono text-smoke text-right text-[11px]'>{c.theme}</p>
+                                    <p className='label-mono text-smoke text-right text-[12px]'>{c.theme}</p>
                                 </li>
                             </Reveal>
                         ))}
