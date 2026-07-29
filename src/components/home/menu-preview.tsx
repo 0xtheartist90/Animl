@@ -208,7 +208,7 @@ const MenuPreview = () => {
                                                 <p className='headline group-hover:text-flame text-xl transition-colors duration-300 md:text-2xl'>
                                                     {item.name}
                                                 </p>
-                                                <p className='label-mono text-smoke mt-0.5 text-[10px]'>{item.note}</p>
+                                                <p className='label-mono text-smoke mt-0.5 text-[11px]'>{item.note}</p>
                                             </div>
                                             {item.price && (
                                                 <p className='font-mono text-bone/80 shrink-0 text-sm'>{item.price}</p>

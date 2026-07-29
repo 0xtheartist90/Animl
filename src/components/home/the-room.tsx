@@ -35,7 +35,7 @@ const TheRoom = () => {
                         height={2081}
                         className='mx-auto mt-8 w-12 md:w-14'
                     />
-                    <p className='text-bone/60 mx-auto mt-4 max-w-md font-mono text-[13px] leading-loose'>
+                    <p className='text-bone/60 mx-auto mt-4 max-w-md font-mono text-[14px] leading-loose'>
                         Mirrored bars, leopard velvet, brass and rosso marble — a timeless, theatrical room built for
                         evenings you don&apos;t forget.
                     </p>

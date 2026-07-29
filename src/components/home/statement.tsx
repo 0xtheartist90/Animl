@@ -24,7 +24,7 @@ const Statement = () => {
                 {ITEMS.map(({ Icon, label }) => (
                     <span key={label} className='flex items-center gap-3 md:gap-4'>
                         <Icon size={28} className='text-coal' />
-                        <span className='label-mono text-coal text-[12px] font-semibold tracking-[0.3em] md:text-[13px]'>
+                        <span className='label-mono text-coal text-[12px] font-semibold tracking-[0.3em] md:text-[14px]'>
                             {label}
                         </span>
                     </span>

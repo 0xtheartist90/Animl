@@ -25,7 +25,7 @@ const Page = () => {
                 <div className='p-8 md:col-span-7 md:p-14'>
                     <Reveal>
                         <p className='label-mono text-flame mb-6'>Booking</p>
-                        <p className='text-bone/70 max-w-lg font-mono text-[13px] leading-loose'>
+                        <p className='text-bone/70 max-w-lg font-mono text-[14px] leading-loose'>
                             Reservations are handled through our booking partner. The online widget will live here —
                             until then, reach us directly by phone or email and we&apos;ll take care of you.
                         </p>
@@ -45,7 +45,7 @@ const Page = () => {
                     <Reveal delay={0.15}>
                         <div className='border-border mt-14 border-t pt-10'>
                             <p className='label-mono text-flame mb-6'>Private Dining &amp; Groups</p>
-                            <p className='text-bone/70 max-w-lg font-mono text-[13px] leading-loose'>
+                            <p className='text-bone/70 max-w-lg font-mono text-[14px] leading-loose'>
                                 Parties of eight or fewer can book directly with our reservations team. For larger
                                 gatherings, private dining, partial venue use or full buyouts, our events team offers
                                 space tours and custom arrangements.
@@ -80,7 +80,7 @@ const Page = () => {
                     <div className='p-8 pt-0 md:p-14 md:pt-0'>
                         <Reveal delay={0.2}>
                             <p className='label-mono text-flame mb-6'>Dress Code</p>
-                            <p className='text-bone/70 max-w-sm font-mono text-[13px] leading-loose'>
+                            <p className='text-bone/70 max-w-sm font-mono text-[14px] leading-loose'>
                                 Elegant attire requested. Athletic wear, hats, tank tops, flip-flops, shorts and
                                 beachwear are not permitted — entry may be refused otherwise.
                             </p>
@@ -141,7 +141,7 @@ const Page = () => {
                 <div className='p-8 md:p-14'>
                     <Reveal delay={0.2}>
                         <p className='label-mono text-flame mb-6'>Press</p>
-                        <p className='text-bone/70 max-w-sm font-mono text-[13px] leading-loose'>
+                        <p className='text-bone/70 max-w-sm font-mono text-[14px] leading-loose'>
                             For press and editorial enquiries:
                         </p>
                         <a

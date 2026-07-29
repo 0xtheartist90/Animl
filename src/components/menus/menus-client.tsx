@@ -281,7 +281,7 @@ const MenusClient = () => {
                                 isActive ? 'text-flame' : 'text-bone/60 hover:text-bone'
                             }`}>
                             <Icon size={24} className='hidden transition-transform duration-500 group-hover:-translate-y-0.5 sm:block' />
-                            <span className='label-mono text-[10px] md:text-[11px]'>{tab.label}</span>
+                            <span className='label-mono text-[11px] md:text-[11px]'>{tab.label}</span>
                             {isActive && (
                                 <motion.span
                                     layoutId='menus-tab-underline'
@@ -331,7 +331,7 @@ const MenusClient = () => {
                                     key={course.key}
                                     onClick={() => setActiveCourse(course)}
                                     aria-pressed={activeCourse.key === course.key}
-                                    className={`label-mono shrink-0 px-3 py-2 text-[10px] transition-colors duration-300 ${
+                                    className={`label-mono shrink-0 px-3 py-2 text-[11px] transition-colors duration-300 ${
                                         activeCourse.key === course.key
                                             ? 'text-flame'
                                             : 'text-bone/50 hover:text-bone'
@@ -356,7 +356,7 @@ const MenusClient = () => {
                                     <span className='text-flame'>.</span>
                                 </h1>
                                 {activeCourse.note && (
-                                    <p className='label-mono text-smoke hidden max-w-xs text-right text-[10px] leading-relaxed md:block'>
+                                    <p className='label-mono text-smoke hidden max-w-xs text-right text-[11px] leading-relaxed md:block'>
                                         {activeCourse.note}
                                     </p>
                                 )}
@@ -375,7 +375,7 @@ const MenusClient = () => {
                                                 {item.name}
                                             </p>
                                             {item.note && (
-                                                <p className='label-mono text-smoke mt-0.5 text-[10px]'>{item.note}</p>
+                                                <p className='label-mono text-smoke mt-0.5 text-[11px]'>{item.note}</p>
                                             )}
                                         </div>
                                         {item.price && (

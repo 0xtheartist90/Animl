@@ -82,12 +82,12 @@ const Page = () => {
                         delay={0.1}
                     />
                     <Reveal delay={0.2}>
-                        <p className='text-bone/60 mt-8 max-w-lg font-mono text-[13px] leading-loose'>
+                        <p className='text-bone/60 mt-8 max-w-lg font-mono text-[14px] leading-loose'>
                             Not just for dinner — for all of it. The low light, the loud table next to yours, the
                             second bottle you didn&apos;t plan on. Animl was built on that instinct: a steakhouse where
                             polished luxury gives in, just a little, to something more primal.
                         </p>
-                        <p className='text-bone/60 mt-6 max-w-lg font-mono text-[13px] leading-loose'>
+                        <p className='text-bone/60 mt-6 max-w-lg font-mono text-[14px] leading-loose'>
                             Founded by Charles Khabouth&apos;s INK Entertainment — the people behind three decades of
                             Toronto nights — Animl brings sophisticated dining and untamed energy under one glowing
                             ceiling in the Entertainment District.
@@ -147,12 +147,12 @@ const Page = () => {
                         delay={0.1}
                     />
                     <Reveal delay={0.2}>
-                        <p className='text-bone/60 mt-8 max-w-lg font-mono text-[13px] leading-loose'>
+                        <p className='text-bone/60 mt-8 max-w-lg font-mono text-[14px] leading-loose'>
                             Toronto design studio Nivek Remas dressed the room like it was going out: mirrored bars
                             under a gold-leaf canopy, leopard velvet booths, rosso marble floors and a backlit coffered
                             ceiling that makes everyone look like they arrived by limousine.
                         </p>
-                        <p className='text-bone/60 mt-6 max-w-lg font-mono text-[13px] leading-loose'>
+                        <p className='text-bone/60 mt-6 max-w-lg font-mono text-[14px] leading-loose'>
                             And above it all — a mirrored bull, suspended mid-charge. Part disco ball, part patron
                             saint. You&apos;ll know the room when you see it.
                         </p>
@@ -176,7 +176,7 @@ const Page = () => {
                         <Reveal>
                             <p className='label-mono text-flame mb-6'>The Table</p>
                             <p className='headline text-bone text-3xl md:text-4xl'>Fire, salt and patience.</p>
-                            <p className='text-bone/60 mt-6 max-w-md font-mono text-[13px] leading-loose'>
+                            <p className='text-bone/60 mt-6 max-w-md font-mono text-[14px] leading-loose'>
                                 Cuts from Alberta, Elora and Miyazaki — wet- and dry-aged up to 45 days, grilled over
                                 fire and branded before they leave the pass. A raw bar of oysters, king crab and
                                 Kaviari caviar keeps the other side of the table honest.
@@ -198,7 +198,7 @@ const Page = () => {
                         <Reveal delay={0.1}>
                             <p className='label-mono text-flame mb-6'>The Den</p>
                             <p className='headline text-bone text-3xl md:text-4xl'>Cocktails, served like dinner.</p>
-                            <p className='text-bone/60 mt-6 max-w-md font-mono text-[13px] leading-loose'>
+                            <p className='text-bone/60 mt-6 max-w-md font-mono text-[14px] leading-loose'>
                                 Saralyn Stevens and the Animl bar team composed the cocktail menu like a tasting: amuse
                                 bouche to dessert, with miniature martinis in between. Stay past midnight — the den
                                 pours until 2 AM on weekends.

@@ -98,7 +98,7 @@ const Hero = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.6, duration: 1 }}
                 className='absolute bottom-0 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 pb-4 md:flex'>
-                <span className='label-mono text-bone/50 text-[10px]'>Scroll</span>
+                <span className='label-mono text-bone/50 text-[11px]'>Scroll</span>
                 <motion.span
                     animate={{ scaleY: [0, 1, 0], originY: ['0%', '0%', '100%'] }}
                     transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
