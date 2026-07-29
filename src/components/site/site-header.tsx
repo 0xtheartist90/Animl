@@ -13,7 +13,6 @@ import { AnimatePresence, motion } from 'motion/react';
 
 const NAV = [
     { href: '/', label: 'Home' },
-    { href: '/home-2', label: 'Home 2' },
     { href: '/about', label: 'About' },
     { href: '/menus', label: 'Menus' },
     { href: '/events', label: 'Events' }
