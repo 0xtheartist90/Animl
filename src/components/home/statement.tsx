@@ -1,9 +1,9 @@
 import Image from 'next/image';
 
-import { IconBowtie, IconCloche, IconMoon, IconPin } from '@/components/site/icons';
+import { IconBowtie, IconCloche, IconMoon, IconSteak } from '@/components/site/icons';
 
 const ITEMS = [
-    { Icon: IconPin, label: '420A Wellington' },
+    { Icon: IconSteak, label: 'A5 Wagyu' },
     { Icon: IconMoon, label: 'Open Till 2 AM' },
     { Icon: IconBowtie, label: 'Elegant Attire' },
     { Icon: IconCloche, label: 'Private Dining' }
