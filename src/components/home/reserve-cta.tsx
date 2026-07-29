@@ -35,9 +35,6 @@ const ReserveCta = () => {
                             Reserve
                             <br />
                             Now
-                            <span className='text-bone'>
-                                .
-                            </span>
                         </span>
                         <span className='label-mono text-coal/80 relative mt-8 inline-flex items-center gap-3'>
                             Book your evening
