@@ -16,31 +16,6 @@ const NAV = [
 const SiteFooter = () => {
     return (
         <footer className='relative overflow-hidden'>
-            {/* Reserve invitation */}
-            <div className='border-border border-y px-5 py-14 text-center md:py-20'>
-                <p className='label-mono text-flame flex items-center justify-center gap-4'>
-                    <Spark size={13} />
-                    Your table is waiting
-                    <Spark size={13} />
-                </p>
-                <p className='headline text-bone mx-auto mt-5 max-w-3xl text-5xl md:text-6xl'>
-                    Reserve your table<span className='text-flame'>.</span>
-                </p>
-                <p className='label-mono text-smoke mx-auto mt-5 max-w-md leading-relaxed'>
-                    Dinner from 5 PM — the den pours till 2 AM on weekends
-                </p>
-                <div className='mt-8 flex flex-wrap items-center justify-center gap-4'>
-                    <ReserveButton className='label-mono bg-flame text-bone hover:bg-bone hover:text-coal px-9 py-4 transition-colors duration-300'>
-                        Reserve Now
-                    </ReserveButton>
-                    <a
-                        href='tel:+14167646094'
-                        className='label-mono border-bone/25 text-bone hover:border-bone border px-9 py-4 transition-colors duration-300'>
-                        +1 (416) 764-6094
-                    </a>
-                </div>
-            </div>
-
             <div className='relative grid grid-cols-1 gap-8 px-5 pt-10 pb-6 md:grid-cols-12 md:gap-12 md:px-8 md:pt-20 md:pb-10'>
                 {/* Brand block */}
                 <div className='flex flex-col items-center gap-5 text-center md:col-span-6 md:items-start md:gap-8 md:text-left'>
