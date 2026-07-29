@@ -103,8 +103,8 @@ const Page = () => {
                     <Parallax className='h-full' amount={8}>
                         <div className='relative h-full min-h-full w-full scale-[1.16]'>
                             <Image
-                                src='/images/home/dining-room.jpg'
-                                alt='The full dining room set for service'
+                                src='/images/home/guests-fashion.jpg'
+                                alt='Guests dressed for the evening in the dining room'
                                 fill
                                 sizes='(max-width: 768px) 100vw, 50vw'
                                 className='img-premium object-cover'

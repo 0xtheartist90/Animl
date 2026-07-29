@@ -16,10 +16,10 @@ export const metadata: Metadata = {
 const GALLERY = [
     { src: '/images/home/knife-wall.jpg', alt: 'Steak knives mounted on leopard velvet', label: 'The Details' },
     { src: '/images/home/glam-dining.jpg', alt: 'A guest in gold slicing into a signature cut', label: 'The Glamour' },
-    { src: '/images/home/event-lounge.jpg', alt: 'Guests lounging on velvet banquettes', label: 'The Nights' },
-    { src: '/images/home/seafood-social.jpg', alt: 'Friends sharing the seafood platter', label: 'The Table' },
+    { src: '/images/home/neon-sign.jpg', alt: 'The neon Animl sign on leopard tapestry', label: 'The Nights' },
+    { src: '/images/home/seafood-tower.jpg', alt: 'The two-tier seafood tower with champagne', label: 'The Table' },
     { src: '/images/home/interior-lights.jpg', alt: 'Sculptural lighting on dark wood', label: 'The Light' },
-    { src: '/images/home/disco-bull.jpg', alt: 'The mirrored bull above the dining room', label: 'The Bull' }
+    { src: '/images/home/bull-close.jpg', alt: 'The mirrored bull up close', label: 'The Bull' }
 ];
 
 const Page = () => {
@@ -95,8 +95,8 @@ const Page = () => {
                 </div>
                 <RevealImage className='relative aspect-[4/5] md:col-span-6 md:aspect-auto md:min-h-[560px]'>
                     <Image
-                        src='/images/home/about-night.jpg'
-                        alt='Guests mingling beneath the mirrored bull on a busy night'
+                        src='/images/home/glam-lounge.jpg'
+                        alt='A guest draped in black on the velvet banquette'
                         fill
                         sizes='(max-width: 768px) 100vw, 50vw'
                         className='img-premium object-cover'
@@ -164,8 +164,8 @@ const Page = () => {
                 <div className='relative'>
                     <RevealImage className='relative aspect-[4/3]'>
                         <Image
-                            src='/images/home/steak-branded.jpg'
-                            alt='The Animl-branded signature cut'
+                            src='/images/home/dry-ager.jpg'
+                            alt='The dry-aging cabinet glowing red'
                             fill
                             sizes='(max-width: 768px) 100vw, 50vw'
                             className='img-premium object-cover'
@@ -186,8 +186,8 @@ const Page = () => {
                 <div className='relative'>
                     <RevealImage className='relative aspect-[4/3]' delay={0.12}>
                         <Image
-                            src='/images/home/cocktail-red.jpg'
-                            alt='Flaming red cocktail crowned with a rose'
+                            src='/images/home/den-nights.jpg'
+                            alt='An old fashioned beside the Animl menu'
                             fill
                             sizes='(max-width: 768px) 100vw, 50vw'
                             className='img-premium object-cover'
@@ -257,8 +257,8 @@ const Page = () => {
                 <Parallax className='h-[50svh] md:h-[65svh]' amount={10}>
                     <div className='relative h-full w-full scale-[1.14]'>
                         <Image
-                            src='/images/home/dining-room.jpg'
-                            alt='The Animl dining room set for the evening'
+                            src='/images/home/disco-bull.jpg'
+                            alt='The mirrored bull suspended above the dining room'
                             fill
                             sizes='100vw'
                             className='img-premium object-cover'

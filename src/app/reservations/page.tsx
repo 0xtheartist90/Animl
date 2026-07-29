@@ -16,8 +16,8 @@ const Page = () => {
                 label='Reservations'
                 title='Reserve'
                 accent='.'
-                image='/images/home/dining.jpg'
-                imageAlt='Steak dinner at Animl Steakhouse Toronto'
+                image='/images/home/table-overhead.jpg'
+                imageAlt='A table at Animl seen from above, oysters and martini at hand'
             />
 
             {/* Booking + hours */}

@@ -84,8 +84,8 @@ const CocktailDen = () => {
                     </RevealImage>
                     <RevealImage className='relative aspect-square' delay={0.1}>
                         <Image
-                            src='/images/home/espresso-martini.jpg'
-                            alt='Espresso martini with gilded chocolate garnish'
+                            src='/images/home/espresso-wood.jpg'
+                            alt='Espresso martini with gilded chocolate on the bar'
                             fill
                             sizes='(max-width: 768px) 50vw, 25vw'
                             className='img-premium object-cover'
@@ -93,8 +93,8 @@ const CocktailDen = () => {
                     </RevealImage>
                     <RevealImage className='relative aspect-square' delay={0.18}>
                         <Image
-                            src='/images/home/bar.jpg'
-                            alt='The mirrored bar at Animl'
+                            src='/images/home/martini-splash.jpg'
+                            alt='A martini mid-pour with the leopard pick'
                             fill
                             sizes='(max-width: 768px) 50vw, 25vw'
                             className='img-premium object-cover'

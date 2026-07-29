@@ -30,8 +30,8 @@ const TABS: {
         label: 'Dinner',
         icon: IconBull,
         title: 'Signature Cuts.',
-        image: '/images/home/steak-fork.jpg',
-        imageAlt: 'Perfectly cooked steak on a carving fork',
+        image: '/images/home/steak-raw.jpg',
+        imageAlt: 'Raw signature cut with the Animl steak knife',
         items: [
             { name: '10 oz Filet Mignon', note: 'Alberta AAA Angus — wet-aged 30 days', price: '108' },
             { name: '18 oz Bone-in Ribeye', note: "Martin's Farm, Elora ON — aged 45 days", price: '153' },
@@ -47,8 +47,8 @@ const TABS: {
         label: 'Dessert',
         icon: IconCake,
         title: 'Sweet Finales.',
-        image: '/images/home/dessert-cherry.jpg',
-        imageAlt: 'Cherry-glazed dessert dome on white porcelain',
+        image: '/images/home/dessert-heart.jpg',
+        imageAlt: 'White-chocolate heart dessert with strawberries and a rose',
         items: [
             { name: 'Black Forest', note: 'Chocolate mousse, cherry compote, almond-chocolate sablé', price: '16' },
             { name: 'Tarte Tatin', note: 'Caramelized apple, speculoos sablé Breton, vanilla ice cream', price: '16' },
@@ -66,8 +66,8 @@ const TABS: {
         label: 'Cocktails',
         icon: IconShaker,
         title: 'Liquid Courses.',
-        image: '/images/home/cocktail-trio.jpg',
-        imageAlt: 'Three crafted cocktails in coupes and a rocks glass',
+        image: '/images/home/coupe-bar.jpg',
+        imageAlt: 'A golden coupe cocktail held at the mirrored bar',
         items: [
             { name: 'Amuse Bouche', note: 'Familiar, refreshing, subtle' },
             { name: 'Appetizers', note: 'Bright, savoury, crisp' },
@@ -82,8 +82,8 @@ const TABS: {
         label: 'Wine',
         icon: IconWine,
         title: 'The Cellar.',
-        image: '/images/home/cellar.jpg',
-        imageAlt: 'The floor-to-ceiling wine cellar at Animl',
+        image: '/images/home/wine-pour.jpg',
+        imageAlt: 'Burgundy poured tableside from the cellar',
         items: [
             { name: 'By the Glass', note: 'Sparkling, white, rosé, red & sweet — 2, 5 or 8 oz pours' },
             { name: 'Champagne', note: 'Vintage & non-vintage houses' },
@@ -96,14 +96,14 @@ const TABS: {
 ];
 
 const DISHES = [
-    { src: '/images/home/lobster-tagliatelle.jpg', label: 'Lobster Tagliatelle' },
-    { src: '/images/home/steak-branded.jpg', label: 'The Signature Cut' },
-    { src: '/images/home/caviar.jpg', label: 'Rainbow Caviar Dip' },
-    { src: '/images/home/surf-turf.jpg', label: 'Surf & Turf' },
-    { src: '/images/home/dessert-heart.jpg', label: 'Sweet Finale' },
+    { src: '/images/home/lamb.jpg', label: 'Ontario Rack of Lamb' },
+    { src: '/images/home/steak-pan.jpg', label: 'Seared Over Fire' },
+    { src: '/images/home/caviar-service.jpg', label: 'Caviar Service' },
+    { src: '/images/home/tomahawk-platter.jpg', label: 'The Tomahawk' },
+    { src: '/images/home/nightcap.jpg', label: 'The Nightcap' },
     { src: '/images/home/tartare.jpg', label: 'Prime Steak Tartare' },
-    { src: '/images/home/wellington.jpg', label: 'From the Oven' },
-    { src: '/images/home/cocktail-trio.jpg', label: 'Liquid Courses' }
+    { src: '/images/home/wellington-cut.jpg', label: 'The Wellington' },
+    { src: '/images/home/cocktail-orange.jpg', label: 'Liquid Courses' }
 ];
 
 const MenuPreview = () => {
