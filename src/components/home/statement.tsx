@@ -21,14 +21,14 @@ const Statement = () => {
                 sizes='100vw'
                 className='object-cover opacity-[0.10] mix-blend-multiply'
             />
-            <Reveal y={18} duration={0.8} className='relative mx-auto flex w-full max-w-5xl flex-wrap items-center justify-center gap-x-10 gap-y-4 px-5 py-6 md:justify-between md:px-8 md:py-9'>
+            <Reveal y={18} duration={0.8} className='relative mx-auto flex w-full max-w-6xl flex-wrap items-center justify-center gap-x-10 gap-y-4 px-5 py-6 md:py-9 lg:justify-between lg:px-8'>
                 {ITEMS.map(({ Icon, label }) => (
                     <span key={label} className='group/pill flex items-center gap-3 md:gap-4'>
                         <Icon
                             size={28}
                             className='text-coal transition-transform duration-500 group-hover/pill:[animation:wobble_1.4s_ease-in-out_infinite]'
                         />
-                        <span className='label-mono text-coal text-[12px] font-semibold tracking-[0.3em] md:text-[15px]'>
+                        <span className='label-mono text-coal text-[12px] font-semibold tracking-[0.3em] whitespace-nowrap md:text-[14px]'>
                             {label}
                         </span>
                     </span>
