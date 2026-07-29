@@ -28,7 +28,7 @@ const ReserveCta = () => {
                     {/* Photo fades in over the terracotta on hover */}
                     <span className='absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100'>
                         <Image
-                            src='/images/home/event-lounge.jpg'
+                            src='/images/home/wagyu-glow.jpg'
                             alt=''
                             fill
                             sizes='(max-width: 768px) 100vw, 66vw'
