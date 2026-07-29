@@ -3,6 +3,7 @@ import Image from 'next/image';
 
 import { IconBull, IconCoupe, IconWine } from '@/components/site/icons';
 import PageHero from '@/components/site/page-hero';
+import { ReserveButton } from '@/components/site/reserve-modal';
 import { Parallax, Reveal, RevealImage, RevealLines } from '@/components/site/reveal';
 
 export const metadata: Metadata = {
@@ -183,11 +184,11 @@ const Page = () => {
                     <RevealLines className='headline text-coal text-5xl md:text-7xl' lines={['Host your night.']} />
                     <Reveal delay={0.15}>
                         <div className='flex flex-col gap-4 sm:flex-row'>
-                            <a
-                                href='mailto:info@animlsteakhouse.com?subject=Event%20enquiry'
+                            <ReserveButton
+                                tab='event'
                                 className='label-mono bg-coal text-bone hover:bg-bone hover:text-coal inline-block px-10 py-4 transition-colors duration-300'>
                                 Submit an enquiry
-                            </a>
+                            </ReserveButton>
                             <a
                                 href='tel:+14167646094'
                                 className='label-mono border-coal/40 text-coal hover:border-coal inline-block border px-10 py-4 transition-colors duration-300'>

@@ -1,6 +1,5 @@
 import Image from 'next/image';
 
-import Logo from '@/components/site/logo';
 import { Reveal, RevealLines } from '@/components/site/reveal';
 import Spark from '@/components/site/spark';
 
@@ -31,7 +30,14 @@ const PageHero = ({
             <div className='relative px-5 pt-40 pb-16 md:px-8 md:pt-56 md:pb-24'>
                 {showLogo && (
                     <Reveal delay={0.05}>
-                        <Logo className='text-bone mb-6 w-36 md:w-48' />
+                        <Image
+                            src='/images/AnimlLOGOcow.svg'
+                            alt='Animl — the upside-down cow'
+                            width={510}
+                            height={400}
+                            priority
+                            className='mx-auto mb-8 w-40 md:mb-10 md:w-52'
+                        />
                     </Reveal>
                 )}
                 <Reveal>

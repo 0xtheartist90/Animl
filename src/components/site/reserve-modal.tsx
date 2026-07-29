@@ -7,16 +7,26 @@ import Spark from '@/components/site/spark';
 
 import { AnimatePresence, motion } from 'motion/react';
 
-const ReserveContext = createContext<{ openReserve: () => void }>({ openReserve: () => {} });
+type ReserveTab = 'table' | 'event';
+
+const ReserveContext = createContext<{ openReserve: (tab?: ReserveTab) => void }>({ openReserve: () => {} });
 
 export const useReserve = () => useContext(ReserveContext);
 
 /** Button that opens the reservation modal. Style it via className like any CTA. */
-export const ReserveButton = ({ children, className }: { children: ReactNode; className?: string }) => {
+export const ReserveButton = ({
+    children,
+    className,
+    tab = 'table'
+}: {
+    children: ReactNode;
+    className?: string;
+    tab?: 'table' | 'event';
+}) => {
     const { openReserve } = useReserve();
 
     return (
-        <button type='button' onClick={openReserve} className={className}>
+        <button type='button' onClick={() => openReserve(tab)} className={className}>
             {children}
         </button>
     );
@@ -33,9 +43,9 @@ export const ReserveProvider = ({ children }: { children: ReactNode }) => {
     const [open, setOpen] = useState(false);
     const [tab, setTab] = useState<'table' | 'event'>('table');
     const [sent, setSent] = useState(false);
-    const openReserve = useCallback(() => {
+    const openReserve = useCallback((t: ReserveTab = 'table') => {
         setSent(false);
-        setTab('table');
+        setTab(t);
         setOpen(true);
     }, []);
 
