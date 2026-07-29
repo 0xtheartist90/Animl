@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import Link from 'next/link';
 
@@ -18,22 +18,40 @@ const Hero = () => {
     const contentOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
     const contentY = useTransform(scrollYProgress, [0, 0.6], ['0%', '30%']);
 
+    // Portrait crop on mobile, landscape on desktop — resolved before the
+    // video mounts so only one file is ever downloaded.
+    const [videoSrc, setVideoSrc] = useState<string | null>(null);
+    useEffect(() => {
+        const mq = window.matchMedia('(max-width: 767px)');
+        const apply = () => setVideoSrc(mq.matches ? '/video/hero-mobile.mp4' : '/video/hero.mp4');
+        apply();
+        mq.addEventListener('change', apply);
+
+        return () => mq.removeEventListener('change', apply);
+    }, []);
+
     return (
         <section ref={ref} className='relative h-[100svh] overflow-hidden'>
             {/* Video — fades in while settling from a slow zoom */}
             <motion.div style={reduced ? undefined : { y: videoY }} className='absolute inset-0 scale-[1.06]'>
-                <motion.video
-                    initial={reduced ? false : { opacity: 0, scale: 1.08 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ opacity: { duration: 1.2, ease: 'easeOut' }, scale: { duration: 2.4, ease: EASE } }}
-                    className='h-full w-full object-cover'
-                    src='/video/hero.mp4'
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload='auto'
-                />
+                {videoSrc && (
+                    <motion.video
+                        key={videoSrc}
+                        initial={reduced ? false : { opacity: 0, scale: 1.08 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{
+                            opacity: { duration: 1.2, ease: 'easeOut' },
+                            scale: { duration: 2.4, ease: EASE }
+                        }}
+                        className='h-full w-full object-cover'
+                        src={videoSrc}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload='auto'
+                    />
+                )}
             </motion.div>
             {/* Grade — edges and corners only, centre stays clean */}
             <div className='absolute inset-0 bg-[radial-gradient(ellipse_75%_65%_at_center,transparent_55%,rgba(10,10,10,0.5)_100%)]' />
