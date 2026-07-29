@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 
 import Logo from '@/components/site/logo';
+import { ReserveButton } from '@/components/site/reserve-modal';
 import { EASE } from '@/components/site/reveal';
 import Spark from '@/components/site/spark';
 
@@ -87,11 +88,9 @@ const Hero = () => {
                         Entertainment District.
                     </p>
                     <div className='flex items-center gap-4'>
-                        <Link
-                            href='/reservations'
-                            className='label-mono bg-flame text-bone hover:bg-bone hover:text-coal px-8 py-4 transition-colors duration-300'>
+                        <ReserveButton className='label-mono bg-flame text-bone hover:bg-bone hover:text-coal px-8 py-4 transition-colors duration-300'>
                             Reserve Now
-                        </Link>
+                        </ReserveButton>
                         <Link
                             href='/menus'
                             className='label-mono border-bone/30 text-bone hover:border-bone border px-8 py-4 transition-colors duration-300'>

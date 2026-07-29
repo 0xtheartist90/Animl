@@ -3,11 +3,10 @@
 import { useState } from 'react';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 
-import CtaLink from '@/components/site/cta-link';
 import { IconBull, IconCake, IconShaker, IconWine } from '@/components/site/icons';
+import { ReserveButton } from '@/components/site/reserve-modal';
 import { EASE } from '@/components/site/reveal';
 import Spark from '@/components/site/spark';
 
@@ -262,7 +261,9 @@ const MenusClient = () => {
                     <Spark className='text-flame' size={13} />
                     The Menus
                 </p>
-                <CtaLink href='/reservations'>Reserve Now</CtaLink>
+                <ReserveButton className='label-mono bg-flame text-bone hover:bg-bone hover:text-coal inline-flex shrink-0 items-center gap-3 px-5 py-2.5 transition-colors duration-300'>
+                    Reserve Now <span aria-hidden>→</span>
+                </ReserveButton>
             </div>
 
             {/* Main tabs */}

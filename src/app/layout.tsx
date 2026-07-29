@@ -4,6 +4,7 @@ import type { Metadata, Viewport } from 'next';
 import localFont from 'next/font/local';
 
 import '@/app/globals.css';
+import { ReserveProvider } from '@/components/site/reserve-modal';
 import SiteFooter from '@/components/site/site-footer';
 import SiteHeader from '@/components/site/site-header';
 import SmoothScroll from '@/components/site/smooth-scroll';
@@ -49,9 +50,11 @@ const Layout = ({ children }: Readonly<{ children: ReactNode }>) => {
             <body
                 className={`${geistSans.variable} ${geistMono.variable} ${display.variable} bg-background text-foreground overscroll-none antialiased`}>
                 <SmoothScroll>
-                    <SiteHeader />
-                    <main>{children}</main>
-                    <SiteFooter />
+                    <ReserveProvider>
+                        <SiteHeader />
+                        <main>{children}</main>
+                        <SiteFooter />
+                    </ReserveProvider>
                 </SmoothScroll>
             </body>
         </html>

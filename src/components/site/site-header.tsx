@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import Logo from '@/components/site/logo';
+import { ReserveButton } from '@/components/site/reserve-modal';
 import { EASE } from '@/components/site/reveal';
 
 import { AnimatePresence, motion } from 'motion/react';
@@ -85,11 +86,9 @@ const SiteHeader = () => {
                     </nav>
 
                     <div className='flex items-center gap-3'>
-                        <Link
-                            href='/reservations'
-                            className='label-mono border-bone/30 text-bone hover:border-flame hover:bg-flame hidden items-center border px-6 py-3 transition-all duration-300 md:flex'>
+                        <ReserveButton className='label-mono bg-flame text-bone hover:bg-bone hover:text-coal hidden items-center px-6 py-3 transition-colors duration-300 md:flex'>
                             Reserve Now
-                        </Link>
+                        </ReserveButton>
                         <button
                             onClick={() => setOpen((v) => !v)}
                             aria-label={open ? 'Close menu' : 'Open menu'}
@@ -136,11 +135,9 @@ const SiteHeader = () => {
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.7, delay: 0.6 }}
                             className='flex flex-col gap-6'>
-                            <Link
-                                href='/reservations'
-                                className='label-mono bg-flame text-bone flex items-center justify-center px-6 py-4'>
+                            <ReserveButton className='label-mono bg-flame text-bone flex items-center justify-center px-6 py-4'>
                                 Reserve Now
-                            </Link>
+                            </ReserveButton>
                             <p className='label-mono text-smoke'>420A Wellington St W — Toronto</p>
                         </motion.div>
                     </motion.div>

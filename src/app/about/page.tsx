@@ -2,8 +2,9 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import PageHero from '@/components/site/page-hero';
+import { ReserveButton } from '@/components/site/reserve-modal';
 import { Parallax, Reveal, RevealImage, RevealLines } from '@/components/site/reveal';
+import Spark from '@/components/site/spark';
 import Stamp from '@/components/site/stamp';
 
 export const metadata: Metadata = {
@@ -24,67 +25,74 @@ const GALLERY = [
 const Page = () => {
     return (
         <>
-            <PageHero
-                label='About Animl'
-                title='Our Story'
-                accent='.'
-                image='/images/home/dining-room.jpg'
-                imageAlt='The Animl dining room beneath the mirrored bull'
-            />
+            {/* Video hero */}
+            <section className='relative h-[80svh] overflow-hidden'>
+                <video
+                    className='absolute inset-0 h-full w-full scale-[1.06] object-cover'
+                    src='/video/interior.mp4'
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload='auto'
+                />
+                <div className='from-coal via-coal/30 absolute inset-0 bg-gradient-to-t to-transparent' />
+                <div className='from-coal/60 absolute inset-x-0 top-0 h-28 bg-gradient-to-b to-transparent' />
+                <div className='relative flex h-full flex-col justify-end px-5 pb-14 md:px-8 md:pb-16'>
+                    <Reveal delay={0.3}>
+                        <p className='label-mono text-bone/80 mb-6 flex items-center gap-4'>
+                            <Spark className='text-flame' size={13} />
+                            About Animl
+                        </p>
+                    </Reveal>
+                    <RevealLines
+                        className='headline text-bone text-[clamp(56px,12vw,160px)]'
+                        delay={0.4}
+                        lines={[
+                            <span key='t'>
+                                Our Story<span className='text-flame'>.</span>
+                            </span>
+                        ]}
+                    />
+                </div>
+            </section>
 
-            {/* Story */}
+            {/* Chapter 01 — The Instinct */}
             <section className='grid grid-cols-1 md:grid-cols-12'>
-                <div className='p-8 md:col-span-7 md:p-14'>
+                <div className='flex flex-col justify-center p-8 md:col-span-6 md:p-16'>
                     <Reveal>
-                        <p className='label-mono text-flame mb-8'>Where luxury turns instinctive</p>
+                        <p className='label-mono text-flame mb-8'>01 — The Instinct</p>
                     </Reveal>
                     <RevealLines
                         className='headline text-bone text-4xl md:text-5xl'
-                        lines={['Polished luxury,', 'primal appetite.']}
+                        lines={['Every great night out', 'starts with an appetite.']}
                         delay={0.1}
                     />
                     <Reveal delay={0.2}>
                         <p className='text-bone/60 mt-8 max-w-lg font-mono text-[13px] leading-loose'>
-                            Animl is a sensory dining experience built on strong flavours, premium ingredients and
-                            culinary artistry — dry-aged steak, a serious raw bar and cocktails composed like courses,
-                            served with sophisticated presentation in a lively, theatrical room.
+                            Not just for dinner — for all of it. The low light, the loud table next to yours, the
+                            second bottle you didn&apos;t plan on. Animl was built on that instinct: a steakhouse where
+                            polished luxury gives in, just a little, to something more primal.
                         </p>
                         <p className='text-bone/60 mt-6 max-w-lg font-mono text-[13px] leading-loose'>
-                            The space channels Art Deco lines, Studio 54 energy and 1970s glamour: mirrored bars,
-                            leopard velvet, brass and rosso marble beneath a glowing coffered ceiling — and a mirrored
-                            bull suspended over it all. Timeless, theatrical, and built for evenings you don&apos;t
-                            forget.
+                            Founded by Charles Khabouth&apos;s INK Entertainment — the people behind three decades of
+                            Toronto nights — Animl brings sophisticated dining and untamed energy under one glowing
+                            ceiling in the Entertainment District.
                         </p>
                     </Reveal>
                 </div>
-
-                {/* Facts */}
-                <div className='p-8 md:col-span-5 md:p-14'>
-                    <Reveal delay={0.15}>
-                        <ul className='label-mono text-bone/70 space-y-6'>
-                            <li>
-                                <span className='text-flame block'>Founder</span>Charles Khabouth — INK Entertainment
-                            </li>
-                            <li>
-                                <span className='text-flame block'>Interior Design</span>Nivek Remas, Toronto
-                            </li>
-                            <li>
-                                <span className='text-flame block'>Cocktail Programme</span>Saralyn Stevens &amp; the
-                                Animl bar team
-                            </li>
-                            <li>
-                                <span className='text-flame block'>Neighbourhood</span>Entertainment District — 420A
-                                Wellington St West
-                            </li>
-                        </ul>
-                        <div className='mt-12'>
-                            <Stamp text='Elegantly Untamed • Animl • Toronto • ' size={130} />
-                        </div>
-                    </Reveal>
-                </div>
+                <RevealImage className='relative aspect-[4/5] md:col-span-6 md:aspect-auto md:min-h-[560px]'>
+                    <Image
+                        src='/images/home/about-night.jpg'
+                        alt='Guests mingling beneath the mirrored bull on a busy night'
+                        fill
+                        sizes='(max-width: 768px) 100vw, 50vw'
+                        className='img-premium object-cover'
+                    />
+                </RevealImage>
             </section>
 
-            {/* Terracotta quote band */}
+            {/* Quote band */}
             <section className='bg-flame relative overflow-hidden'>
                 <Image
                     src='/images/leopardbg.png'
@@ -93,11 +101,124 @@ const Page = () => {
                     sizes='100vw'
                     className='object-cover opacity-[0.10] mix-blend-multiply'
                 />
-                <div className='relative px-5 py-16 text-center md:py-24'>
+                <div className='relative px-5 py-16 text-center md:py-20'>
                     <RevealLines
                         className='headline text-coal text-4xl md:text-6xl'
-                        lines={['Timeless, theatrical —', "built for evenings you don't forget."]}
+                        lines={['Polished luxury,', 'primal appetite.']}
                     />
+                </div>
+            </section>
+
+            {/* Chapter 02 — The Room */}
+            <section className='grid grid-cols-1 md:grid-cols-12'>
+                <RevealImage className='relative order-2 aspect-[4/5] md:order-1 md:col-span-6 md:aspect-auto md:min-h-[560px]'>
+                    <Parallax className='h-full' amount={8}>
+                        <div className='relative h-full min-h-full w-full scale-[1.16]'>
+                            <Image
+                                src='/images/home/the-lounge.jpg'
+                                alt='Leopard velvet banquettes beneath woven brass pendants'
+                                fill
+                                sizes='(max-width: 768px) 100vw, 50vw'
+                                className='img-premium object-cover'
+                            />
+                        </div>
+                    </Parallax>
+                </RevealImage>
+                <div className='order-1 flex flex-col justify-center p-8 md:order-2 md:col-span-6 md:p-16'>
+                    <Reveal>
+                        <p className='label-mono text-flame mb-8'>02 — The Room</p>
+                    </Reveal>
+                    <RevealLines
+                        className='headline text-bone text-4xl md:text-5xl'
+                        lines={['Art Deco bones,', 'Studio 54 blood.']}
+                        delay={0.1}
+                    />
+                    <Reveal delay={0.2}>
+                        <p className='text-bone/60 mt-8 max-w-lg font-mono text-[13px] leading-loose'>
+                            Toronto design studio Nivek Remas dressed the room like it was going out: mirrored bars
+                            under a gold-leaf canopy, leopard velvet booths, rosso marble floors and a backlit coffered
+                            ceiling that makes everyone look like they arrived by limousine.
+                        </p>
+                        <p className='text-bone/60 mt-6 max-w-lg font-mono text-[13px] leading-loose'>
+                            And above it all — a mirrored bull, suspended mid-charge. Part disco ball, part patron
+                            saint. You&apos;ll know the room when you see it.
+                        </p>
+                    </Reveal>
+                </div>
+            </section>
+
+            {/* Chapter 03 — The Table & The Den */}
+            <section className='grid grid-cols-1 md:grid-cols-2'>
+                <div className='relative'>
+                    <RevealImage className='relative aspect-[4/3]'>
+                        <Image
+                            src='/images/home/steak-branded.jpg'
+                            alt='The Animl-branded signature cut'
+                            fill
+                            sizes='(max-width: 768px) 100vw, 50vw'
+                            className='img-premium object-cover'
+                        />
+                    </RevealImage>
+                    <div className='p-8 md:p-12'>
+                        <Reveal>
+                            <p className='label-mono text-flame mb-6'>03 — The Table</p>
+                            <p className='headline text-bone text-3xl md:text-4xl'>Fire, salt and patience.</p>
+                            <p className='text-bone/60 mt-6 max-w-md font-mono text-[13px] leading-loose'>
+                                Cuts from Alberta, Elora and Miyazaki — wet- and dry-aged up to 45 days, grilled over
+                                fire and branded before they leave the pass. A raw bar of oysters, king crab and
+                                Kaviari caviar keeps the other side of the table honest.
+                            </p>
+                        </Reveal>
+                    </div>
+                </div>
+                <div className='relative'>
+                    <RevealImage className='relative aspect-[4/3]' delay={0.12}>
+                        <Image
+                            src='/images/home/cocktail-red.jpg'
+                            alt='Flaming red cocktail crowned with a rose'
+                            fill
+                            sizes='(max-width: 768px) 100vw, 50vw'
+                            className='img-premium object-cover'
+                        />
+                    </RevealImage>
+                    <div className='p-8 md:p-12'>
+                        <Reveal delay={0.1}>
+                            <p className='label-mono text-flame mb-6'>04 — The Den</p>
+                            <p className='headline text-bone text-3xl md:text-4xl'>Cocktails, served like dinner.</p>
+                            <p className='text-bone/60 mt-6 max-w-md font-mono text-[13px] leading-loose'>
+                                Saralyn Stevens and the Animl bar team composed the cocktail menu like a tasting: amuse
+                                bouche to dessert, with miniature martinis in between. Stay past midnight — the den
+                                pours until 2 AM on weekends.
+                            </p>
+                        </Reveal>
+                    </div>
+                </div>
+            </section>
+
+            {/* Credits */}
+            <section className='grid grid-cols-1 items-center gap-8 px-8 py-12 md:grid-cols-12 md:px-16 md:py-16'>
+                <div className='md:col-span-9'>
+                    <Reveal>
+                        <ul className='label-mono text-bone/70 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4'>
+                            <li>
+                                <span className='text-flame block'>Founder</span>Charles Khabouth — INK
+                            </li>
+                            <li>
+                                <span className='text-flame block'>Interior Design</span>Nivek Remas
+                            </li>
+                            <li>
+                                <span className='text-flame block'>Cocktail Programme</span>Saralyn Stevens
+                            </li>
+                            <li>
+                                <span className='text-flame block'>Neighbourhood</span>420A Wellington St W
+                            </li>
+                        </ul>
+                    </Reveal>
+                </div>
+                <div className='md:col-span-3 md:justify-self-end'>
+                    <Reveal delay={0.15}>
+                        <Stamp text='Elegantly Untamed • Animl • Toronto • ' size={120} />
+                    </Reveal>
                 </div>
             </section>
 
@@ -119,18 +240,16 @@ const Page = () => {
                 ))}
             </section>
 
-            {/* Interior video */}
+            {/* Closing CTA */}
             <section className='relative'>
                 <Parallax className='h-[50svh] md:h-[65svh]' amount={10}>
                     <div className='relative h-full w-full scale-[1.14]'>
-                        <video
-                            className='absolute inset-0 h-full w-full object-cover'
-                            src='/video/interior.mp4'
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                            preload='metadata'
+                        <Image
+                            src='/images/home/dining-room.jpg'
+                            alt='The Animl dining room set for the evening'
+                            fill
+                            sizes='100vw'
+                            className='img-premium object-cover'
                         />
                     </div>
                 </Parallax>
@@ -138,11 +257,9 @@ const Page = () => {
                 <div className='absolute inset-x-0 bottom-0 flex flex-col items-start gap-6 px-5 pb-10 md:flex-row md:items-end md:justify-between md:px-8'>
                     <p className='headline text-bone text-4xl md:text-5xl'>Come see it for yourself.</p>
                     <div className='flex gap-4'>
-                        <Link
-                            href='/reservations'
-                            className='label-mono bg-flame text-bone hover:bg-bone hover:text-coal px-8 py-4 transition-colors duration-300'>
+                        <ReserveButton className='label-mono bg-flame text-bone hover:bg-bone hover:text-coal px-8 py-4 transition-colors duration-300'>
                             Reserve Now
-                        </Link>
+                        </ReserveButton>
                         <Link
                             href='/menus'
                             className='label-mono border-bone/30 text-bone hover:border-bone border px-8 py-4 transition-colors duration-300'>

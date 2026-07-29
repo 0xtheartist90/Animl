@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
+import { ReserveButton } from '@/components/site/reserve-modal';
 import { Reveal } from '@/components/site/reveal';
 import Spark from '@/components/site/spark';
 
@@ -17,9 +17,7 @@ const ReserveCta = () => {
 
             <div className='grid grid-cols-1 md:grid-cols-12'>
                 {/* Giant CTA */}
-                <Link
-                    href='/reservations'
-                    className='bg-flame relative flex flex-col justify-center overflow-hidden px-5 py-20 md:col-span-8 md:px-14 md:py-32'>
+                <ReserveButton className='bg-flame relative flex flex-col justify-center overflow-hidden px-5 py-20 text-left md:col-span-8 md:px-14 md:py-32'>
                     <Image
                         src='/images/leopardbg.png'
                         alt=''
@@ -41,7 +39,7 @@ const ReserveCta = () => {
                             <span>→</span>
                         </span>
                     </Reveal>
-                </Link>
+                </ReserveButton>
 
                 {/* Hours + dress code */}
                 <div className='md:col-span-4'>

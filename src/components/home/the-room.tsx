@@ -1,8 +1,7 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
 import Statement from '@/components/home/statement';
-import CtaLink from '@/components/site/cta-link';
+import { ReserveButton } from '@/components/site/reserve-modal';
 import { Parallax, Reveal, RevealImage, RevealLines } from '@/components/site/reveal';
 import Spark from '@/components/site/spark';
 
@@ -84,7 +83,7 @@ const TheRoom = () => {
             <Statement />
 
             {/* Full-bleed interior video */}
-            <Link href='/reservations' className='group relative block'>
+            <div className='group relative block'>
                 <Parallax className='h-[55svh] md:h-[75svh]' amount={10}>
                     <div className='relative h-full w-full scale-[1.14]'>
                         <video
@@ -101,11 +100,11 @@ const TheRoom = () => {
                 <div className='from-coal/80 absolute inset-0 bg-gradient-to-t via-transparent to-transparent' />
                 <div className='absolute inset-x-0 bottom-0 flex items-end justify-between px-5 pb-8 md:px-8 md:pb-10'>
                     <p className='headline text-bone text-4xl md:text-5xl'>Pull up a stool.</p>
-                    <CtaLink href='/reservations' className='hidden md:inline-flex'>
-                        Reserve your evening
-                    </CtaLink>
+                    <ReserveButton className='label-mono bg-flame text-bone hover:bg-bone hover:text-coal hidden items-center gap-3 px-5 py-2.5 transition-colors duration-300 md:inline-flex'>
+                        Reserve your evening <span aria-hidden>→</span>
+                    </ReserveButton>
                 </div>
-            </Link>
+            </div>
         </section>
     );
 };

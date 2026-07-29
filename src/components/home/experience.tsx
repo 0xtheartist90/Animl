@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
 import { IconBull, IconCake, IconCoupe, IconShell, IconWine } from '@/components/site/icons';
+import { ReserveButton } from '@/components/site/reserve-modal';
 import { Reveal, RevealLines } from '@/components/site/reveal';
 
 const ICONS = [
@@ -47,11 +47,9 @@ const Experience = () => {
                 </Reveal>
 
                 <Reveal delay={0.35}>
-                    <Link
-                        href='/reservations'
-                        className='label-mono bg-coal text-bone hover:bg-bone hover:text-coal mt-14 inline-block px-10 py-4 transition-colors duration-300'>
+                    <ReserveButton className='label-mono bg-coal text-bone hover:bg-bone hover:text-coal mt-14 inline-block px-10 py-4 transition-colors duration-300'>
                         Book your evening
-                    </Link>
+                    </ReserveButton>
                 </Reveal>
             </div>
         </section>

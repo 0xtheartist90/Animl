@@ -2,6 +2,7 @@ import Link from 'next/link';
 
 import Logo from '@/components/site/logo';
 import Marquee from '@/components/site/marquee';
+import { ReserveButton } from '@/components/site/reserve-modal';
 import Spark from '@/components/site/spark';
 import Stamp from '@/components/site/stamp';
 
@@ -17,7 +18,7 @@ const SiteFooter = () => {
     return (
         <footer className='relative overflow-hidden'>
             {/* Reserve ticker */}
-            <Link href='/reservations' className='border-border block border-y'>
+            <ReserveButton className='border-border block w-full border-y'>
                 <Marquee className='py-3 md:py-4' slow>
                     {Array.from({ length: 6 }).map((_, i) => (
                         <span key={i} className='headline text-bone mx-5 inline-flex items-center gap-6 text-2xl md:mx-6 md:gap-8 md:text-3xl'>
@@ -26,7 +27,7 @@ const SiteFooter = () => {
                         </span>
                     ))}
                 </Marquee>
-            </Link>
+            </ReserveButton>
 
             <div className='relative grid grid-cols-1 gap-8 px-5 pt-10 pb-6 md:grid-cols-12 md:gap-12 md:px-8 md:pt-20 md:pb-10'>
                 {/* Brand block */}
@@ -35,11 +36,9 @@ const SiteFooter = () => {
                     <p className='label-mono text-smoke'>
                         Steakhouse &amp; Cocktail Den — Elegantly Untamed
                     </p>
-                    <Link
-                        href='/reservations'
-                        className='label-mono bg-flame text-bone hover:bg-bone hover:text-coal px-8 py-4 transition-colors duration-300'>
+                    <ReserveButton className='label-mono bg-flame text-bone hover:bg-bone hover:text-coal px-8 py-4 transition-colors duration-300'>
                         Reserve Now
-                    </Link>
+                    </ReserveButton>
                 </div>
 
                 {/* Script nav */}
