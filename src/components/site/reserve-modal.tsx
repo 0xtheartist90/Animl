@@ -2,6 +2,8 @@
 
 import { type ReactNode, createContext, useCallback, useContext, useEffect, useState } from 'react';
 
+import Image from 'next/image';
+
 import { EASE } from '@/components/site/reveal';
 import Spark from '@/components/site/spark';
 
@@ -33,7 +35,7 @@ export const ReserveButton = ({
 };
 
 const FIELD =
-    'label-mono bg-secondary/60 border-border text-bone placeholder:text-smoke focus:border-flame w-full border px-4 py-3 outline-none transition-colors';
+    'label-mono border-border text-bone placeholder:text-smoke focus:border-flame w-full border-0 border-b bg-transparent px-1 py-3 outline-none transition-colors [color-scheme:dark]';
 
 const EVENT_TYPES = ['Corporate Event', 'Special Celebration', 'Wrap Party', 'Private Gathering'];
 const EVENT_OPTIONS = ['Private Dining', 'Partial Venue', 'Full Buyout'];
@@ -120,16 +122,44 @@ export const ReserveProvider = ({ children }: { children: ReactNode }) => {
                             role='dialog'
                             aria-modal='true'
                             aria-label='Reserve your table'
-                            className='bg-coal border-border relative max-h-[92svh] w-full max-w-lg overflow-y-auto border p-6 md:p-10'>
+                            className='bg-coal border-border relative w-full max-w-lg overflow-hidden border md:max-w-3xl'>
                             {/* close */}
                             <button
                                 type='button'
                                 onClick={() => setOpen(false)}
                                 aria-label='Close'
-                                className='label-mono text-smoke hover:text-bone absolute top-4 right-4 p-2 transition-colors'>
+                                className='label-mono text-smoke hover:text-bone absolute top-4 right-4 z-10 p-2 transition-colors'>
                                 ✕
                             </button>
 
+                            <div className='md:grid md:grid-cols-[260px_1fr]'>
+                                {/* Mood photo — unique per tab */}
+                                <div className='relative hidden md:block'>
+                                    <AnimatePresence mode='popLayout' initial={false}>
+                                        <motion.div
+                                            key={tab}
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                            exit={{ opacity: 0 }}
+                                            transition={{ duration: 0.5 }}
+                                            className='absolute inset-0'>
+                                            <Image
+                                                src={
+                                                    tab === 'table'
+                                                        ? '/images/home/espresso-close.jpg'
+                                                        : '/images/home/disco-bull.jpg'
+                                                }
+                                                alt=''
+                                                fill
+                                                sizes='260px'
+                                                className='object-cover'
+                                            />
+                                            <div className='from-coal/60 absolute inset-0 bg-gradient-to-r to-transparent' />
+                                        </motion.div>
+                                    </AnimatePresence>
+                                </div>
+
+                                <div className='max-h-[92svh] overflow-y-auto p-6 md:p-10'>
                             <p className='label-mono text-flame flex items-center gap-3'>
                                 <Spark size={13} />
                                 Reservations
@@ -140,7 +170,7 @@ export const ReserveProvider = ({ children }: { children: ReactNode }) => {
                             </h2>
 
                             {/* Tab switch */}
-                            <div className='border-border mt-6 grid grid-cols-2 border'>
+                            <div className='mt-6 grid grid-cols-2'>
                                 {(
                                     [
                                         { key: 'table', label: 'A Table' },
@@ -155,10 +185,10 @@ export const ReserveProvider = ({ children }: { children: ReactNode }) => {
                                             setSent(false);
                                         }}
                                         aria-pressed={tab === t.key}
-                                        className={`label-mono py-3 transition-colors duration-300 ${
+                                        className={`label-mono border-b py-3 transition-colors duration-300 ${
                                             tab === t.key
-                                                ? 'bg-flame text-bone'
-                                                : 'text-bone/60 hover:text-bone bg-transparent'
+                                                ? 'border-flame text-flame'
+                                                : 'border-border text-bone/60 hover:text-bone'
                                         }`}>
                                         {t.label}
                                     </button>
@@ -198,7 +228,7 @@ export const ReserveProvider = ({ children }: { children: ReactNode }) => {
                                     />
                                     <button
                                         type='submit'
-                                        className='label-mono bg-flame text-bone hover:bg-bone hover:text-coal col-span-2 mt-2 px-8 py-4 transition-colors duration-300'>
+                                        className='label-mono bg-flame text-bone hover:bg-bone hover:text-coal col-span-2 mt-3 px-8 py-3.5 transition-colors duration-300'>
                                         Request reservation
                                     </button>
                                     <p className='label-mono text-smoke col-span-2 mt-1 text-center text-[12px]'>
@@ -247,7 +277,7 @@ export const ReserveProvider = ({ children }: { children: ReactNode }) => {
                                     />
                                     <button
                                         type='submit'
-                                        className='label-mono bg-flame text-bone hover:bg-bone hover:text-coal col-span-2 mt-2 px-8 py-4 transition-colors duration-300'>
+                                        className='label-mono bg-flame text-bone hover:bg-bone hover:text-coal col-span-2 mt-3 px-8 py-3.5 transition-colors duration-300'>
                                         Submit enquiry
                                     </button>
                                     <p className='label-mono text-smoke col-span-2 mt-1 text-center text-[12px]'>
@@ -255,6 +285,8 @@ export const ReserveProvider = ({ children }: { children: ReactNode }) => {
                                     </p>
                                 </form>
                             )}
+                                </div>
+                            </div>
                         </motion.div>
                     </motion.div>
                 )}
