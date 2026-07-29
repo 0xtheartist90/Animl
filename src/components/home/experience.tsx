@@ -26,7 +26,7 @@ const Experience = () => {
 
             <div className='relative px-5 py-12 text-center md:py-16'>
                 <Reveal>
-                    <p className='label-mono text-coal/70 mb-6'>The Animl Experience</p>
+                    <p className='headline text-coal/70 mb-4 text-2xl'>The Animl Experience</p>
                 </Reveal>
                 <RevealLines
                     className='headline text-coal text-5xl md:text-7xl'
