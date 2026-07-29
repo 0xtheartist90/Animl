@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from 'react';
 
 import Link from 'next/link';
 
-import Logo from '@/components/site/logo';
 import { ReserveButton } from '@/components/site/reserve-modal';
 import { EASE } from '@/components/site/reveal';
 import Spark from '@/components/site/spark';
@@ -62,13 +61,6 @@ const Hero = () => {
             <motion.div
                 style={reduced ? undefined : { opacity: contentOpacity, y: contentY }}
                 className='relative flex h-full flex-col justify-end px-5 pb-12 md:px-8 md:pb-14'>
-                <motion.div
-                    initial={{ opacity: 0, y: 28 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1.2, delay: 0.5, ease: EASE }}
-                    className='mb-6 hidden md:block'>
-                    <Logo className='w-60' />
-                </motion.div>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
