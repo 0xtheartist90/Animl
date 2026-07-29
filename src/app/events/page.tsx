@@ -125,7 +125,7 @@ const Page = () => {
                 <Reveal className='relative'>
                     <p className='label-mono text-coal/70 mb-10 text-center'>Ways to book the room</p>
                 </Reveal>
-                <div className='relative mx-auto grid max-w-5xl grid-cols-1 gap-10 md:grid-cols-3 md:gap-8'>
+                <div className='relative mx-auto grid max-w-7xl grid-cols-1 gap-10 md:grid-cols-3 md:gap-16'>
                     {OPTIONS.map(({ Icon, name, note }, i) => (
                         <Reveal key={name} delay={0.08 * i}>
                             <div className='flex flex-col items-center gap-5 text-center'>
