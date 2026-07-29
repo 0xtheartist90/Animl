@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 const GALLERY = [
     { src: '/images/home/knife-wall.jpg', alt: 'Steak knives mounted on leopard velvet', label: 'The Details' },
-    { src: '/images/home/glam-dining.jpg', alt: 'A guest in gold slicing into a signature cut', label: 'The Glamour' },
+    { src: '/images/home/glam-lounge.jpg', alt: 'A guest draped in black on the velvet banquette', label: 'The Glamour' },
     { src: '/images/home/neon-sign.jpg', alt: 'The neon Animl sign on leopard tapestry', label: 'The Nights' },
     { src: '/images/home/seafood-tower.jpg', alt: 'The two-tier seafood tower with champagne', label: 'The Table' },
     { src: '/images/home/interior-lights.jpg', alt: 'Sculptural lighting on dark wood', label: 'The Light' },
@@ -93,11 +93,11 @@ const Page = () => {
                 </div>
                 <RevealImage className='relative aspect-[4/5] md:col-span-6 md:aspect-auto md:min-h-[560px]'>
                     <Image
-                        src='/images/home/glam-lounge.jpg'
-                        alt='A guest draped in black on the velvet banquette'
+                        src='/images/home/glam-dining.jpg'
+                        alt='A guest in gold slicing into a signature cut'
                         fill
                         sizes='(max-width: 768px) 100vw, 50vw'
-                        className='img-premium object-cover object-top'
+                        className='img-premium object-cover'
                     />
                 </RevealImage>
             </section>
