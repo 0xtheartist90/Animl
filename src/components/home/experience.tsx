@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import { IconBull, IconCake, IconCoupe, IconShell, IconWine } from '@/components/site/icons';
 import { ReserveButton } from '@/components/site/reserve-modal';
-import { Reveal, RevealLines } from '@/components/site/reveal';
+import { Reveal } from '@/components/site/reveal';
 
 const ICONS = [
     { Icon: IconShell, label: 'Raw Bar' },
@@ -24,19 +24,14 @@ const Experience = () => {
                 className='object-cover opacity-[0.10] mix-blend-multiply'
             />
 
-            <div className='relative px-5 py-12 text-center md:py-16'>
+            <div className='relative px-5 py-8 text-center md:py-10'>
                 <Reveal>
-                    <p className='headline text-coal mb-4 text-5xl md:text-6xl'>The Animl Experience</p>
+                    <p className='headline text-coal mb-7 text-5xl md:text-6xl'>The Animl Experience</p>
                 </Reveal>
-                <RevealLines
-                    className='headline text-coal text-5xl md:text-7xl'
-                    lines={['Where polished luxury', 'meets primal instinct.']}
-                    delay={0.1}
-                />
 
                 {/* Icon row */}
-                <Reveal delay={0.25}>
-                    <div className='mx-auto mt-10 flex max-w-4xl flex-wrap items-start justify-center gap-x-12 gap-y-7 md:justify-between'>
+                <Reveal delay={0.1}>
+                    <div className='mx-auto flex max-w-4xl flex-wrap items-start justify-center gap-x-12 gap-y-7 md:justify-between'>
                         {ICONS.map(({ Icon, label }) => (
                             <div key={label} className='group/exp flex flex-col items-center gap-4'>
                                 <Icon
@@ -49,8 +44,8 @@ const Experience = () => {
                     </div>
                 </Reveal>
 
-                <Reveal delay={0.35}>
-                    <ReserveButton className='label-mono bg-coal text-bone hover:bg-bone hover:text-coal mt-10 inline-block px-9 py-4 transition-colors duration-300'>
+                <Reveal delay={0.2}>
+                    <ReserveButton className='label-mono bg-coal text-bone hover:bg-bone hover:text-coal mt-8 inline-block px-9 py-4 transition-colors duration-300'>
                         Book your evening
                     </ReserveButton>
                 </Reveal>
