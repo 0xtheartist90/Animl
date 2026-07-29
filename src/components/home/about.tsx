@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import CtaLink from '@/components/site/cta-link';
 import { Parallax, Reveal, RevealImage, RevealLines } from '@/components/site/reveal';
 import Spark from '@/components/site/spark';
 import Stamp from '@/components/site/stamp';
@@ -14,11 +15,9 @@ const About = () => {
                     <Spark className='text-flame' size={13} />
                     About Animl
                 </p>
-                <Link
-                    href='/about'
-                    className='link-sweep label-mono text-bone/70 hover:text-bone hidden transition-colors md:block'>
+                <CtaLink href='/about' className='hidden md:inline-flex'>
                     Our full story
-                </Link>
+                </CtaLink>
             </div>
 
             <div className='grid grid-cols-1 md:grid-cols-12'>

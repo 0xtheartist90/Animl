@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import CtaLink from '@/components/site/cta-link';
 import { IconBull, IconCake, IconShaker, IconWine } from '@/components/site/icons';
 import { EASE } from '@/components/site/reveal';
 import Spark from '@/components/site/spark';
@@ -258,11 +259,7 @@ const MenusClient = () => {
                     <Spark className='text-flame' size={13} />
                     The Menus
                 </p>
-                <Link
-                    href='/reservations'
-                    className='link-sweep label-mono text-bone/70 hover:text-bone transition-colors'>
-                    Reserve Now
-                </Link>
+                <CtaLink href='/reservations'>Reserve Now</CtaLink>
             </div>
 
             {/* Main tabs */}

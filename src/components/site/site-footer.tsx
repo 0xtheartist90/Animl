@@ -1,118 +1,152 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import Logo from '@/components/site/logo';
 import Marquee from '@/components/site/marquee';
 import Spark from '@/components/site/spark';
+import Stamp from '@/components/site/stamp';
 
-const HOURS = [
-    { days: 'Mon — Wed', hours: '5:00 PM — 12:00 AM' },
-    { days: 'Thu — Sat', hours: '5:00 PM — 2:00 AM' },
-    { days: 'Sunday', hours: '5:00 PM — 12:00 AM' }
+const NAV = [
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/menus', label: 'Menus' },
+    { href: '/events', label: 'Events' },
+    { href: '/reservations', label: 'Reserve' }
 ];
 
 const SiteFooter = () => {
     return (
-        <footer className='border-border border-t'>
-            {/* Ticker */}
+        <footer className='relative overflow-hidden'>
+            {/* Terracotta reserve ticker */}
             <Link href='/reservations' className='block'>
-                <Marquee className='py-5' slow>
-                    {Array.from({ length: 6 }).map((_, i) => (
-                        <span key={i} className='headline text-bone mx-8 inline-flex items-center gap-8 text-3xl'>
-                            Reserve your table
-                            <Spark className='text-flame' size={20} />
-                        </span>
-                    ))}
-                </Marquee>
+                <div className='bg-flame relative overflow-hidden'>
+                    <Image
+                        src='/images/leopardbg.png'
+                        alt=''
+                        fill
+                        sizes='100vw'
+                        className='object-cover opacity-[0.10] mix-blend-multiply'
+                    />
+                    <Marquee className='relative py-4' slow>
+                        {Array.from({ length: 6 }).map((_, i) => (
+                            <span key={i} className='headline text-coal/90 mx-6 inline-flex items-center gap-8 text-3xl'>
+                                Reserve your table
+                                <Spark className='text-coal/60' size={18} />
+                            </span>
+                        ))}
+                    </Marquee>
+                </div>
             </Link>
 
-            <div className='grid grid-cols-1 md:grid-cols-12'>
-                {/* Brand */}
-                <div className='flex flex-col justify-between gap-10 p-8 md:col-span-5 md:p-10'>
-                    <Logo className='w-56 md:w-72' />
-                    <div>
-                        <p className='label-mono text-smoke mb-3'>Steakhouse &amp; Cocktail Den</p>
-                        <p className='headline text-bone/80 text-2xl'>Elegantly Untamed</p>
-                    </div>
+            {/* Ghosted leopard watching from the right */}
+            <Image
+                src='/images/leopardicon.png'
+                alt=''
+                width={955}
+                height={2081}
+                aria-hidden
+                className='pointer-events-none absolute -right-8 bottom-16 w-40 opacity-[0.13] md:right-10 md:w-56'
+            />
+
+            <div className='relative grid grid-cols-1 gap-12 px-5 pt-14 pb-10 md:grid-cols-12 md:px-8 md:pt-20'>
+                {/* Brand block */}
+                <div className='flex flex-col items-start gap-8 md:col-span-6'>
+                    <Logo className='text-bone w-64 md:w-80' />
+                    <p className='label-mono text-smoke'>
+                        Steakhouse &amp; Cocktail Den — Elegantly Untamed
+                    </p>
+                    <Link
+                        href='/reservations'
+                        className='label-mono bg-flame text-bone hover:bg-bone hover:text-coal px-8 py-4 transition-colors duration-300'>
+                        Reserve Now
+                    </Link>
                 </div>
 
-                {/* Navigate */}
-                <div className='p-8 md:col-span-2 md:p-10'>
-                    <p className='label-mono text-flame mb-6'>Navigate</p>
-                    <ul className='space-y-3'>
-                        {[
-                            { href: '/', label: 'Home' },
-                            { href: '/about', label: 'About' },
-                            { href: '/menus', label: 'Menus' },
-                            { href: '/events', label: 'Events' },
-                            { href: '/reservations', label: 'Reserve' }
-                        ].map((item) => (
+                {/* Script nav */}
+                <nav className='md:col-span-3'>
+                    <ul className='space-y-1'>
+                        {NAV.map((item) => (
                             <li key={item.href}>
                                 <Link
                                     href={item.href}
-                                    className='link-sweep label-mono text-bone/70 hover:text-bone transition-colors'>
+                                    className='group headline text-bone/80 hover:text-flame inline-flex items-center gap-4 text-3xl transition-colors duration-300 md:text-4xl'>
+                                    <Spark
+                                        size={13}
+                                        className='text-flame opacity-0 transition-opacity duration-300 group-hover:opacity-100'
+                                    />
                                     {item.label}
                                 </Link>
                             </li>
                         ))}
                     </ul>
-                </div>
+                </nav>
 
-                {/* Contact */}
-                <div className='p-8 md:col-span-3 md:p-10'>
-                    <p className='label-mono text-flame mb-6'>Find Us</p>
-                    <address className='label-mono text-bone/70 space-y-3 leading-relaxed not-italic'>
-                        <p>
-                            420A Wellington St West
-                            <br />
-                            Toronto, ON M5V 1E3
+                {/* Details */}
+                <div className='space-y-10 md:col-span-3'>
+                    <div>
+                        <p className='label-mono text-flame mb-4 flex items-center gap-3'>
+                            <Spark size={12} />
+                            Find Us
                         </p>
-                        <p>
-                            <a href='tel:+14167646094' className='link-sweep hover:text-bone transition-colors'>
-                                +1 (416) 764-6094
-                            </a>
+                        <address className='label-mono text-bone/70 space-y-2 leading-relaxed not-italic'>
+                            <p>
+                                420A Wellington St West
+                                <br />
+                                Toronto, ON M5V 1E3
+                            </p>
+                            <p>
+                                <a href='tel:+14167646094' className='link-sweep hover:text-bone transition-colors'>
+                                    +1 (416) 764-6094
+                                </a>
+                            </p>
+                            <p>
+                                <a
+                                    href='mailto:info@animlsteakhouse.com'
+                                    className='link-sweep hover:text-bone transition-colors'>
+                                    info@animlsteakhouse.com
+                                </a>
+                            </p>
+                            <p>
+                                <a
+                                    href='https://www.instagram.com/animl.toronto'
+                                    target='_blank'
+                                    rel='noreferrer'
+                                    className='link-sweep hover:text-bone transition-colors'>
+                                    @animl.toronto
+                                </a>
+                            </p>
+                        </address>
+                    </div>
+                    <div>
+                        <p className='label-mono text-flame mb-4 flex items-center gap-3'>
+                            <Spark size={12} />
+                            Hours
                         </p>
-                        <p>
-                            <a
-                                href='mailto:info@animlsteakhouse.com'
-                                className='link-sweep hover:text-bone transition-colors'>
-                                info@animlsteakhouse.com
-                            </a>
-                        </p>
-                        <p>
-                            <a
-                                href='https://www.instagram.com/animl.toronto'
-                                target='_blank'
-                                rel='noreferrer'
-                                className='link-sweep hover:text-bone transition-colors'>
-                                @animl.toronto
-                            </a>
-                        </p>
-                    </address>
-                </div>
-
-                {/* Hours */}
-                <div className='p-8 md:col-span-2 md:p-10'>
-                    <p className='label-mono text-flame mb-6'>Hours</p>
-                    <ul className='label-mono text-bone/70 space-y-3'>
-                        {HOURS.map((h) => (
-                            <li key={h.days}>
-                                <span className='text-bone block'>{h.days}</span>
-                                {h.hours}
+                        <ul className='label-mono text-bone/70 space-y-2'>
+                            <li>
+                                <span className='text-bone'>Mon — Wed &amp; Sun</span> · 5 PM — 12 AM
                             </li>
-                        ))}
-                    </ul>
+                            <li>
+                                <span className='text-bone'>Thu — Sat</span> · 5 PM — 2 AM
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div className='label-mono text-smoke flex flex-col gap-3 px-8 py-6 md:flex-row md:items-center md:justify-between md:px-10'>
-                <p>© 2026 Animl Steakhouse — powered by INK Entertainment</p>
-                <a
-                    href='https://inkentertainment.com/privacy-policy/'
-                    target='_blank'
-                    rel='noreferrer'
-                    className='link-sweep hover:text-bone transition-colors'>
-                    Privacy Policy
-                </a>
+            {/* Bottom strip with stamp */}
+            <div className='relative flex flex-col gap-6 px-5 pb-10 md:flex-row md:items-end md:justify-between md:px-8'>
+                <div className='label-mono text-smoke space-y-2'>
+                    <p>© 2026 Animl Steakhouse — powered by INK Entertainment</p>
+                    <a
+                        href='https://inkentertainment.com/privacy-policy/'
+                        target='_blank'
+                        rel='noreferrer'
+                        className='link-sweep hover:text-bone inline-block transition-colors'>
+                        Privacy Policy
+                    </a>
+                </div>
+                <Stamp text='Elegantly Untamed • Animl • Toronto • ' size={96} className='opacity-70' />
             </div>
         </footer>
     );

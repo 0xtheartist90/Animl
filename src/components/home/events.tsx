@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import CtaLink from '@/components/site/cta-link';
 import { Parallax, Reveal, RevealLines } from '@/components/site/reveal';
 import Spark from '@/components/site/spark';
 
@@ -14,9 +15,7 @@ const Events = () => {
                     <Spark className='text-flame' size={13} />
                     Private Dining &amp; Events
                 </p>
-                <Link href='/events' className='link-sweep label-mono text-bone/70 hover:text-bone transition-colors'>
-                    Plan an event
-                </Link>
+                <CtaLink href='/events'>Plan an event</CtaLink>
             </div>
 
             {/* Full-bleed parallax image with copy overlay */}

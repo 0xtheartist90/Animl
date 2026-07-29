@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import CtaLink from '@/components/site/cta-link';
 import { IconBull, IconCake, IconShaker, IconWine } from '@/components/site/icons';
 import Marquee from '@/components/site/marquee';
 import { EASE, Reveal, RevealImage } from '@/components/site/reveal';
@@ -115,9 +116,7 @@ const MenuPreview = () => {
                     <Spark className='text-flame' size={13} />
                     The Menus
                 </p>
-                <Link href='/menus' className='link-sweep label-mono text-bone/70 hover:text-bone transition-colors'>
-                    Explore all menus
-                </Link>
+                <CtaLink href='/menus'>Explore all menus</CtaLink>
             </div>
 
             {/* Selector + content — fits one viewport on desktop */}
