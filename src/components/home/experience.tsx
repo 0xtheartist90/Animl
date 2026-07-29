@@ -29,25 +29,28 @@ const Experience = () => {
                     <p className='label-mono text-coal/70 mb-6'>The Animl Experience</p>
                 </Reveal>
                 <RevealLines
-                    className='headline text-coal text-4xl md:text-5xl'
+                    className='headline text-coal text-4xl md:text-6xl'
                     lines={['Where polished luxury', 'meets primal instinct.']}
                     delay={0.1}
                 />
 
                 {/* Icon row */}
                 <Reveal delay={0.25}>
-                    <div className='mx-auto mt-10 flex max-w-2xl flex-wrap items-start justify-center gap-x-10 gap-y-6 md:justify-between'>
+                    <div className='mx-auto mt-10 flex max-w-4xl flex-wrap items-start justify-center gap-x-12 gap-y-7 md:justify-between'>
                         {ICONS.map(({ Icon, label }) => (
-                            <div key={label} className='flex flex-col items-center gap-4'>
-                                <Icon size={34} className='text-coal' />
-                                <span className='label-mono text-coal/70 text-[10px]'>{label}</span>
+                            <div key={label} className='group/exp flex flex-col items-center gap-4'>
+                                <Icon
+                                    size={42}
+                                    className='text-coal transition-transform duration-500 group-hover/exp:[animation:spin_7s_linear_infinite]'
+                                />
+                                <span className='label-mono text-coal/70 text-[11px]'>{label}</span>
                             </div>
                         ))}
                     </div>
                 </Reveal>
 
                 <Reveal delay={0.35}>
-                    <ReserveButton className='label-mono bg-coal text-bone hover:bg-bone hover:text-coal mt-10 inline-block px-8 py-3.5 transition-colors duration-300'>
+                    <ReserveButton className='label-mono bg-coal text-bone hover:bg-bone hover:text-coal mt-10 inline-block px-9 py-4 transition-colors duration-300'>
                         Book your evening
                     </ReserveButton>
                 </Reveal>
