@@ -105,23 +105,6 @@ const Page = () => {
                 </RevealImage>
             </section>
 
-            {/* Quote band */}
-            <section data-snap className='bg-flame relative flex snap-start items-center justify-center overflow-hidden md:h-svh'>
-                <Image
-                    src='/images/leopardbg.png'
-                    alt=''
-                    fill
-                    sizes='100vw'
-                    className='object-cover opacity-[0.10] mix-blend-multiply'
-                />
-                <div className='relative w-full px-5 py-16 text-center md:py-0'>
-                    <RevealLines
-                        className='headline text-coal text-4xl md:text-7xl'
-                        lines={['Polished luxury,', 'primal appetite.']}
-                    />
-                </div>
-            </section>
-
             {/* Chapter 02 — The Room */}
             <section data-snap className='grid snap-start grid-cols-1 md:h-svh md:grid-cols-12'>
                 <RevealImage className='relative order-2 aspect-[4/5] md:order-1 md:col-span-6 md:aspect-auto md:h-full'>
@@ -160,77 +143,114 @@ const Page = () => {
                 </div>
             </section>
 
-            {/* Chapter 03 — The Table & The Den */}
-            <section data-snap className='grid snap-start grid-cols-1 md:h-svh md:grid-cols-2 md:grid-rows-1'>
-                <div className='relative flex flex-col md:min-h-0'>
-                    <RevealImage className='relative aspect-[4/3] md:min-h-0 md:flex-1 md:aspect-auto'>
-                        <Image
-                            src='/images/home/dry-ager.jpg'
-                            alt='The dry-aging cabinet glowing red'
-                            fill
-                            sizes='(max-width: 768px) 100vw, 50vw'
-                            className='img-premium object-cover'
-                        />
-                    </RevealImage>
-                    <div className='p-8 md:p-12'>
-                        <Reveal>
-                            <p className='label-mono text-flame mb-6'>The Table</p>
-                            <p className='headline text-bone text-3xl md:text-4xl'>Fire, salt and patience.</p>
-                            <p className='text-bone/60 mt-6 max-w-md font-mono text-[15px] leading-loose'>
-                                Cuts from Alberta, Elora and Miyazaki — wet- and dry-aged up to 45 days, grilled over
-                                fire and branded before they leave the pass. A raw bar of oysters, king crab and
-                                Kaviari caviar keeps the other side of the table honest.
-                            </p>
-                        </Reveal>
-                    </div>
+            {/* The Table */}
+            <section data-snap className='grid snap-start grid-cols-1 md:h-svh md:grid-cols-12'>
+                <div className='flex flex-col justify-center p-8 md:col-span-6 md:p-16'>
+                    <Reveal>
+                        <p className='label-mono text-flame mb-8'>The Table</p>
+                    </Reveal>
+                    <RevealLines
+                        className='headline text-bone text-4xl md:text-5xl'
+                        lines={['Fire, salt', 'and patience.']}
+                        delay={0.1}
+                    />
+                    <Reveal delay={0.2}>
+                        <p className='text-bone/60 mt-8 max-w-lg font-mono text-[15px] leading-loose'>
+                            Cuts from Alberta, Elora and Miyazaki — wet- and dry-aged up to 45 days, grilled over fire
+                            and branded before they leave the pass. A raw bar of oysters, king crab and Kaviari caviar
+                            keeps the other side of the table honest.
+                        </p>
+                        <p className='text-bone/60 mt-6 max-w-lg font-mono text-[15px] leading-loose'>
+                            The cabinet by the pass glows red for a reason: time is the most expensive ingredient in
+                            the room, and we spend it generously.
+                        </p>
+                    </Reveal>
                 </div>
-                <div className='relative flex flex-col md:min-h-0'>
-                    <RevealImage className='relative aspect-[4/3] md:min-h-0 md:flex-1 md:aspect-auto' delay={0.12}>
-                        <Image
-                            src='/images/home/den-nights.jpg'
-                            alt='An old fashioned beside the Animl menu'
-                            fill
-                            sizes='(max-width: 768px) 100vw, 50vw'
-                            className='img-premium object-cover'
-                        />
-                    </RevealImage>
-                    <div className='p-8 md:p-12'>
-                        <Reveal delay={0.1}>
-                            <p className='label-mono text-flame mb-6'>The Den</p>
-                            <p className='headline text-bone text-3xl md:text-4xl'>Cocktails, served like dinner.</p>
-                            <p className='text-bone/60 mt-6 max-w-md font-mono text-[15px] leading-loose'>
-                                Saralyn Stevens and the Animl bar team composed the cocktail menu like a tasting: amuse
-                                bouche to dessert, with miniature martinis in between. Stay past midnight — the den
-                                pours until 2 AM on weekends.
-                            </p>
-                        </Reveal>
-                    </div>
+                <RevealImage className='relative aspect-[4/5] md:col-span-6 md:aspect-auto md:h-full'>
+                    <Image
+                        src='/images/home/dry-ager.jpg'
+                        alt='The dry-aging cabinet glowing red'
+                        fill
+                        sizes='(max-width: 768px) 100vw, 50vw'
+                        className='img-premium object-cover'
+                    />
+                </RevealImage>
+            </section>
+
+            {/* The Den */}
+            <section data-snap className='grid snap-start grid-cols-1 md:h-svh md:grid-cols-12'>
+                <RevealImage className='relative order-2 aspect-[4/5] md:order-1 md:col-span-6 md:aspect-auto md:h-full'>
+                    <Image
+                        src='/images/home/den-nights.jpg'
+                        alt='An old fashioned beside the Animl menu'
+                        fill
+                        sizes='(max-width: 768px) 100vw, 50vw'
+                        className='img-premium object-cover'
+                    />
+                </RevealImage>
+                <div className='order-1 flex flex-col justify-center p-8 md:order-2 md:col-span-6 md:p-16'>
+                    <Reveal>
+                        <p className='label-mono text-flame mb-8'>The Den</p>
+                    </Reveal>
+                    <RevealLines
+                        className='headline text-bone text-4xl md:text-5xl'
+                        lines={['Cocktails,', 'served like dinner.']}
+                        delay={0.1}
+                    />
+                    <Reveal delay={0.2}>
+                        <p className='text-bone/60 mt-8 max-w-lg font-mono text-[15px] leading-loose'>
+                            Saralyn Stevens and the Animl bar team composed the cocktail menu like a tasting: amuse
+                            bouche to dessert, with miniature martinis in between and a house digestif to close.
+                        </p>
+                        <p className='text-bone/60 mt-6 max-w-lg font-mono text-[15px] leading-loose'>
+                            Stay past midnight — the den pours until 2 AM on weekends.
+                        </p>
+                    </Reveal>
                 </div>
             </section>
 
-            {/* Credits */}
-            <section data-snap className='grid snap-start grid-cols-1 content-center items-center gap-8 px-8 py-12 md:h-svh md:grid-cols-12 md:px-16'>
-                <div className='md:col-span-9'>
+            {/* The Founder */}
+            <section data-snap className='grid snap-start grid-cols-1 content-center items-center gap-10 px-8 py-16 md:h-svh md:grid-cols-12 md:gap-12 md:px-16'>
+                <div className='md:col-span-7'>
                     <Reveal>
-                        <ul className='label-mono text-bone/70 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4'>
+                        <p className='label-mono text-flame mb-8'>The Founder</p>
+                    </Reveal>
+                    <RevealLines
+                        className='headline text-bone text-4xl md:text-6xl'
+                        lines={['Three decades of', 'Toronto nights.']}
+                        delay={0.1}
+                    />
+                    <Reveal delay={0.2}>
+                        <p className='text-bone/60 mt-8 max-w-lg font-mono text-[15px] leading-loose'>
+                            Animl is the newest chapter from Charles Khabouth&apos;s INK Entertainment — the
+                            hospitality house that has shaped how Toronto goes out since the eighties, from defining
+                            nightclubs to restaurants and hotels.
+                        </p>
+                        <p className='text-bone/60 mt-6 max-w-lg font-mono text-[15px] leading-loose'>
+                            Everything INK learned about a great night — the room, the sound, the service, the drama —
+                            is distilled into one address on Wellington Street.
+                        </p>
+                    </Reveal>
+                </div>
+                <div className='md:col-span-5 md:justify-self-end'>
+                    <Reveal delay={0.15}>
+                        <ul className='label-mono text-bone/70 space-y-6'>
                             <li>
-                                <span className='text-flame block'>Founder</span>Charles Khabouth — INK
+                                <span className='text-flame block'>Founder</span>Charles Khabouth — INK Entertainment
                             </li>
                             <li>
-                                <span className='text-flame block'>Interior Design</span>Nivek Remas
+                                <span className='text-flame block'>Interior Design</span>Nivek Remas, Toronto
                             </li>
                             <li>
                                 <span className='text-flame block'>Cocktail Programme</span>Saralyn Stevens
                             </li>
                             <li>
-                                <span className='text-flame block'>Neighbourhood</span>420A Wellington St W
+                                <span className='text-flame block'>Home</span>420A Wellington St West
                             </li>
                         </ul>
-                    </Reveal>
-                </div>
-                <div className='md:col-span-3 md:justify-self-end'>
-                    <Reveal delay={0.15}>
-                        <Stamp text='Elegantly Untamed • Animl • Toronto • ' size={120} />
+                        <div className='mt-10'>
+                            <Stamp text='Elegantly Untamed • Animl • Toronto • ' size={110} />
+                        </div>
                     </Reveal>
                 </div>
             </section>
