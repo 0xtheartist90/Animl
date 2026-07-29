@@ -29,7 +29,7 @@ const Experience = () => {
                     <p className='label-mono text-coal/70 mb-6'>The Animl Experience</p>
                 </Reveal>
                 <RevealLines
-                    className='headline text-coal text-4xl md:text-6xl'
+                    className='headline text-coal text-5xl md:text-7xl'
                     lines={['Where polished luxury', 'meets primal instinct.']}
                     delay={0.1}
                 />

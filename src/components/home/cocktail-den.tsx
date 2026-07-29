@@ -28,7 +28,7 @@ const CocktailDen = () => {
                 {/* Copy + courses */}
                 <div className='order-2 flex flex-col justify-center px-5 py-16 md:order-1 md:col-span-6 md:px-14 md:py-24'>
                     <RevealLines
-                        className='headline text-bone text-5xl md:text-7xl'
+                        className='headline text-bone text-6xl md:text-8xl'
                         lines={[
                             'Cocktails,',
                             <span key='l2'>
