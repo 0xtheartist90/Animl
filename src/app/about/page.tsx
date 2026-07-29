@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import { ReserveButton } from '@/components/site/reserve-modal';
 import { Parallax, Reveal, RevealImage, RevealLines } from '@/components/site/reveal';
+import SnapPager from '@/components/site/snap-pager';
 import Spark from '@/components/site/spark';
 import Stamp from '@/components/site/stamp';
 
@@ -25,8 +26,10 @@ const GALLERY = [
 const Page = () => {
     return (
         <>
+            <SnapPager />
+
             {/* Video hero */}
-            <section className='relative h-[80svh] overflow-hidden'>
+            <section data-snap className='relative h-[80svh] snap-start overflow-hidden md:h-svh'>
                 <video
                     className='absolute inset-0 h-full w-full scale-[1.06] object-cover'
                     src='/video/interior.mp4'
@@ -68,7 +71,7 @@ const Page = () => {
             </section>
 
             {/* Chapter 01 — The Instinct */}
-            <section className='grid grid-cols-1 md:grid-cols-12'>
+            <section data-snap className='grid snap-start grid-cols-1 md:h-svh md:grid-cols-12'>
                 <div className='flex flex-col justify-center p-8 md:col-span-6 md:p-16'>
                     <Reveal>
                         <p className='label-mono text-flame mb-8'>The Instinct</p>
@@ -91,7 +94,7 @@ const Page = () => {
                         </p>
                     </Reveal>
                 </div>
-                <RevealImage className='relative aspect-[4/5] md:col-span-6 md:aspect-auto md:min-h-[560px]'>
+                <RevealImage className='relative aspect-[4/5] md:col-span-6 md:aspect-auto md:h-full'>
                     <Image
                         src='/images/home/glam-dining.jpg'
                         alt='A guest in gold slicing into a signature cut'
@@ -103,7 +106,7 @@ const Page = () => {
             </section>
 
             {/* Quote band */}
-            <section className='bg-flame relative overflow-hidden'>
+            <section data-snap className='bg-flame relative flex snap-start items-center justify-center overflow-hidden md:h-svh'>
                 <Image
                     src='/images/leopardbg.png'
                     alt=''
@@ -111,17 +114,17 @@ const Page = () => {
                     sizes='100vw'
                     className='object-cover opacity-[0.10] mix-blend-multiply'
                 />
-                <div className='relative px-5 py-16 text-center md:py-20'>
+                <div className='relative w-full px-5 py-16 text-center md:py-0'>
                     <RevealLines
-                        className='headline text-coal text-4xl md:text-6xl'
+                        className='headline text-coal text-4xl md:text-7xl'
                         lines={['Polished luxury,', 'primal appetite.']}
                     />
                 </div>
             </section>
 
             {/* Chapter 02 — The Room */}
-            <section className='grid grid-cols-1 md:grid-cols-12'>
-                <RevealImage className='relative order-2 aspect-[4/5] md:order-1 md:col-span-6 md:aspect-auto md:min-h-[560px]'>
+            <section data-snap className='grid snap-start grid-cols-1 md:h-svh md:grid-cols-12'>
+                <RevealImage className='relative order-2 aspect-[4/5] md:order-1 md:col-span-6 md:aspect-auto md:h-full'>
                     <Parallax className='h-full' amount={8}>
                         <div className='relative h-full min-h-full w-full scale-[1.16]'>
                             <Image
@@ -158,9 +161,9 @@ const Page = () => {
             </section>
 
             {/* Chapter 03 — The Table & The Den */}
-            <section className='grid grid-cols-1 md:grid-cols-2'>
-                <div className='relative'>
-                    <RevealImage className='relative aspect-[4/3]'>
+            <section data-snap className='grid snap-start grid-cols-1 md:h-svh md:grid-cols-2 md:grid-rows-1'>
+                <div className='relative flex flex-col md:min-h-0'>
+                    <RevealImage className='relative aspect-[4/3] md:min-h-0 md:flex-1 md:aspect-auto'>
                         <Image
                             src='/images/home/dry-ager.jpg'
                             alt='The dry-aging cabinet glowing red'
@@ -181,8 +184,8 @@ const Page = () => {
                         </Reveal>
                     </div>
                 </div>
-                <div className='relative'>
-                    <RevealImage className='relative aspect-[4/3]' delay={0.12}>
+                <div className='relative flex flex-col md:min-h-0'>
+                    <RevealImage className='relative aspect-[4/3] md:min-h-0 md:flex-1 md:aspect-auto' delay={0.12}>
                         <Image
                             src='/images/home/den-nights.jpg'
                             alt='An old fashioned beside the Animl menu'
@@ -206,7 +209,7 @@ const Page = () => {
             </section>
 
             {/* Credits */}
-            <section className='grid grid-cols-1 items-center gap-8 px-8 py-12 md:grid-cols-12 md:px-16 md:py-16'>
+            <section data-snap className='grid snap-start grid-cols-1 content-center items-center gap-8 px-8 py-12 md:h-svh md:grid-cols-12 md:px-16'>
                 <div className='md:col-span-9'>
                     <Reveal>
                         <ul className='label-mono text-bone/70 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4'>
@@ -233,9 +236,9 @@ const Page = () => {
             </section>
 
             {/* Gallery */}
-            <section className='grid grid-cols-2 md:grid-cols-3'>
+            <section data-snap className='grid snap-start grid-cols-2 md:h-svh md:grid-cols-3 md:grid-rows-2'>
                 {GALLERY.map((img, i) => (
-                    <RevealImage key={img.src} className='group relative aspect-[4/5]' delay={0.06 * (i % 3)}>
+                    <RevealImage key={img.src} className='group relative aspect-[4/5] md:aspect-auto' delay={0.06 * (i % 3)}>
                         <Image
                             src={img.src}
                             alt={img.alt}
@@ -251,8 +254,8 @@ const Page = () => {
             </section>
 
             {/* Closing CTA */}
-            <section className='relative'>
-                <Parallax className='h-[50svh] md:h-[65svh]' amount={10}>
+            <section data-snap className='relative snap-start md:h-svh'>
+                <Parallax className='h-[50svh] md:h-svh' amount={10}>
                     <div className='relative h-full w-full scale-[1.14]'>
                         <Image
                             src='/images/home/disco-bull.jpg'
