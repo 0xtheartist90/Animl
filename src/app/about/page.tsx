@@ -91,7 +91,7 @@ const Page = () => {
                         </p>
                     </Reveal>
                 </div>
-                <RevealImage className='relative aspect-[4/5] md:col-span-6'>
+                <RevealImage className='relative aspect-[4/5] w-full md:col-span-6 md:max-w-md md:justify-self-center md:self-center'>
                     <Image
                         src='/images/home/glam-dining.jpg'
                         alt='A guest in gold slicing into a signature cut'
