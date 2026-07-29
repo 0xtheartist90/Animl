@@ -136,35 +136,6 @@ export const IconShell = (p: IconProps) => (
     </Base>
 );
 
-/** Walking leopard — after the house pattern. */
-export const IconLeopard = (p: IconProps) => (
-    <Base {...p}>
-        {/* ear + head + back */}
-        <path d='M4 14 C4 12.4, 5.2 11.2, 6.8 11.2 L7.6 9.6 L8.6 11.3 C12 10.2, 18.5 10, 22 11.2' />
-        {/* muzzle + jaw to chest */}
-        <path d='M4 14 C3.8 15, 4.4 15.8, 5.6 15.9 L6.8 16 C7.2 16.8, 7.6 17.2, 8.4 17.4' />
-        {/* rump */}
-        <path d='M22 11.2 C24 11.6, 24.8 13.5, 24.6 15.2 C24.5 16, 24.2 16.8, 23.8 17.4' />
-        {/* belly */}
-        <path d='M8.4 17.4 C13 18.2, 19 18.2, 23.8 17.4' />
-        {/* legs */}
-        <path d='M9.2 17.6 L8.8 22.5 L10.2 22.5' />
-        <path d='M12.4 18 L12.2 22.5 L13.6 22.5' />
-        <path d='M19.6 18 L19.4 22.5 L20.8 22.5' />
-        <path d='M23 17.6 L23 22.5 L24.4 22.5' />
-        {/* curled tail */}
-        <path d='M22 11.2 C24.5 9.5, 27 8.2, 28.4 9.4 C29.6 10.4, 28.8 12, 27.2 11.6' />
-        {/* spots */}
-        <path d='M11.6 13 L11.8 13.2' />
-        <path d='M15.2 12.2 L15.4 12.4' />
-        <path d='M18.6 13.6 L18.8 13.8' />
-        <path d='M13.8 15.4 L14 15.6' />
-        <path d='M20.8 15.2 L21 15.4' />
-        {/* eye */}
-        <path d='M5.7 13.2 L5.9 13.2' />
-    </Base>
-);
-
 /** Tomahawk / rib steak. */
 export const IconSteak = (p: IconProps) => (
     <Base {...p}>

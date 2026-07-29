@@ -7,7 +7,7 @@ const ITEMS = ['Dry-Aged Steak', 'Crafted Cocktails', 'Art Deco', 'Studio 54 Ene
 
 const Statement = () => {
     return (
-        <section className='bg-flame relative overflow-hidden py-10 md:py-14'>
+        <section className='bg-flame relative overflow-hidden py-4 md:py-6'>
             <Image
                 src='/images/leopardbg.png'
                 alt=''
@@ -17,9 +17,9 @@ const Statement = () => {
             />
             <Marquee slow className='relative'>
                 {ITEMS.map((item, i) => (
-                    <span key={i} className='mx-6 inline-flex items-center gap-12 md:mx-10'>
-                        <span className='headline text-coal/90 text-6xl md:text-8xl'>{item}</span>
-                        <Spark className='text-coal/60' size={26} />
+                    <span key={i} className='mx-4 inline-flex items-center gap-8 md:mx-6'>
+                        <span className='headline text-coal/90 text-3xl md:text-5xl'>{item}</span>
+                        <Spark className='text-coal/60' size={18} />
                     </span>
                 ))}
             </Marquee>
