@@ -26,15 +26,17 @@ const Page = () => {
         <>
             {/* Video hero */}
             <section className='relative h-[80svh] overflow-hidden'>
-                <video
-                    className='absolute inset-0 h-full w-full scale-[1.06] object-cover'
-                    src='/video/interior.mp4'
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload='auto'
-                />
+                <Reveal y={0} duration={1.4} className='absolute inset-0'>
+                    <video
+                        className='h-full w-full scale-[1.06] object-cover'
+                        src='/video/interior.mp4'
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload='auto'
+                    />
+                </Reveal>
                 <div className='from-coal via-coal/30 absolute inset-0 bg-gradient-to-t to-transparent' />
                 <div className='from-coal/60 absolute inset-x-0 top-0 h-28 bg-gradient-to-b to-transparent' />
                 <div className='relative flex h-full flex-col justify-end px-5 pb-14 md:px-8 md:pb-16'>
@@ -103,7 +105,8 @@ const Page = () => {
 
             {/* The Room — full-bleed */}
             <section className='relative'>
-                <Parallax className='h-[85svh] md:h-[95svh]' amount={10}>
+                <RevealImage zoom={false}>
+                    <Parallax className='h-[85svh] md:h-[95svh]' amount={10}>
                     <div className='relative h-full w-full scale-[1.14]'>
                         <Image
                             src='/images/home/the-lounge.jpg'
@@ -113,7 +116,8 @@ const Page = () => {
                             className='img-premium object-cover'
                         />
                     </div>
-                </Parallax>
+                    </Parallax>
+                </RevealImage>
                 <div className='from-coal/95 via-coal/40 absolute inset-0 bg-gradient-to-t to-transparent' />
                 <div className='absolute inset-x-0 bottom-0 grid grid-cols-1 gap-6 px-5 pb-10 md:grid-cols-12 md:items-end md:px-8 md:pb-14'>
                     <div className='md:col-span-6'>
@@ -164,22 +168,20 @@ const Page = () => {
                             generously.
                         </p>
                     </Reveal>
-                    <Reveal delay={0.3}>
-                        <div className='mt-12 flex gap-14 md:gap-20'>
-                            <div>
-                                <p className='headline text-flame text-6xl md:text-7xl'>45</p>
-                                <p className='label-mono text-smoke mt-2'>Days dry-aged</p>
-                            </div>
-                            <div>
-                                <p className='headline text-flame text-6xl md:text-7xl'>3</p>
-                                <p className='label-mono text-smoke mt-2'>Continents of wagyu</p>
-                            </div>
-                            <div>
-                                <p className='headline text-flame text-6xl md:text-7xl'>40</p>
-                                <p className='label-mono text-smoke mt-2'>oz Porterhouse</p>
-                            </div>
-                        </div>
-                    </Reveal>
+                    <div className='mt-12 flex gap-14 md:gap-20'>
+                        <Reveal delay={0.25} y={28}>
+                            <p className='headline text-flame text-6xl md:text-7xl'>45</p>
+                            <p className='label-mono text-smoke mt-2'>Days dry-aged</p>
+                        </Reveal>
+                        <Reveal delay={0.37} y={28}>
+                            <p className='headline text-flame text-6xl md:text-7xl'>3</p>
+                            <p className='label-mono text-smoke mt-2'>Continents of wagyu</p>
+                        </Reveal>
+                        <Reveal delay={0.49} y={28}>
+                            <p className='headline text-flame text-6xl md:text-7xl'>40</p>
+                            <p className='label-mono text-smoke mt-2'>oz Porterhouse</p>
+                        </Reveal>
+                    </div>
                 </div>
             </section>
 
@@ -242,28 +244,34 @@ const Page = () => {
                         Wellington Street.
                     </p>
                 </Reveal>
-                <Reveal delay={0.3}>
-                    <ul className='label-mono text-bone/70 mx-auto mt-14 flex max-w-4xl flex-wrap justify-center gap-x-16 gap-y-8'>
-                        <li>
+                <ul className='label-mono text-bone/70 mx-auto mt-14 flex max-w-4xl flex-wrap justify-center gap-x-16 gap-y-8'>
+                    <li>
+                        <Reveal delay={0.25} y={20}>
                             <span className='text-flame block'>Founder</span>Charles Khabouth
-                        </li>
-                        <li>
+                        </Reveal>
+                    </li>
+                    <li>
+                        <Reveal delay={0.33} y={20}>
                             <span className='text-flame block'>Interior Design</span>Nivek Remas
-                        </li>
-                        <li>
+                        </Reveal>
+                    </li>
+                    <li>
+                        <Reveal delay={0.41} y={20}>
                             <span className='text-flame block'>Cocktail Programme</span>Saralyn Stevens
-                        </li>
-                        <li>
+                        </Reveal>
+                    </li>
+                    <li>
+                        <Reveal delay={0.49} y={20}>
                             <span className='text-flame block'>Home</span>420A Wellington St W
-                        </li>
-                    </ul>
-                </Reveal>
+                        </Reveal>
+                    </li>
+                </ul>
             </section>
 
             {/* Gallery */}
             <section className='grid grid-cols-2 md:grid-cols-3'>
                 {GALLERY.map((img, i) => (
-                    <RevealImage key={img.src} className='group relative aspect-[4/5]' delay={0.06 * (i % 3)}>
+                    <RevealImage key={img.src} className='group relative aspect-[4/5]' delay={0.07 * i}>
                         <Image
                             src={img.src}
                             alt={img.alt}
@@ -280,7 +288,8 @@ const Page = () => {
 
             {/* Closing CTA */}
             <section className='relative'>
-                <Parallax className='h-[50svh] md:h-[65svh]' amount={10}>
+                <RevealImage zoom={false}>
+                    <Parallax className='h-[50svh] md:h-[65svh]' amount={10}>
                     <div className='relative h-full w-full scale-[1.14]'>
                         <Image
                             src='/images/home/caviar-night.jpg'
@@ -290,9 +299,10 @@ const Page = () => {
                             className='img-premium object-cover'
                         />
                     </div>
-                </Parallax>
+                    </Parallax>
+                </RevealImage>
                 <div className='from-coal/80 absolute inset-0 bg-gradient-to-t via-transparent to-transparent' />
-                <div className='absolute inset-x-0 bottom-0 flex flex-col items-start gap-6 px-5 pb-10 md:flex-row md:items-end md:justify-between md:px-8'>
+                <Reveal y={28} delay={0.15} className='absolute inset-x-0 bottom-0 flex flex-col items-start gap-6 px-5 pb-10 md:flex-row md:items-end md:justify-between md:px-8'>
                     <p className='headline text-bone text-4xl md:text-5xl'>Come see it for yourself.</p>
                     <div className='flex gap-4'>
                         <ReserveButton className='label-mono bg-flame text-bone hover:bg-bone hover:text-coal px-8 py-4 transition-colors duration-300'>
@@ -304,7 +314,7 @@ const Page = () => {
                             View Menus
                         </Link>
                     </div>
-                </div>
+                </Reveal>
             </section>
         </>
     );
