@@ -1,12 +1,12 @@
 import Image from 'next/image';
 
-import { IconBull, IconMartini, IconShell, IconWine } from '@/components/site/icons';
+import { IconBowtie, IconCloche, IconMoon, IconPin } from '@/components/site/icons';
 
 const ITEMS = [
-    { Icon: IconBull, label: 'Signature Cuts' },
-    { Icon: IconShell, label: 'Raw Bar' },
-    { Icon: IconMartini, label: 'Cocktail Den' },
-    { Icon: IconWine, label: 'Wine Cellar' }
+    { Icon: IconPin, label: 'Entertainment District' },
+    { Icon: IconMoon, label: 'Open Till 2 AM' },
+    { Icon: IconBowtie, label: 'Elegant Attire' },
+    { Icon: IconCloche, label: 'Private Dining' }
 ];
 
 /** Quiet terracotta divider — static, understated, one icon per pillar. */

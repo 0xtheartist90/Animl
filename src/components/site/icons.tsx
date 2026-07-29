@@ -136,6 +136,42 @@ export const IconShell = (p: IconProps) => (
     </Base>
 );
 
+/** Location pin with diamond. */
+export const IconPin = (p: IconProps) => (
+    <Base {...p}>
+        <path d='M16 3 C22 3, 26 7.5, 26 13 C26 20, 16 29, 16 29 C16 29, 6 20, 6 13 C6 7.5, 10 3, 16 3 Z' />
+        <path d='M16 9.5 L19.5 13 L16 16.5 L12.5 13 Z' />
+    </Base>
+);
+
+/** Crescent moon with a spark — the late-night den. */
+export const IconMoon = (p: IconProps) => (
+    <Base {...p}>
+        <path d='M21 4 C14 4.5, 8.5 10, 8.5 17 C8.5 23.5, 13.5 28, 19.5 28 C21.5 28, 23.5 27.5, 25 26.5 C18 25.5, 13.5 20.5, 13.5 14 C13.5 10, 15.5 6.5, 21 4 Z' />
+        <path d='M24 8 L24 12' />
+        <path d='M22 10 L26 10' />
+    </Base>
+);
+
+/** Bowtie — elegant attire. */
+export const IconBowtie = (p: IconProps) => (
+    <Base {...p}>
+        <path d='M4 9.5 L13 13.5 L13 18.5 L4 22.5 C3 20, 3 12, 4 9.5 Z' />
+        <path d='M28 9.5 L19 13.5 L19 18.5 L28 22.5 C29 20, 29 12, 28 9.5 Z' />
+        <path d='M13 12.8 H19 V19.2 H13 Z' />
+    </Base>
+);
+
+/** Cloche — private dining. */
+export const IconCloche = (p: IconProps) => (
+    <Base {...p}>
+        <path d='M6 21 C6 14, 10.5 9.5, 16 9.5 C21.5 9.5, 26 14, 26 21' />
+        <circle cx='16' cy='6.5' r='1.6' />
+        <path d='M3.5 21 H28.5' />
+        <path d='M7 24.5 H25' />
+    </Base>
+);
+
 /** Tomahawk / rib steak. */
 export const IconSteak = (p: IconProps) => (
     <Base {...p}>
