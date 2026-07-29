@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import Statement from '@/components/home/statement';
+import { IconLeopard } from '@/components/site/icons';
 import { Parallax, Reveal, RevealImage, RevealLines } from '@/components/site/reveal';
 import Spark from '@/components/site/spark';
 
@@ -28,7 +29,8 @@ const TheRoom = () => {
                     ]}
                 />
                 <Reveal delay={0.2}>
-                    <p className='text-bone/60 mx-auto mt-8 max-w-md font-mono text-[13px] leading-loose'>
+                    <IconLeopard size={44} className='text-flame mx-auto mt-8' />
+                    <p className='text-bone/60 mx-auto mt-4 max-w-md font-mono text-[13px] leading-loose'>
                         Mirrored bars, leopard velvet, brass and rosso marble — a timeless, theatrical room built for
                         evenings you don&apos;t forget.
                     </p>
