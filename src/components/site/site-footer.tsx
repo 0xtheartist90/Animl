@@ -30,7 +30,7 @@ const SiteFooter = () => {
 
             <div className='relative grid grid-cols-1 gap-8 px-5 pt-10 pb-6 md:grid-cols-12 md:gap-12 md:px-8 md:pt-20 md:pb-10'>
                 {/* Brand block */}
-                <div className='flex flex-col items-start gap-5 md:col-span-6 md:gap-8'>
+                <div className='flex flex-col items-center gap-5 text-center md:col-span-6 md:items-start md:gap-8 md:text-left'>
                     <Logo className='text-bone w-44 md:w-80' />
                     <p className='label-mono text-smoke'>
                         Steakhouse &amp; Cocktail Den — Elegantly Untamed
@@ -43,7 +43,7 @@ const SiteFooter = () => {
                 </div>
 
                 {/* Script nav */}
-                <nav className='md:col-span-3'>
+                <nav className='text-center md:col-span-3 md:text-left'>
                     <ul className='space-y-1'>
                         {NAV.map((item) => (
                             <li key={item.href}>
@@ -62,9 +62,9 @@ const SiteFooter = () => {
                 </nav>
 
                 {/* Details */}
-                <div className='space-y-6 md:col-span-3 md:space-y-10'>
+                <div className='space-y-6 text-center md:col-span-3 md:space-y-10 md:text-left'>
                     <div>
-                        <p className='label-mono text-flame mb-4 flex items-center gap-3'>
+                        <p className='label-mono text-flame mb-4 flex items-center justify-center gap-3 md:justify-start'>
                             <Spark size={12} />
                             Find Us
                         </p>
@@ -98,7 +98,7 @@ const SiteFooter = () => {
                         </address>
                     </div>
                     <div>
-                        <p className='label-mono text-flame mb-4 flex items-center gap-3'>
+                        <p className='label-mono text-flame mb-4 flex items-center justify-center gap-3 md:justify-start'>
                             <Spark size={12} />
                             Hours
                         </p>
@@ -115,7 +115,7 @@ const SiteFooter = () => {
             </div>
 
             {/* Bottom strip with stamp */}
-            <div className='relative flex flex-col gap-4 px-5 pb-8 md:flex-row md:items-end md:justify-between md:gap-6 md:px-8 md:pb-10'>
+            <div className='relative flex flex-col items-center gap-4 px-5 pb-8 text-center md:flex-row md:items-end md:justify-between md:gap-6 md:px-8 md:pb-10 md:text-left'>
                 <div className='label-mono text-smoke space-y-2'>
                     <p>© 2026 Animl Steakhouse — powered by INK Entertainment</p>
                     <a
