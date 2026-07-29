@@ -19,7 +19,7 @@ const geistMono = localFont({
     weight: '100 900'
 });
 const display = localFont({
-    src: './fonts/MangroRegular.ttf',
+    src: './fonts/TheQuicky.otf',
     variable: '--font-display',
     display: 'swap'
 });
