@@ -73,7 +73,7 @@ const Page = () => {
             <section className='grid grid-cols-1 md:grid-cols-12'>
                 <div className='flex flex-col justify-center p-8 md:col-span-6 md:p-16'>
                     <Reveal>
-                        <p className='label-mono text-flame mb-8'>01 — The Instinct</p>
+                        <p className='label-mono text-flame mb-8'>The Instinct</p>
                     </Reveal>
                     <RevealLines
                         className='headline text-bone text-4xl md:text-5xl'
@@ -138,7 +138,7 @@ const Page = () => {
                 </RevealImage>
                 <div className='order-1 flex flex-col justify-center p-8 md:order-2 md:col-span-6 md:p-16'>
                     <Reveal>
-                        <p className='label-mono text-flame mb-8'>02 — The Room</p>
+                        <p className='label-mono text-flame mb-8'>The Room</p>
                     </Reveal>
                     <RevealLines
                         className='headline text-bone text-4xl md:text-5xl'
@@ -173,7 +173,7 @@ const Page = () => {
                     </RevealImage>
                     <div className='p-8 md:p-12'>
                         <Reveal>
-                            <p className='label-mono text-flame mb-6'>03 — The Table</p>
+                            <p className='label-mono text-flame mb-6'>The Table</p>
                             <p className='headline text-bone text-3xl md:text-4xl'>Fire, salt and patience.</p>
                             <p className='text-bone/60 mt-6 max-w-md font-mono text-[13px] leading-loose'>
                                 Cuts from Alberta, Elora and Miyazaki — wet- and dry-aged up to 45 days, grilled over
@@ -195,7 +195,7 @@ const Page = () => {
                     </RevealImage>
                     <div className='p-8 md:p-12'>
                         <Reveal delay={0.1}>
-                            <p className='label-mono text-flame mb-6'>04 — The Den</p>
+                            <p className='label-mono text-flame mb-6'>The Den</p>
                             <p className='headline text-bone text-3xl md:text-4xl'>Cocktails, served like dinner.</p>
                             <p className='text-bone/60 mt-6 max-w-md font-mono text-[13px] leading-loose'>
                                 Saralyn Stevens and the Animl bar team composed the cocktail menu like a tasting: amuse
