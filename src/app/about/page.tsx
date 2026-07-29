@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import Logo from '@/components/site/logo';
 import { ReserveButton } from '@/components/site/reserve-modal';
 import { Parallax, Reveal, RevealImage, RevealLines } from '@/components/site/reveal';
 import Spark from '@/components/site/spark';
@@ -39,6 +40,9 @@ const Page = () => {
                 <div className='from-coal via-coal/30 absolute inset-0 bg-gradient-to-t to-transparent' />
                 <div className='from-coal/60 absolute inset-x-0 top-0 h-28 bg-gradient-to-b to-transparent' />
                 <div className='relative flex h-full flex-col justify-end px-5 pb-14 md:px-8 md:pb-16'>
+                    <Reveal delay={0.2}>
+                        <Logo className='text-bone mb-6 w-36 md:w-48' />
+                    </Reveal>
                     <Reveal delay={0.3}>
                         <p className='label-mono text-bone/80 mb-6 flex items-center gap-4'>
                             <Spark className='text-flame' size={13} />

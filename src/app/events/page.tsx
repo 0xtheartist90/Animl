@@ -55,6 +55,7 @@ const Page = () => {
                 accent='.'
                 image='/images/home/event-lounge.jpg'
                 imageAlt='Guests lounging in the Animl dining room'
+                showLogo
             />
 
             {/* Intro */}

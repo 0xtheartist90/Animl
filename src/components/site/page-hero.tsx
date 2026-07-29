@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+import Logo from '@/components/site/logo';
 import { Reveal, RevealLines } from '@/components/site/reveal';
 import Spark from '@/components/site/spark';
 
@@ -9,13 +10,15 @@ const PageHero = ({
     title,
     accent,
     image,
-    imageAlt
+    imageAlt,
+    showLogo = false
 }: {
     label: string;
     title: string;
     accent?: string;
     image?: string;
     imageAlt?: string;
+    showLogo?: boolean;
 }) => {
     return (
         <section className='relative overflow-hidden'>
@@ -26,6 +29,11 @@ const PageHero = ({
                 </>
             )}
             <div className='relative px-5 pt-40 pb-16 md:px-8 md:pt-56 md:pb-24'>
+                {showLogo && (
+                    <Reveal delay={0.05}>
+                        <Logo className='text-bone mb-6 w-36 md:w-48' />
+                    </Reveal>
+                )}
                 <Reveal>
                     <p className='label-mono text-bone/70 mb-6 flex items-center gap-4'>
                         <Spark className='text-flame' />
