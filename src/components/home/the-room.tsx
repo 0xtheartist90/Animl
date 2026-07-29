@@ -29,11 +29,11 @@ const TheRoom = () => {
                 />
                 <Reveal delay={0.2}>
                     <Image
-                        src='/images/leopard.png'
+                        src='/images/leopardicon.png'
                         alt=''
-                        width={467}
-                        height={325}
-                        className='mx-auto mt-8 w-24 md:w-28'
+                        width={955}
+                        height={2081}
+                        className='mx-auto mt-8 w-12 md:w-14'
                     />
                     <p className='text-bone/60 mx-auto mt-4 max-w-md font-mono text-[13px] leading-loose'>
                         Mirrored bars, leopard velvet, brass and rosso marble — a timeless, theatrical room built for
