@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 import Logo from '@/components/site/logo';
@@ -17,36 +16,17 @@ const NAV = [
 const SiteFooter = () => {
     return (
         <footer className='relative overflow-hidden'>
-            {/* Terracotta reserve ticker */}
-            <Link href='/reservations' className='block'>
-                <div className='bg-flame relative overflow-hidden'>
-                    <Image
-                        src='/images/leopardbg.png'
-                        alt=''
-                        fill
-                        sizes='100vw'
-                        className='object-cover opacity-[0.10] mix-blend-multiply'
-                    />
-                    <Marquee className='relative py-4' slow>
-                        {Array.from({ length: 6 }).map((_, i) => (
-                            <span key={i} className='headline text-coal/90 mx-6 inline-flex items-center gap-8 text-3xl'>
-                                Reserve your table
-                                <Spark className='text-coal/60' size={18} />
-                            </span>
-                        ))}
-                    </Marquee>
-                </div>
+            {/* Reserve ticker */}
+            <Link href='/reservations' className='border-border block border-y'>
+                <Marquee className='py-4' slow>
+                    {Array.from({ length: 6 }).map((_, i) => (
+                        <span key={i} className='headline text-bone mx-6 inline-flex items-center gap-8 text-3xl'>
+                            Reserve your table
+                            <Spark className='text-flame' size={18} />
+                        </span>
+                    ))}
+                </Marquee>
             </Link>
-
-            {/* Ghosted leopard watching from the right */}
-            <Image
-                src='/images/leopardicon.png'
-                alt=''
-                width={955}
-                height={2081}
-                aria-hidden
-                className='pointer-events-none absolute -right-8 bottom-16 w-40 opacity-[0.13] md:right-10 md:w-56'
-            />
 
             <div className='relative grid grid-cols-1 gap-12 px-5 pt-14 pb-10 md:grid-cols-12 md:px-8 md:pt-20'>
                 {/* Brand block */}

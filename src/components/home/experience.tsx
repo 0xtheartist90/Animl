@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { IconBull, IconCake, IconCoupe, IconShell, IconWine } from '@/components/site/icons';
-import Marquee from '@/components/site/marquee';
 import { Reveal, RevealLines } from '@/components/site/reveal';
 
 const ICONS = [
@@ -25,17 +24,6 @@ const Experience = () => {
                 className='object-cover opacity-[0.10] mix-blend-multiply'
             />
 
-            {/* Slow ghost marquee drifting behind the content */}
-            <div className='pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2' aria-hidden>
-                <Marquee slow>
-                    {Array.from({ length: 4 }).map((_, i) => (
-                        <span key={i} className='headline text-coal/10 mx-10 text-[16vw] whitespace-nowrap'>
-                            Elegantly Untamed
-                        </span>
-                    ))}
-                </Marquee>
-            </div>
-
             <div className='relative px-5 py-20 text-center md:py-28'>
                 <Reveal>
                     <p className='label-mono text-coal/70 mb-8'>The Animl Experience</p>
@@ -46,14 +34,11 @@ const Experience = () => {
                     delay={0.1}
                 />
 
-                {/* Floating icon row */}
+                {/* Icon row */}
                 <Reveal delay={0.25}>
                     <div className='mx-auto mt-14 flex max-w-3xl flex-wrap items-start justify-center gap-x-12 gap-y-8 md:justify-between'>
-                        {ICONS.map(({ Icon, label }, i) => (
-                            <div
-                                key={label}
-                                className='animate-float flex flex-col items-center gap-4'
-                                style={{ animationDelay: `${i * 0.55}s` }}>
+                        {ICONS.map(({ Icon, label }) => (
+                            <div key={label} className='flex flex-col items-center gap-4'>
                                 <Icon size={44} className='text-coal' />
                                 <span className='label-mono text-coal/70 text-[10px]'>{label}</span>
                             </div>
