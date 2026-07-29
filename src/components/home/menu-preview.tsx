@@ -286,13 +286,13 @@ const MenuPreview = () => {
                                 className='label-mono text-bone/70 hover:text-bone absolute -top-10 right-0 p-2 transition-colors'>
                                 ✕
                             </button>
-                            <div className='relative aspect-[4/5] max-h-[80svh] w-full overflow-hidden md:aspect-[4/3]'>
+                            <div className='relative h-[70svh] w-full md:h-[78svh]'>
                                 <Image
                                     src={lightbox.src}
                                     alt={lightbox.label}
                                     fill
                                     sizes='(max-width: 768px) 100vw, 768px'
-                                    className='object-cover'
+                                    className='object-contain'
                                 />
                             </div>
                             <p className='label-mono text-bone mt-4 flex items-center gap-3'>
