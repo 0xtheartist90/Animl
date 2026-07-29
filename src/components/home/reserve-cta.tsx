@@ -17,7 +17,7 @@ const ReserveCta = () => {
 
             <div className='grid grid-cols-1 md:grid-cols-12'>
                 {/* Giant CTA */}
-                <ReserveButton className='bg-flame relative flex flex-col justify-center overflow-hidden px-5 py-20 text-left md:col-span-8 md:px-14 md:py-32'>
+                <ReserveButton className='group bg-flame relative flex flex-col justify-center overflow-hidden px-5 py-20 text-left md:col-span-8 md:px-14 md:py-32'>
                     <Image
                         src='/images/leopardbg.png'
                         alt=''
@@ -25,16 +25,27 @@ const ReserveCta = () => {
                         sizes='(max-width: 768px) 100vw, 66vw'
                         className='object-cover opacity-[0.10] mix-blend-multiply'
                     />
+                    {/* Photo fades in over the terracotta on hover */}
+                    <span className='absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100'>
+                        <Image
+                            src='/images/home/event-lounge.jpg'
+                            alt=''
+                            fill
+                            sizes='(max-width: 768px) 100vw, 66vw'
+                            className='scale-105 object-cover transition-transform duration-[2000ms] ease-out group-hover:scale-100'
+                        />
+                        <span className='bg-coal/45 absolute inset-0' />
+                    </span>
                     <Reveal>
-                        <span className='label-mono text-coal/70 relative mb-6 block'>
+                        <span className='label-mono text-coal/70 group-hover:text-bone/80 relative mb-6 block transition-colors duration-500'>
                             Your table is waiting
                         </span>
-                        <span className='text-coal relative block font-sans text-[clamp(52px,8vw,128px)] leading-[1.02] font-semibold tracking-tight uppercase'>
+                        <span className='text-coal group-hover:text-bone relative block font-sans text-[clamp(52px,8vw,128px)] leading-[1.02] font-semibold tracking-tight uppercase transition-colors duration-500'>
                             Reserve
                             <br />
                             Now
                         </span>
-                        <span className='label-mono text-coal/80 relative mt-8 inline-flex items-center gap-3'>
+                        <span className='label-mono text-coal/80 group-hover:text-bone relative mt-8 inline-flex items-center gap-3 transition-colors duration-500'>
                             Book your evening
                             <span>→</span>
                         </span>
