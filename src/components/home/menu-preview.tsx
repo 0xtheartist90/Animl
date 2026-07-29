@@ -190,7 +190,7 @@ const MenuPreview = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -16 }}
                                 transition={{ duration: 0.55, ease: EASE }}>
-                                <h2 className='headline text-bone text-4xl md:text-5xl'>
+                                <h2 className='headline text-bone text-5xl md:text-6xl'>
                                     {active.title.slice(0, -1)}
                                     <span className='text-flame'>.</span>
                                 </h2>
