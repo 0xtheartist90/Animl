@@ -27,8 +27,8 @@ const About = () => {
                     <Parallax className='h-full' amount={8}>
                         <div className='relative h-full min-h-full w-full scale-[1.18]'>
                             <Image
-                                src='/images/home/interior-lights.jpg'
-                                alt='Sculptural lighting inside Animl Steakhouse'
+                                src='/images/home/about-night.jpg'
+                                alt='Guests mingling beneath the mirrored bull on a busy night'
                                 fill
                                 sizes='(max-width: 768px) 100vw, 33vw'
                                 className='img-premium object-cover'

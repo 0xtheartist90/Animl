@@ -48,8 +48,8 @@ const TheRoom = () => {
                     <Parallax className='h-full' amount={8}>
                         <div className='relative h-full min-h-full w-full scale-[1.16]'>
                             <Image
-                                src='/images/home/the-lounge.jpg'
-                                alt='Leopard velvet banquettes beneath woven brass pendants'
+                                src='/images/home/bar-wide.jpg'
+                                alt='The mirrored bar with brass stools and rosso marble floors'
                                 fill
                                 sizes='(max-width: 768px) 100vw, 58vw'
                                 className='img-premium object-cover'
