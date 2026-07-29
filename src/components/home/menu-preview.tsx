@@ -232,7 +232,7 @@ const MenuPreview = () => {
 
             {/* Dish marquee — click a dish to view it large */}
             <RevealImage zoom={false}>
-                <div className='group block [&:hover_.animate-marquee-slow]:[animation-play-state:paused]'>
+                <div className='block'>
                     <Marquee slow className='py-0'>
                         {DISHES.map((dish) => (
                             <button
