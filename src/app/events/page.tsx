@@ -170,33 +170,6 @@ const Page = () => {
                 </div>
             </section>
 
-            {/* Terracotta CTA band */}
-            <section className='bg-flame relative overflow-hidden'>
-                <Image
-                    src='/images/leopardbg.png'
-                    alt=''
-                    fill
-                    sizes='100vw'
-                    className='object-cover opacity-[0.10] mix-blend-multiply'
-                />
-                <div className='relative flex flex-col items-center gap-8 px-5 py-16 text-center md:py-24'>
-                    <RevealLines className='headline text-coal text-5xl md:text-7xl' lines={['Host your night.']} />
-                    <Reveal delay={0.15}>
-                        <div className='flex flex-col gap-4 sm:flex-row'>
-                            <ReserveButton
-                                tab='event'
-                                className='label-mono bg-coal text-bone hover:bg-bone hover:text-coal inline-block px-10 py-4 transition-colors duration-300'>
-                                Submit an enquiry
-                            </ReserveButton>
-                            <a
-                                href='tel:+14167646094'
-                                className='label-mono border-coal/40 text-coal hover:border-coal inline-block border px-10 py-4 transition-colors duration-300'>
-                                +1 (416) 764-6094
-                            </a>
-                        </div>
-                    </Reveal>
-                </div>
-            </section>
         </>
     );
 };
