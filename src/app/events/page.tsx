@@ -114,17 +114,24 @@ const Page = () => {
             </section>
 
             {/* Ways to book the room */}
-            <section className='px-5 py-14 md:px-8 md:py-20'>
-                <Reveal>
-                    <p className='label-mono text-flame mb-10 text-center'>Ways to book the room</p>
+            <section className='bg-flame relative overflow-hidden px-5 py-14 md:px-8 md:py-20'>
+                <Image
+                    src='/images/leopardbg.png'
+                    alt=''
+                    fill
+                    sizes='100vw'
+                    className='object-cover opacity-[0.10] mix-blend-multiply'
+                />
+                <Reveal className='relative'>
+                    <p className='label-mono text-coal/70 mb-10 text-center'>Ways to book the room</p>
                 </Reveal>
-                <div className='mx-auto grid max-w-5xl grid-cols-1 gap-10 md:grid-cols-3 md:gap-8'>
+                <div className='relative mx-auto grid max-w-5xl grid-cols-1 gap-10 md:grid-cols-3 md:gap-8'>
                     {OPTIONS.map(({ Icon, name, note }, i) => (
                         <Reveal key={name} delay={0.08 * i}>
                             <div className='flex flex-col items-center gap-5 text-center'>
-                                <Icon size={44} className='text-flame' />
-                                <p className='headline text-bone text-3xl'>{name}</p>
-                                <p className='label-mono text-smoke max-w-xs text-[12px] leading-relaxed'>{note}</p>
+                                <Icon size={44} className='text-coal' />
+                                <p className='headline text-coal text-3xl'>{name}</p>
+                                <p className='label-mono text-coal/60 max-w-xs text-[12px] leading-relaxed'>{note}</p>
                             </div>
                         </Reveal>
                     ))}
