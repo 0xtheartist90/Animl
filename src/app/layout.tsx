@@ -24,6 +24,11 @@ const display = localFont({
     variable: '--font-display',
     display: 'swap'
 });
+const mangro = localFont({
+    src: './fonts/MangroRegular.ttf',
+    variable: '--font-mangro',
+    display: 'swap'
+});
 
 export const metadata: Metadata = {
     title: {
@@ -48,7 +53,7 @@ const Layout = ({ children }: Readonly<{ children: ReactNode }>) => {
     return (
         <html suppressHydrationWarning lang='en' className='dark'>
             <body
-                className={`${geistSans.variable} ${geistMono.variable} ${display.variable} bg-background text-foreground overscroll-none antialiased`}>
+                className={`${geistSans.variable} ${geistMono.variable} ${display.variable} ${mangro.variable} bg-background text-foreground overscroll-none antialiased`}>
                 <SmoothScroll>
                     <ReserveProvider>
                         <SiteHeader />
