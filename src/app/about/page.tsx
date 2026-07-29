@@ -13,12 +13,12 @@ export const metadata: Metadata = {
 };
 
 const GALLERY = [
-    { src: '/images/home/knife-wall.jpg', alt: 'Steak knives mounted on leopard velvet' },
-    { src: '/images/home/glam-dining.jpg', alt: 'A guest in gold slicing into a signature cut' },
-    { src: '/images/home/event-lounge.jpg', alt: 'Guests lounging on velvet banquettes' },
-    { src: '/images/home/seafood-social.jpg', alt: 'Friends sharing the seafood platter' },
-    { src: '/images/home/interior-lights.jpg', alt: 'Sculptural lighting on dark wood' },
-    { src: '/images/home/disco-bull.jpg', alt: 'The mirrored bull above the dining room' }
+    { src: '/images/home/knife-wall.jpg', alt: 'Steak knives mounted on leopard velvet', label: 'The Details' },
+    { src: '/images/home/glam-dining.jpg', alt: 'A guest in gold slicing into a signature cut', label: 'The Glamour' },
+    { src: '/images/home/event-lounge.jpg', alt: 'Guests lounging on velvet banquettes', label: 'The Nights' },
+    { src: '/images/home/seafood-social.jpg', alt: 'Friends sharing the seafood platter', label: 'The Table' },
+    { src: '/images/home/interior-lights.jpg', alt: 'Sculptural lighting on dark wood', label: 'The Light' },
+    { src: '/images/home/disco-bull.jpg', alt: 'The mirrored bull above the dining room', label: 'The Bull' }
 ];
 
 const Page = () => {
@@ -84,10 +84,27 @@ const Page = () => {
                 </div>
             </section>
 
+            {/* Terracotta quote band */}
+            <section className='bg-flame relative overflow-hidden'>
+                <Image
+                    src='/images/leopardbg.png'
+                    alt=''
+                    fill
+                    sizes='100vw'
+                    className='object-cover opacity-[0.10] mix-blend-multiply'
+                />
+                <div className='relative px-5 py-16 text-center md:py-24'>
+                    <RevealLines
+                        className='headline text-coal text-4xl md:text-6xl'
+                        lines={['Timeless, theatrical —', "built for evenings you don't forget."]}
+                    />
+                </div>
+            </section>
+
             {/* Gallery */}
             <section className='grid grid-cols-2 md:grid-cols-3'>
                 {GALLERY.map((img, i) => (
-                    <RevealImage key={img.src} className='relative aspect-[4/5]' delay={0.06 * (i % 3)}>
+                    <RevealImage key={img.src} className='group relative aspect-[4/5]' delay={0.06 * (i % 3)}>
                         <Image
                             src={img.src}
                             alt={img.alt}
@@ -95,6 +112,9 @@ const Page = () => {
                             sizes='(max-width: 768px) 50vw, 33vw'
                             className='img-premium object-cover'
                         />
+                        <div className='from-coal/70 absolute inset-x-0 bottom-0 bg-gradient-to-t to-transparent p-5 pt-14 opacity-0 transition-opacity duration-500 group-hover:opacity-100'>
+                            <p className='label-mono text-bone'>{img.label}</p>
+                        </div>
                     </RevealImage>
                 ))}
             </section>
@@ -117,11 +137,18 @@ const Page = () => {
                 <div className='from-coal/80 absolute inset-0 bg-gradient-to-t via-transparent to-transparent' />
                 <div className='absolute inset-x-0 bottom-0 flex flex-col items-start gap-6 px-5 pb-10 md:flex-row md:items-end md:justify-between md:px-8'>
                     <p className='headline text-bone text-4xl md:text-5xl'>Come see it for yourself.</p>
-                    <Link
-                        href='/reservations'
-                        className='label-mono bg-flame text-bone hover:bg-bone hover:text-coal px-8 py-4 transition-colors duration-300'>
-                        Reserve Now
-                    </Link>
+                    <div className='flex gap-4'>
+                        <Link
+                            href='/reservations'
+                            className='label-mono bg-flame text-bone hover:bg-bone hover:text-coal px-8 py-4 transition-colors duration-300'>
+                            Reserve Now
+                        </Link>
+                        <Link
+                            href='/menus'
+                            className='label-mono border-bone/30 text-bone hover:border-bone border px-8 py-4 transition-colors duration-300'>
+                            View Menus
+                        </Link>
+                    </div>
                 </div>
             </section>
         </>

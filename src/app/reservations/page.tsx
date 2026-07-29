@@ -90,7 +90,7 @@ const Page = () => {
             </section>
 
             {/* Find us */}
-            <section className='grid grid-cols-1 pb-8 md:grid-cols-3 md:pb-14'>
+            <section className='grid grid-cols-1 md:grid-cols-3'>
                 <div className='p-8 md:p-14'>
                     <Reveal>
                         <p className='label-mono text-flame mb-6'>Address</p>
@@ -151,6 +151,21 @@ const Page = () => {
                         </a>
                     </Reveal>
                 </div>
+            </section>
+
+            {/* Map */}
+            <section className='px-5 pb-10 md:px-8 md:pb-14'>
+                <Reveal>
+                    <div className='relative h-[320px] overflow-hidden md:h-[420px]'>
+                        <iframe
+                            title='Animl Steakhouse — 420A Wellington Street West, Toronto'
+                            src='https://www.google.com/maps?q=420A+Wellington+Street+West,+Toronto,+ON+M5V+1E3&output=embed'
+                            className='absolute inset-0 h-full w-full border-0 grayscale invert-[0.92] contrast-[1.05]'
+                            loading='lazy'
+                            referrerPolicy='no-referrer-when-downgrade'
+                        />
+                    </div>
+                </Reveal>
             </section>
         </>
     );
