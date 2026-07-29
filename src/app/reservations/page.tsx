@@ -4,8 +4,9 @@ import PageHero from '@/components/site/page-hero';
 import { Reveal } from '@/components/site/reveal';
 
 export const metadata: Metadata = {
-    title: 'Reservations — Book Your Table',
-    description: 'Book your table at Animl Steakhouse Toronto. Private dining, partial venue use and full buyouts.'
+    title: 'Reserve — Book Your Table',
+    description:
+        'Book your table at Animl Steakhouse Toronto. Hours, dress code, private dining and how to find us at 420A Wellington Street West.'
 };
 
 const Page = () => {
@@ -13,11 +14,13 @@ const Page = () => {
         <>
             <PageHero
                 label='Reservations'
-                title='Book a table'
+                title='Reserve'
                 accent='.'
                 image='/images/home/dining.jpg'
                 imageAlt='Steak dinner at Animl Steakhouse Toronto'
             />
+
+            {/* Booking + hours */}
             <section className='grid grid-cols-1 md:grid-cols-12'>
                 <div className='p-8 md:col-span-7 md:p-14'>
                     <Reveal>
@@ -41,14 +44,16 @@ const Page = () => {
                     </Reveal>
                     <Reveal delay={0.15}>
                         <div className='border-border mt-14 border-t pt-10'>
-                            <p className='label-mono text-flame mb-6'>Private Dining</p>
+                            <p className='label-mono text-flame mb-6'>Private Dining &amp; Groups</p>
                             <p className='text-bone/70 max-w-lg font-mono text-[13px] leading-loose'>
-                                Enquire about private dining, partial venue use or full buyouts. Our events team offers
+                                Parties of eight or fewer can book directly with our reservations team. For larger
+                                gatherings, private dining, partial venue use or full buyouts, our events team offers
                                 space tours and custom arrangements.
                             </p>
                         </div>
                     </Reveal>
                 </div>
+
                 <div className='md:col-span-5'>
                     <div className='p-8 md:p-14'>
                         <Reveal delay={0.1}>
@@ -61,9 +66,18 @@ const Page = () => {
                                     <span className='text-bone block'>Thu — Sat</span>5:00 PM — 11:00 PM
                                 </li>
                             </ul>
+                            <p className='label-mono text-flame mt-10 mb-6'>Den Hours</p>
+                            <ul className='label-mono text-bone/70 space-y-4'>
+                                <li>
+                                    <span className='text-bone block'>Mon — Wed &amp; Sun</span>5:00 PM — 12:00 AM
+                                </li>
+                                <li>
+                                    <span className='text-bone block'>Thu — Sat</span>5:00 PM — 2:00 AM
+                                </li>
+                            </ul>
                         </Reveal>
                     </div>
-                    <div className='p-8 md:p-14'>
+                    <div className='p-8 pt-0 md:p-14 md:pt-0'>
                         <Reveal delay={0.2}>
                             <p className='label-mono text-flame mb-6'>Dress Code</p>
                             <p className='text-bone/70 max-w-sm font-mono text-[13px] leading-loose'>
@@ -72,6 +86,70 @@ const Page = () => {
                             </p>
                         </Reveal>
                     </div>
+                </div>
+            </section>
+
+            {/* Find us */}
+            <section className='grid grid-cols-1 pb-8 md:grid-cols-3 md:pb-14'>
+                <div className='p-8 md:p-14'>
+                    <Reveal>
+                        <p className='label-mono text-flame mb-6'>Address</p>
+                        <address className='label-mono text-bone/70 leading-loose not-italic'>
+                            420A Wellington Street West
+                            <br />
+                            Toronto, Ontario M5V 1E3
+                            <br />
+                            Entertainment District
+                        </address>
+                        <a
+                            href='https://maps.google.com/?q=420A+Wellington+Street+West+Toronto'
+                            target='_blank'
+                            rel='noreferrer'
+                            className='link-sweep label-mono text-bone mt-6 inline-block'>
+                            Open in Maps
+                        </a>
+                    </Reveal>
+                </div>
+                <div className='p-8 md:p-14'>
+                    <Reveal delay={0.1}>
+                        <p className='label-mono text-flame mb-6'>Reach Us</p>
+                        <ul className='label-mono text-bone/70 space-y-4'>
+                            <li>
+                                <a href='tel:+14167646094' className='link-sweep hover:text-bone transition-colors'>
+                                    +1 (416) 764-6094
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href='mailto:info@animlsteakhouse.com'
+                                    className='link-sweep hover:text-bone transition-colors'>
+                                    info@animlsteakhouse.com
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href='https://www.instagram.com/animl.toronto'
+                                    target='_blank'
+                                    rel='noreferrer'
+                                    className='link-sweep hover:text-bone transition-colors'>
+                                    @animl.toronto
+                                </a>
+                            </li>
+                        </ul>
+                    </Reveal>
+                </div>
+                <div className='p-8 md:p-14'>
+                    <Reveal delay={0.2}>
+                        <p className='label-mono text-flame mb-6'>Press</p>
+                        <p className='text-bone/70 max-w-sm font-mono text-[13px] leading-loose'>
+                            For press and editorial enquiries:
+                        </p>
+                        <a
+                            href='mailto:pr@inkentertainment.com'
+                            className='link-sweep label-mono text-bone mt-4 inline-block'>
+                            pr@inkentertainment.com
+                        </a>
+                    </Reveal>
                 </div>
             </section>
         </>

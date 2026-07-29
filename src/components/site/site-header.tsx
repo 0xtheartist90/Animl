@@ -11,10 +11,9 @@ import { EASE } from '@/components/site/reveal';
 import { AnimatePresence, motion } from 'motion/react';
 
 const NAV = [
+    { href: '/about', label: 'About' },
     { href: '/menus', label: 'Menus' },
-    { href: '/reservations', label: 'Reservations' },
-    { href: '/events', label: 'Events' },
-    { href: '/contact', label: 'Contact' }
+    { href: '/events', label: 'Events' }
 ];
 
 const SiteHeader = () => {

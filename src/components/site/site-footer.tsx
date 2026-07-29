@@ -41,10 +41,10 @@ const SiteFooter = () => {
                     <ul className='space-y-3'>
                         {[
                             { href: '/', label: 'Home' },
+                            { href: '/about', label: 'About' },
                             { href: '/menus', label: 'Menus' },
-                            { href: '/reservations', label: 'Reservations' },
                             { href: '/events', label: 'Events' },
-                            { href: '/contact', label: 'Contact' }
+                            { href: '/reservations', label: 'Reserve' }
                         ].map((item) => (
                             <li key={item.href}>
                                 <Link

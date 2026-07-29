@@ -14,7 +14,11 @@ const About = () => {
                     <Spark className='text-flame' size={13} />
                     About Animl
                 </p>
-                <p className='label-mono text-smoke hidden md:block'>Toronto — Entertainment District</p>
+                <Link
+                    href='/about'
+                    className='link-sweep label-mono text-bone/70 hover:text-bone hidden transition-colors md:block'>
+                    Our full story
+                </Link>
             </div>
 
             <div className='grid grid-cols-1 md:grid-cols-12'>
@@ -54,10 +58,8 @@ const About = () => {
                         </p>
                     </Reveal>
                     <Reveal delay={0.35}>
-                        <Link
-                            href='/reservations'
-                            className='link-sweep label-mono text-bone mx-auto mt-10 inline-block'>
-                            Book your evening
+                        <Link href='/about' className='link-sweep label-mono text-bone mx-auto mt-10 inline-block'>
+                            Read our story
                         </Link>
                     </Reveal>
                 </div>
