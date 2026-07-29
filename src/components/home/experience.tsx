@@ -26,7 +26,7 @@ const Experience = () => {
 
             <div className='relative px-5 py-8 text-center md:py-10'>
                 <Reveal>
-                    <p className='headline text-coal mb-7 text-5xl md:text-6xl'>The Animl Experience</p>
+                    <p className='headline text-coal mb-7 text-4xl md:text-5xl'>The Animl Experience</p>
                 </Reveal>
 
                 {/* Icon row */}
