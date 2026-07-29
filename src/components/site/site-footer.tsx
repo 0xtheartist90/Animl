@@ -2,6 +2,7 @@ import Link from 'next/link';
 
 import Logo from '@/components/site/logo';
 import { ReserveButton } from '@/components/site/reserve-modal';
+import { Reveal } from '@/components/site/reveal';
 import Spark from '@/components/site/spark';
 import Stamp from '@/components/site/stamp';
 
@@ -18,7 +19,7 @@ const SiteFooter = () => {
         <footer className='relative overflow-hidden'>
             <div className='relative grid grid-cols-1 gap-8 px-5 pt-10 pb-6 md:grid-cols-12 md:gap-12 md:px-8 md:pt-20 md:pb-10'>
                 {/* Brand block */}
-                <div className='flex flex-col items-center gap-5 text-center md:col-span-6 md:items-start md:gap-8 md:text-left'>
+                <Reveal y={24} duration={0.8} className='flex flex-col items-center gap-5 text-center md:col-span-6 md:items-start md:gap-8 md:text-left'>
                     <Logo className='text-bone w-44 md:w-80' />
                     <p className='label-mono text-smoke'>
                         Steakhouse &amp; Cocktail Den — Elegantly Untamed
@@ -26,11 +27,12 @@ const SiteFooter = () => {
                     <ReserveButton className='label-mono bg-flame text-bone hover:bg-bone hover:text-coal px-8 py-4 transition-colors duration-300'>
                         Reserve Now
                     </ReserveButton>
-                </div>
+                </Reveal>
 
                 {/* Script nav */}
                 <nav className='text-center md:col-span-3 md:text-left'>
-                    <ul className='space-y-1'>
+                    <Reveal y={24} duration={0.8} delay={0.08}>
+                        <ul className='space-y-1'>
                         {NAV.map((item) => (
                             <li key={item.href}>
                                 <Link
@@ -44,11 +46,12 @@ const SiteFooter = () => {
                                 </Link>
                             </li>
                         ))}
-                    </ul>
+                        </ul>
+                    </Reveal>
                 </nav>
 
                 {/* Details */}
-                <div className='space-y-6 text-center md:col-span-3 md:space-y-10 md:text-left'>
+                <Reveal y={24} duration={0.8} delay={0.16} className='space-y-6 text-center md:col-span-3 md:space-y-10 md:text-left'>
                     <div>
                         <p className='label-mono text-flame mb-4 flex items-center justify-center gap-3 md:justify-start'>
                             <Spark size={12} />
@@ -97,7 +100,7 @@ const SiteFooter = () => {
                             </li>
                         </ul>
                     </div>
-                </div>
+                </Reveal>
             </div>
 
             {/* Bottom strip with stamp */}

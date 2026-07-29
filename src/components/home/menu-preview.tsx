@@ -119,17 +119,17 @@ const MenuPreview = () => {
 
     return (
         <section className='pt-6 md:pt-10'>
-            <div className='flex items-center justify-between px-5 py-6 md:px-8'>
+            <Reveal y={14} duration={0.7} className='flex items-center justify-between px-5 py-6 md:px-8'>
                 <p className='label-mono text-bone/70 flex items-center gap-4'>
                     <Spark className='text-flame' size={13} />
                     The Menus
                 </p>
-            </div>
+            </Reveal>
 
             {/* Selector + content — fits one viewport on desktop */}
             <div className='md:flex md:h-[calc(100svh-72px)] md:flex-col'>
                 {/* Tab bar */}
-                <div className='grid shrink-0 grid-cols-2 gap-2 px-5 pb-6 md:grid-cols-4 md:gap-0 md:px-8'>
+                <Reveal y={20} duration={0.8} delay={0.05} className='grid shrink-0 grid-cols-2 gap-2 px-5 pb-6 md:grid-cols-4 md:gap-0 md:px-8'>
                     {TABS.map((tab) => {
                         const Icon = tab.icon;
                         const isActive = active.key === tab.key;
@@ -157,9 +157,10 @@ const MenuPreview = () => {
                             </button>
                         );
                     })}
-                </div>
+                </Reveal>
 
-                <div className='grid grid-cols-1 md:min-h-0 md:flex-1 md:grid-cols-12'>
+                <Reveal y={32} delay={0.1} className='md:min-h-0 md:flex-1'>
+                    <div className='grid h-full grid-cols-1 md:grid-cols-12'>
                     {/* Image — swaps with the active tab */}
                     <div className='relative aspect-square overflow-hidden md:col-span-5 md:aspect-auto md:h-full'>
                         <AnimatePresence mode='popLayout' initial={false}>
@@ -225,7 +226,8 @@ const MenuPreview = () => {
                             </motion.div>
                         </AnimatePresence>
                     </div>
-                </div>
+                    </div>
+                </Reveal>
             </div>
 
             {/* Dish marquee — click a dish to view it large */}

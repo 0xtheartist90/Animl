@@ -16,13 +16,13 @@ const COURSES = [
 const CocktailDen = () => {
     return (
         <section className='pt-6 md:pt-10'>
-            <div className='flex items-center justify-between px-5 py-6 md:px-8'>
+            <Reveal y={14} duration={0.7} className='flex items-center justify-between px-5 py-6 md:px-8'>
                 <p className='label-mono text-bone/70 flex items-center gap-4'>
                     <Spark className='text-flame' size={13} />
                     The Cocktail Den
                 </p>
                 <p className='label-mono text-smoke hidden md:block'>A programme by Saralyn Stevens</p>
-            </div>
+            </Reveal>
 
             <div className='grid grid-cols-1 md:grid-cols-12'>
                 {/* Copy + courses */}

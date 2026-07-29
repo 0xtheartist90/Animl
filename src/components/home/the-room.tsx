@@ -8,13 +8,13 @@ import Spark from '@/components/site/spark';
 const TheRoom = () => {
     return (
         <section className='pt-6 md:pt-10'>
-            <div className='flex items-center justify-between px-5 py-6 md:px-8'>
+            <Reveal y={14} duration={0.7} className='flex items-center justify-between px-5 py-6 md:px-8'>
                 <p className='label-mono text-bone/70 flex items-center gap-4'>
                     <Spark className='text-flame' size={13} />
                     The Room
                 </p>
                 <p className='label-mono text-smoke hidden md:block'>Design by Nivek Remas</p>
-            </div>
+            </Reveal>
 
             {/* Intro line */}
             <div className='px-5 pt-4 pb-10 text-center md:pt-6 md:pb-16'>
@@ -98,11 +98,13 @@ const TheRoom = () => {
                     </div>
                 </Parallax>
                 <div className='from-coal/80 absolute inset-0 bg-gradient-to-t via-transparent to-transparent' />
-                <div className='absolute inset-x-0 bottom-0 flex items-end justify-between px-5 pb-8 md:px-8 md:pb-10'>
-                    <p className='headline text-bone text-5xl md:text-6xl'>Pull up a stool.</p>
-                    <ReserveButton className='label-mono bg-flame text-bone hover:bg-bone hover:text-coal hidden items-center gap-3 px-5 py-2.5 transition-colors duration-300 md:inline-flex'>
-                        Reserve your evening <span aria-hidden>→</span>
-                    </ReserveButton>
+                <div className='absolute inset-x-0 bottom-0 px-5 pb-8 md:px-8 md:pb-10'>
+                    <Reveal y={28} className='flex items-end justify-between'>
+                        <p className='headline text-bone text-5xl md:text-6xl'>Pull up a stool.</p>
+                        <ReserveButton className='label-mono bg-flame text-bone hover:bg-bone hover:text-coal hidden items-center gap-3 px-5 py-2.5 transition-colors duration-300 md:inline-flex'>
+                            Reserve your evening <span aria-hidden>→</span>
+                        </ReserveButton>
+                    </Reveal>
                 </div>
             </div>
         </section>

@@ -10,7 +10,7 @@ const About = () => {
     return (
         <section className='pt-6 md:pt-10'>
             {/* Section label */}
-            <div className='flex items-center justify-between px-5 py-6 md:px-8'>
+            <Reveal y={14} duration={0.7} className='flex items-center justify-between px-5 py-6 md:px-8'>
                 <p className='label-mono text-bone/70 flex items-center gap-4'>
                     <Spark className='text-flame' size={13} />
                     About Animl
@@ -18,7 +18,7 @@ const About = () => {
                 <CtaLink href='/about' className='hidden md:inline-flex'>
                     Our full story
                 </CtaLink>
-            </div>
+            </Reveal>
 
             <div className='grid grid-cols-1 md:grid-cols-12'>
                 {/* Image */}
