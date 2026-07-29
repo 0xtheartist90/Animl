@@ -11,6 +11,7 @@ import { EASE } from '@/components/site/reveal';
 import { AnimatePresence, motion } from 'motion/react';
 
 const NAV = [
+    { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
     { href: '/menus', label: 'Menus' },
     { href: '/events', label: 'Events' }
@@ -53,16 +54,28 @@ const SiteHeader = () => {
                     </Link>
 
                     <nav className='hidden items-stretch md:flex'>
-                        {NAV.map((item) => (
-                            <Link
-                                key={item.href}
-                                href={item.href}
-                                className={`label-mono border-border/0 hover:text-bone flex items-center px-6 transition-colors duration-300 ${
-                                    pathname === item.href ? 'text-flame' : 'text-bone/70'
-                                }`}>
-                                <span className='link-sweep'>{item.label}</span>
-                            </Link>
-                        ))}
+                        {NAV.map((item) => {
+                            const isActive = pathname === item.href;
+
+                            return (
+                                <Link
+                                    key={item.href}
+                                    href={item.href}
+                                    aria-current={isActive ? 'page' : undefined}
+                                    className={`label-mono hover:text-bone relative flex items-center px-6 transition-colors duration-300 ${
+                                        isActive ? 'text-flame' : 'text-bone/70'
+                                    }`}>
+                                    <span className={isActive ? '' : 'link-sweep'}>{item.label}</span>
+                                    {isActive && (
+                                        <motion.span
+                                            layoutId='nav-active'
+                                            transition={{ duration: 0.45, ease: EASE }}
+                                            className='bg-flame absolute inset-x-6 bottom-0 h-px'
+                                        />
+                                    )}
+                                </Link>
+                            );
+                        })}
                     </nav>
 
                     <div className='flex items-center gap-3'>
@@ -103,7 +116,10 @@ const SiteHeader = () => {
                                     transition={{ duration: 0.7, delay: 0.25 + i * 0.07, ease: EASE }}>
                                     <Link
                                         href={item.href}
-                                        className='headline text-bone border-border hover:text-flame block border-b py-4 text-5xl transition-colors'>
+                                        aria-current={pathname === item.href ? 'page' : undefined}
+                                        className={`headline border-border hover:text-flame block border-b py-4 text-5xl transition-colors ${
+                                            pathname === item.href ? 'text-flame' : 'text-bone'
+                                        }`}>
                                         {item.label}
                                     </Link>
                                 </motion.div>
