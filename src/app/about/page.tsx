@@ -275,8 +275,8 @@ const Page = () => {
                 <Parallax className='h-[50svh] md:h-[65svh]' amount={10}>
                     <div className='relative h-full w-full scale-[1.14]'>
                         <Image
-                            src='/images/home/disco-bull.jpg'
-                            alt='The mirrored bull suspended above the dining room'
+                            src='/images/home/event-lounge.jpg'
+                            alt='Guests lounging on the velvet banquettes'
                             fill
                             sizes='100vw'
                             className='img-premium object-cover'
