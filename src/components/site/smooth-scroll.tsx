@@ -2,21 +2,15 @@
 
 import { type ReactNode, useEffect } from 'react';
 
-import { usePathname } from 'next/navigation';
-
 import Lenis from 'lenis';
 
 /**
  * Lenis-powered smooth scrolling with a heavy, premium feel.
- * Disabled on /about, where native scroll drives the section snapping.
  */
 const SmoothScroll = ({ children }: { children: ReactNode }) => {
-    const pathname = usePathname();
-
     useEffect(() => {
         const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         if (prefersReduced) return;
-        if (pathname === '/about') return;
 
         const lenis = new Lenis({
             lerp: 0.085,
@@ -36,7 +30,7 @@ const SmoothScroll = ({ children }: { children: ReactNode }) => {
             cancelAnimationFrame(frame);
             lenis.destroy();
         };
-    }, [pathname]);
+    }, []);
 
     return <>{children}</>;
 };
