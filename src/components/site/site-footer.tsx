@@ -18,9 +18,9 @@ const SiteFooter = () => {
         <footer className='relative overflow-hidden'>
             {/* Reserve ticker */}
             <Link href='/reservations' className='border-border block border-y'>
-                <Marquee className='py-4' slow>
+                <Marquee className='py-3 md:py-4' slow>
                     {Array.from({ length: 6 }).map((_, i) => (
-                        <span key={i} className='headline text-bone mx-6 inline-flex items-center gap-8 text-3xl'>
+                        <span key={i} className='headline text-bone mx-5 inline-flex items-center gap-6 text-2xl md:mx-6 md:gap-8 md:text-3xl'>
                             Reserve your table
                             <Spark className='text-flame' size={18} />
                         </span>
@@ -28,10 +28,10 @@ const SiteFooter = () => {
                 </Marquee>
             </Link>
 
-            <div className='relative grid grid-cols-1 gap-12 px-5 pt-14 pb-10 md:grid-cols-12 md:px-8 md:pt-20'>
+            <div className='relative grid grid-cols-1 gap-8 px-5 pt-10 pb-6 md:grid-cols-12 md:gap-12 md:px-8 md:pt-20 md:pb-10'>
                 {/* Brand block */}
-                <div className='flex flex-col items-start gap-8 md:col-span-6'>
-                    <Logo className='text-bone w-64 md:w-80' />
+                <div className='flex flex-col items-start gap-5 md:col-span-6 md:gap-8'>
+                    <Logo className='text-bone w-44 md:w-80' />
                     <p className='label-mono text-smoke'>
                         Steakhouse &amp; Cocktail Den — Elegantly Untamed
                     </p>
@@ -49,7 +49,7 @@ const SiteFooter = () => {
                             <li key={item.href}>
                                 <Link
                                     href={item.href}
-                                    className='group headline text-bone/80 hover:text-flame inline-flex items-center gap-4 text-3xl transition-colors duration-300 md:text-4xl'>
+                                    className='group headline text-bone/80 hover:text-flame inline-flex items-center gap-3 text-2xl transition-colors duration-300 md:gap-4 md:text-4xl'>
                                     <Spark
                                         size={13}
                                         className='text-flame opacity-0 transition-opacity duration-300 group-hover:opacity-100'
@@ -62,7 +62,7 @@ const SiteFooter = () => {
                 </nav>
 
                 {/* Details */}
-                <div className='space-y-10 md:col-span-3'>
+                <div className='space-y-6 md:col-span-3 md:space-y-10'>
                     <div>
                         <p className='label-mono text-flame mb-4 flex items-center gap-3'>
                             <Spark size={12} />
@@ -115,7 +115,7 @@ const SiteFooter = () => {
             </div>
 
             {/* Bottom strip with stamp */}
-            <div className='relative flex flex-col gap-6 px-5 pb-10 md:flex-row md:items-end md:justify-between md:px-8'>
+            <div className='relative flex flex-col gap-4 px-5 pb-8 md:flex-row md:items-end md:justify-between md:gap-6 md:px-8 md:pb-10'>
                 <div className='label-mono text-smoke space-y-2'>
                     <p>© 2026 Animl Steakhouse — powered by INK Entertainment</p>
                     <a
@@ -126,7 +126,7 @@ const SiteFooter = () => {
                         Privacy Policy
                     </a>
                 </div>
-                <Stamp text='Elegantly Untamed • Animl • Toronto • ' size={96} className='opacity-70' />
+                <Stamp text='Elegantly Untamed • Animl • Toronto • ' size={96} className='hidden opacity-70 md:block' />
             </div>
         </footer>
     );

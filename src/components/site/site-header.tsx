@@ -48,10 +48,16 @@ const SiteHeader = () => {
                 className={`fixed inset-x-0 top-0 z-50 border-b transition-colors duration-500 ${
                     scrolled || open ? 'border-border bg-coal/90 backdrop-blur-md' : 'border-transparent bg-transparent'
                 }`}>
-                <div className='flex h-16 items-stretch justify-between px-5 md:h-[72px] md:px-8'>
-                    <Link href='/' className='flex items-center' aria-label='Animl Steakhouse — home'>
+                <div className='relative flex h-16 items-stretch justify-between px-5 md:h-[72px] md:px-8'>
+                    {/* Centered on mobile, left-aligned on desktop */}
+                    <Link
+                        href='/'
+                        className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:static md:flex md:translate-x-0 md:translate-y-0 md:items-center'
+                        aria-label='Animl Steakhouse — home'>
                         <Logo className='w-[88px] md:w-[104px]' />
                     </Link>
+                    <span className='md:hidden' aria-hidden />
+
 
                     <nav className='hidden items-stretch md:flex'>
                         {NAV.map((item) => {

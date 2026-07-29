@@ -47,8 +47,8 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 28 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1.2, delay: 0.5, ease: EASE }}
-                    className='mb-6'>
-                    <Logo className='w-44 md:w-60' />
+                    className='mb-6 hidden md:block'>
+                    <Logo className='w-60' />
                 </motion.div>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
