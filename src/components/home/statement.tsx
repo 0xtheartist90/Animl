@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { IconBowtie, IconCloche, IconMoon, IconPin } from '@/components/site/icons';
 
 const ITEMS = [
-    { Icon: IconPin, label: 'Entertainment District' },
+    { Icon: IconPin, label: '420A Wellington' },
     { Icon: IconMoon, label: 'Open Till 2 AM' },
     { Icon: IconBowtie, label: 'Elegant Attire' },
     { Icon: IconCloche, label: 'Private Dining' }
