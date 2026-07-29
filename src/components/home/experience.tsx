@@ -25,10 +25,6 @@ const Experience = () => {
             />
 
             <div className='relative px-5 py-8 text-center md:py-10'>
-                <Reveal>
-                    <p className='headline text-coal mb-7 text-4xl md:text-5xl'>The Animl Experience</p>
-                </Reveal>
-
                 {/* Icon row */}
                 <Reveal delay={0.1}>
                     <div className='mx-auto flex max-w-6xl flex-wrap items-start justify-center gap-x-14 gap-y-6 md:justify-between'>
