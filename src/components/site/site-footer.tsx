@@ -14,12 +14,12 @@ const SiteFooter = () => {
     return (
         <footer className='border-border border-t'>
             {/* Ticker */}
-            <Link href='/reservations' className='group block'>
-                <Marquee className='group-hover:bg-flame py-5 transition-colors duration-500' slow>
+            <Link href='/reservations' className='block'>
+                <Marquee className='py-5' slow>
                     {Array.from({ length: 6 }).map((_, i) => (
                         <span key={i} className='headline text-bone mx-8 inline-flex items-center gap-8 text-3xl'>
                             Reserve your table
-                            <Spark className='text-flame group-hover:text-bone transition-colors' size={20} />
+                            <Spark className='text-flame' size={20} />
                         </span>
                     ))}
                 </Marquee>
