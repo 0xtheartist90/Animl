@@ -20,11 +20,13 @@ const Statement = () => {
                 sizes='100vw'
                 className='object-cover opacity-[0.10] mix-blend-multiply'
             />
-            <div className='relative flex flex-wrap items-center justify-center gap-x-10 gap-y-4 px-5 py-6 md:gap-x-16 md:py-8'>
+            <div className='relative mx-auto flex w-full max-w-6xl flex-wrap items-center justify-center gap-x-10 gap-y-4 px-5 py-6 md:justify-between md:px-8 md:py-9'>
                 {ITEMS.map(({ Icon, label }) => (
                     <span key={label} className='flex items-center gap-3 md:gap-4'>
-                        <Icon size={26} className='text-coal/80' />
-                        <span className='label-mono text-coal/90 tracking-[0.3em]'>{label}</span>
+                        <Icon size={28} className='text-coal' />
+                        <span className='label-mono text-coal text-[12px] font-semibold tracking-[0.3em] md:text-[13px]'>
+                            {label}
+                        </span>
                     </span>
                 ))}
             </div>
