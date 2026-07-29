@@ -91,13 +91,13 @@ const Page = () => {
                         </p>
                     </Reveal>
                 </div>
-                <RevealImage className='relative aspect-[4/5] md:col-span-6 md:aspect-auto md:min-h-[560px]'>
+                <RevealImage className='relative aspect-[4/5] md:col-span-6'>
                     <Image
                         src='/images/home/glam-dining.jpg'
                         alt='A guest in gold slicing into a signature cut'
                         fill
                         sizes='(max-width: 768px) 100vw, 50vw'
-                        className='img-premium object-cover object-[center_75%]'
+                        className='img-premium object-cover'
                     />
                 </RevealImage>
             </section>
