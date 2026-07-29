@@ -97,7 +97,7 @@ const Page = () => {
                         alt='A guest in gold slicing into a signature cut'
                         fill
                         sizes='(max-width: 768px) 100vw, 50vw'
-                        className='img-premium object-cover'
+                        className='img-premium object-cover object-[center_75%]'
                     />
                 </RevealImage>
             </section>
