@@ -20,14 +20,14 @@ const PageHero = ({
     showLogo?: boolean;
 }) => {
     return (
-        <section className='relative overflow-hidden'>
+        <section className='relative h-[80svh] overflow-hidden'>
             {image && (
                 <>
                     <Image src={image} alt={imageAlt ?? ''} fill sizes='100vw' priority className='object-cover opacity-40' />
                     <div className='from-coal via-coal/60 absolute inset-0 bg-gradient-to-t to-transparent' />
                 </>
             )}
-            <div className='relative px-5 pt-40 pb-16 md:px-8 md:pt-56 md:pb-24'>
+            <div className='relative flex h-full flex-col justify-end px-5 pb-14 md:px-8 md:pb-16'>
                 {showLogo && (
                     <Reveal delay={0.05}>
                         <Image
@@ -42,12 +42,12 @@ const PageHero = ({
                 )}
                 <Reveal>
                     <p className='label-mono text-bone/70 mb-6 flex items-center gap-4'>
-                        <Spark className='text-flame' />
+                        <Spark className='text-flame' size={13} />
                         {label}
                     </p>
                 </Reveal>
                 <RevealLines
-                    className='headline text-bone text-[clamp(56px,12vw,180px)]'
+                    className='headline text-bone text-[clamp(56px,12vw,160px)]'
                     delay={0.1}
                     lines={[
                         <span key='t'>
