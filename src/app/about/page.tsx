@@ -97,7 +97,7 @@ const Page = () => {
                         alt='A guest draped in black on the velvet banquette'
                         fill
                         sizes='(max-width: 768px) 100vw, 50vw'
-                        className='img-premium object-cover'
+                        className='img-premium object-cover object-top'
                     />
                 </RevealImage>
             </section>

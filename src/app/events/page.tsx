@@ -54,8 +54,7 @@ const Page = () => {
                 label='Private Dining & Events'
                 title='Events'
                 accent='.'
-                image='/images/home/event-lounge.jpg'
-                imageAlt='Guests lounging in the Animl dining room'
+                video='/video/interior.mp4'
                 showLogo
             />
 
@@ -103,8 +102,8 @@ const Page = () => {
                     <Parallax className='h-full' amount={8}>
                         <div className='relative h-full min-h-full w-full scale-[1.16]'>
                             <Image
-                                src='/images/home/guests-fashion.jpg'
-                                alt='Guests dressed for the evening in the dining room'
+                                src='/images/home/bull-gold.jpg'
+                                alt='The mirrored bull head glowing gold'
                                 fill
                                 sizes='(max-width: 768px) 100vw, 50vw'
                                 className='img-premium object-cover'
