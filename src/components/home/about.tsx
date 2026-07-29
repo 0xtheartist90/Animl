@@ -68,7 +68,7 @@ const About = () => {
                 <div className='grid grid-rows-2 md:col-span-3'>
                     <div className='flex flex-col items-center justify-center gap-4 py-14'>
                         <Reveal>
-                            <Stamp text='Elegantly Untamed • Toronto • Steakhouse • Cocktail Den • ' />
+                            <Stamp text='Elegantly Untamed • Animl • Toronto • ' />
                         </Reveal>
                     </div>
                     <RevealImage className='bg-flame relative overflow-hidden' delay={0.1}>

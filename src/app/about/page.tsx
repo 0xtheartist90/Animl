@@ -78,7 +78,7 @@ const Page = () => {
                             </li>
                         </ul>
                         <div className='mt-12'>
-                            <Stamp text='Elegantly Untamed • Toronto • Steakhouse • Cocktail Den • ' size={130} />
+                            <Stamp text='Elegantly Untamed • Animl • Toronto • ' size={130} />
                         </div>
                     </Reveal>
                 </div>

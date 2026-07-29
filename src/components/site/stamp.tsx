@@ -8,8 +8,12 @@ const Stamp = ({ text, className, size = 150 }: { text: string; className?: stri
                 <defs>
                     <path id={id} d='M 50,50 m -36,0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0' />
                 </defs>
-                <text className='fill-bone font-mono text-[7.5px] tracking-[0.24em] uppercase'>
-                    <textPath href={`#${id}`}>{text}</textPath>
+                {/* textLength pins the text to the exact circumference (2π×36),
+                    so it always loops seamlessly and can never truncate mid-word */}
+                <text className='fill-bone font-mono text-[7.5px] tracking-[0.18em] uppercase'>
+                    <textPath href={`#${id}`} textLength={226} lengthAdjust='spacingAndGlyphs'>
+                        {text}
+                    </textPath>
                 </text>
             </svg>
             <div className='absolute inset-0 flex items-center justify-center'>
