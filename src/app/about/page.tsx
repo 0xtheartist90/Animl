@@ -39,18 +39,16 @@ const Page = () => {
                 <div className='from-coal via-coal/30 absolute inset-0 bg-gradient-to-t to-transparent' />
                 <div className='from-coal/60 absolute inset-x-0 top-0 h-28 bg-gradient-to-b to-transparent' />
                 <div className='relative flex h-full flex-col justify-end px-5 pb-14 md:px-8 md:pb-16'>
-                    <div className='flex flex-1 items-center justify-center'>
-                        <Reveal delay={0.2}>
-                            <Image
-                                src='/images/animl-cow.png'
-                                alt='Animl — the upside-down cow'
-                                width={1215}
-                                height={954}
-                                priority
-                                className='w-48 md:w-64'
-                            />
-                        </Reveal>
-                    </div>
+                    <Reveal delay={0.2}>
+                        <Image
+                            src='/images/animl-cow.png'
+                            alt='Animl — the upside-down cow'
+                            width={1215}
+                            height={954}
+                            priority
+                            className='mx-auto mb-8 w-40 md:mb-10 md:w-52'
+                        />
+                    </Reveal>
                     <Reveal delay={0.3}>
                         <p className='label-mono text-bone/80 mb-6 flex items-center gap-4'>
                             <Spark className='text-flame' size={13} />
