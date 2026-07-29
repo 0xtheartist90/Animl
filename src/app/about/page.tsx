@@ -51,8 +51,8 @@ const Page = () => {
                         />
                     </Reveal>
                     <Reveal delay={0.3}>
-                        <p className='label-mono text-bone/80 mb-6 flex items-center gap-4'>
-                            <Spark className='text-flame' size={13} />
+                        <p className='text-bone/90 mb-6 flex items-center gap-4 font-sans text-2xl font-semibold tracking-tight uppercase md:text-3xl'>
+                            <Spark className='text-flame' size={18} />
                             About Animl
                         </p>
                     </Reveal>
@@ -72,7 +72,7 @@ const Page = () => {
             <section className='grid grid-cols-1 md:grid-cols-12'>
                 <div className='flex flex-col justify-center p-8 md:col-span-6 md:p-16'>
                     <Reveal>
-                        <p className='label-mono text-flame mb-8'>The Instinct</p>
+                        <p className='text-flame mb-6 font-sans text-2xl font-semibold tracking-tight uppercase md:text-3xl'>The Instinct</p>
                     </Reveal>
                     <RevealLines
                         className='headline text-bone text-4xl md:text-5xl'
@@ -122,7 +122,7 @@ const Page = () => {
                 <div className='absolute inset-x-0 bottom-0 grid grid-cols-1 gap-6 px-5 pb-10 md:grid-cols-12 md:items-end md:px-8 md:pb-14'>
                     <div className='md:col-span-6'>
                         <Reveal>
-                            <p className='label-mono text-flame mb-6'>The Room</p>
+                            <p className='text-flame mb-6 font-sans text-2xl font-semibold tracking-tight uppercase md:text-3xl'>The Room</p>
                         </Reveal>
                         <RevealLines
                             className='headline text-bone text-4xl md:text-6xl'
@@ -153,7 +153,7 @@ const Page = () => {
                 </RevealImage>
                 <div className='flex flex-col justify-center p-8 md:col-span-7 md:p-16 md:pl-20'>
                     <Reveal>
-                        <p className='label-mono text-flame mb-8'>The Table</p>
+                        <p className='text-flame mb-6 font-sans text-2xl font-semibold tracking-tight uppercase md:text-3xl'>The Table</p>
                     </Reveal>
                     <RevealLines
                         className='headline text-bone text-4xl md:text-5xl'
@@ -197,7 +197,7 @@ const Page = () => {
                 <div className='relative grid grid-cols-1 gap-10 p-8 md:grid-cols-12 md:items-center md:gap-14 md:p-16'>
                     <div className='md:col-span-7'>
                         <Reveal>
-                            <p className='label-mono text-coal/70 mb-8'>The Den</p>
+                            <p className='text-coal mb-6 font-sans text-2xl font-semibold tracking-tight uppercase md:text-3xl'>The Den</p>
                         </Reveal>
                         <RevealLines
                             className='headline text-coal text-4xl md:text-5xl'
@@ -229,7 +229,7 @@ const Page = () => {
             {/* The Founder — centered */}
             <section className='px-5 py-16 text-center md:py-24'>
                 <Reveal>
-                    <p className='label-mono text-flame mb-8'>The Founder</p>
+                    <p className='text-flame mb-6 font-sans text-2xl font-semibold tracking-tight uppercase md:text-3xl'>The Founder</p>
                 </Reveal>
                 <RevealLines
                     className='headline text-bone text-4xl md:text-6xl'
