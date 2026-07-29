@@ -1,13 +1,13 @@
 import Image from 'next/image';
 
-import Marquee from '@/components/site/marquee';
 import Spark from '@/components/site/spark';
 
-const ITEMS = ['Dry-Aged Steak', 'Crafted Cocktails', 'Art Deco', 'Studio 54 Energy', '1970s Glamour', 'Raw Bar'];
+const ITEMS = ['Dry-Aged Steak', 'Raw Bar', 'Crafted Cocktails', 'The Cellar'];
 
+/** Quiet terracotta divider — static, understated. */
 const Statement = () => {
     return (
-        <section className='bg-flame relative overflow-hidden py-4 md:py-6'>
+        <section className='bg-flame relative overflow-hidden'>
             <Image
                 src='/images/leopardbg.png'
                 alt=''
@@ -15,14 +15,14 @@ const Statement = () => {
                 sizes='100vw'
                 className='object-cover opacity-[0.10] mix-blend-multiply'
             />
-            <Marquee slow className='relative'>
+            <div className='relative flex flex-wrap items-center justify-center gap-x-6 gap-y-3 px-5 py-6 md:gap-x-10 md:py-8'>
                 {ITEMS.map((item, i) => (
-                    <span key={i} className='mx-4 inline-flex items-center gap-8 md:mx-6'>
-                        <span className='headline text-coal/90 text-3xl md:text-5xl'>{item}</span>
-                        <Spark className='text-coal/60' size={18} />
+                    <span key={item} className='flex items-center gap-x-6 md:gap-x-10'>
+                        {i > 0 && <Spark className='text-coal/50' size={12} />}
+                        <span className='label-mono text-coal/90 tracking-[0.3em]'>{item}</span>
                     </span>
                 ))}
-            </Marquee>
+            </div>
         </section>
     );
 };

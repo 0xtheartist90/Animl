@@ -1,7 +1,6 @@
 import Link from 'next/link';
 
 import Logo from '@/components/site/logo';
-import Marquee from '@/components/site/marquee';
 import { ReserveButton } from '@/components/site/reserve-modal';
 import Spark from '@/components/site/spark';
 import Stamp from '@/components/site/stamp';
@@ -17,16 +16,12 @@ const NAV = [
 const SiteFooter = () => {
     return (
         <footer className='relative overflow-hidden'>
-            {/* Reserve ticker */}
-            <ReserveButton className='border-border block w-full border-y'>
-                <Marquee className='py-3 md:py-4' slow>
-                    {Array.from({ length: 6 }).map((_, i) => (
-                        <span key={i} className='headline text-bone mx-5 inline-flex items-center gap-6 text-2xl md:mx-6 md:gap-8 md:text-3xl'>
-                            Reserve your table
-                            <Spark className='text-flame' size={18} />
-                        </span>
-                    ))}
-                </Marquee>
+            {/* Reserve invitation */}
+            <ReserveButton className='group border-border block w-full border-y py-8 md:py-10'>
+                <span className='headline text-bone group-hover:text-flame inline-flex items-center gap-5 text-3xl transition-colors duration-500 md:gap-6 md:text-4xl'>
+                    Reserve your table
+                    <Spark className='text-flame group-hover:text-bone transition-colors duration-500' size={18} />
+                </span>
             </ReserveButton>
 
             <div className='relative grid grid-cols-1 gap-8 px-5 pt-10 pb-6 md:grid-cols-12 md:gap-12 md:px-8 md:pt-20 md:pb-10'>
