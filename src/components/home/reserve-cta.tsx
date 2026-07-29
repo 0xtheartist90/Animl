@@ -19,7 +19,7 @@ const ReserveCta = () => {
                 {/* Giant CTA */}
                 <Link
                     href='/reservations'
-                    className='group bg-flame relative flex flex-col justify-center overflow-hidden px-5 py-20 md:col-span-8 md:px-14 md:py-32'>
+                    className='bg-flame relative flex flex-col justify-center overflow-hidden px-5 py-20 md:col-span-8 md:px-14 md:py-32'>
                     <Image
                         src='/images/leopardbg.png'
                         alt=''
@@ -27,22 +27,21 @@ const ReserveCta = () => {
                         sizes='(max-width: 768px) 100vw, 66vw'
                         className='object-cover opacity-[0.10] mix-blend-multiply'
                     />
-                    <span className='bg-coal absolute inset-0 origin-bottom scale-y-0 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-y-100' />
                     <Reveal>
-                        <span className='label-mono text-coal/70 group-hover:text-bone/70 relative mb-6 block transition-colors duration-500'>
+                        <span className='label-mono text-coal/70 relative mb-6 block'>
                             Your table is waiting
                         </span>
-                        <span className='text-coal group-hover:text-bone relative block font-sans text-[clamp(52px,8vw,128px)] leading-[1.02] font-semibold tracking-tight uppercase transition-colors duration-500'>
+                        <span className='text-coal relative block font-sans text-[clamp(52px,8vw,128px)] leading-[1.02] font-semibold tracking-tight uppercase'>
                             Reserve
                             <br />
                             Now
-                            <span className='text-bone group-hover:text-flame transition-colors duration-500'>
+                            <span className='text-bone'>
                                 .
                             </span>
                         </span>
-                        <span className='label-mono text-coal/80 group-hover:text-bone relative mt-8 inline-flex items-center gap-3 transition-colors duration-500'>
+                        <span className='label-mono text-coal/80 relative mt-8 inline-flex items-center gap-3'>
                             Book your evening
-                            <span className='transition-transform duration-500 group-hover:translate-x-2'>→</span>
+                            <span>→</span>
                         </span>
                     </Reveal>
                 </Link>
