@@ -31,14 +31,14 @@ const Experience = () => {
 
                 {/* Icon row */}
                 <Reveal delay={0.1}>
-                    <div className='mx-auto flex max-w-4xl flex-wrap items-start justify-center gap-x-12 gap-y-7 md:justify-between'>
+                    <div className='mx-auto flex max-w-6xl flex-wrap items-start justify-center gap-x-14 gap-y-6 md:justify-between'>
                         {ICONS.map(({ Icon, label }) => (
                             <div key={label} className='group/exp flex flex-col items-center gap-4'>
                                 <Icon
-                                    size={42}
+                                    size={34}
                                     className='text-coal transition-transform duration-500 group-hover/exp:[animation:spin_7s_linear_infinite]'
                                 />
-                                <span className='label-mono text-coal/70 text-[12px]'>{label}</span>
+                                <span className='label-mono text-coal/70 text-[11px]'>{label}</span>
                             </div>
                         ))}
                     </div>
