@@ -4,8 +4,8 @@ import { IconBowtie, IconCloche, IconMoon, IconSteak } from '@/components/site/i
 import { Reveal } from '@/components/site/reveal';
 
 const ITEMS = [
-    { Icon: IconSteak, label: 'A5 Wagyu' },
-    { Icon: IconMoon, label: 'Open Till 2 AM' },
+    { Icon: IconSteak, label: 'Dinner From 5 PM' },
+    { Icon: IconMoon, label: 'Cocktails Till Late' },
     { Icon: IconBowtie, label: 'Elegant Attire' },
     { Icon: IconCloche, label: 'Private Dining' }
 ];
