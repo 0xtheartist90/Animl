@@ -31,10 +31,10 @@ const PageHero = ({
                 {showLogo && (
                     <Reveal delay={0.05}>
                         <Image
-                            src='/images/AnimlLOGOcow.svg'
+                            src='/images/animl-cow.png'
                             alt='Animl — the upside-down cow'
-                            width={510}
-                            height={400}
+                            width={1215}
+                            height={954}
                             priority
                             className='mx-auto mb-8 w-40 md:mb-10 md:w-52'
                         />

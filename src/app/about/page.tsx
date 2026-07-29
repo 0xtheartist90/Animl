@@ -42,10 +42,10 @@ const Page = () => {
                     <div className='flex flex-1 items-center justify-center'>
                         <Reveal delay={0.2}>
                             <Image
-                                src='/images/AnimlLOGOcow.svg'
+                                src='/images/animl-cow.png'
                                 alt='Animl — the upside-down cow'
-                                width={510}
-                                height={400}
+                                width={1215}
+                                height={954}
                                 priority
                                 className='w-48 md:w-64'
                             />

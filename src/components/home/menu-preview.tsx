@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -108,6 +108,14 @@ const DISHES = [
 
 const MenuPreview = () => {
     const [active, setActive] = useState(TABS[0]);
+    const [lightbox, setLightbox] = useState<(typeof DISHES)[number] | null>(null);
+
+    useEffect(() => {
+        const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setLightbox(null);
+        window.addEventListener('keydown', onKey);
+
+        return () => window.removeEventListener('keydown', onKey);
+    }, []);
 
     return (
         <section className='pt-6 md:pt-10'>
@@ -220,12 +228,17 @@ const MenuPreview = () => {
                 </div>
             </div>
 
-            {/* Dish marquee */}
+            {/* Dish marquee — click a dish to view it large */}
             <RevealImage zoom={false}>
-                <Link href='/menus' className='group block'>
+                <div className='group block [&:hover_.animate-marquee-slow]:[animation-play-state:paused]'>
                     <Marquee slow className='py-0'>
                         {DISHES.map((dish) => (
-                            <span key={dish.src} className='relative block w-64 md:w-80'>
+                            <button
+                                type='button'
+                                key={dish.src}
+                                onClick={() => setLightbox(dish)}
+                                aria-label={`View ${dish.label} large`}
+                                className='relative block w-64 md:w-80'>
                                 <span className='relative block aspect-[4/5] overflow-hidden'>
                                     <Image
                                         src={dish.src}
@@ -241,11 +254,53 @@ const MenuPreview = () => {
                                         {dish.label}
                                     </span>
                                 </span>
-                            </span>
+                            </button>
                         ))}
                     </Marquee>
-                </Link>
+                </div>
             </RevealImage>
+
+            {/* Lightbox */}
+            <AnimatePresence>
+                {lightbox && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.35 }}
+                        className='bg-coal/90 fixed inset-0 z-[70] flex items-center justify-center p-5 backdrop-blur-sm md:p-10'
+                        onClick={() => setLightbox(null)}>
+                        <motion.div
+                            initial={{ scale: 0.94, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.96, opacity: 0 }}
+                            transition={{ duration: 0.45, ease: EASE }}
+                            onClick={(e) => e.stopPropagation()}
+                            className='relative w-full max-w-3xl'>
+                            <button
+                                type='button'
+                                onClick={() => setLightbox(null)}
+                                aria-label='Close'
+                                className='label-mono text-bone/70 hover:text-bone absolute -top-10 right-0 p-2 transition-colors'>
+                                ✕
+                            </button>
+                            <div className='relative aspect-[4/5] max-h-[80svh] w-full overflow-hidden md:aspect-[4/3]'>
+                                <Image
+                                    src={lightbox.src}
+                                    alt={lightbox.label}
+                                    fill
+                                    sizes='(max-width: 768px) 100vw, 768px'
+                                    className='object-cover'
+                                />
+                            </div>
+                            <p className='label-mono text-bone mt-4 flex items-center gap-3'>
+                                <Spark className='text-flame' size={13} />
+                                {lightbox.label}
+                            </p>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </section>
     );
 };
